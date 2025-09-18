@@ -20,3 +20,15 @@ msgstr ""
 #: users/views.py:24
 msgid "Welcome"
 msgstr "خوش آمدید"
+
+msgid "Board created" 
+msgstr "برد ایجاد شد"
+
+msgid "Profile updated" 
+msgstr "پروفایل به‌روزرسانی شد"
+
+msgid "List created" 
+msgstr "لیست ایجاد شد"
+
+msgid "Task created" 
+msgstr "تسک ایجاد شد"
