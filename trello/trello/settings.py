@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     #apps
-    'core.apps.CoreConfig', 
+    'users.apps.UsersConfig',
+    'boards.apps.BoardsConfig',
+    'lists.apps.ListsConfig',
+    'invitations.apps.InvitationsConfig',
     
     #library 
     'rest_framework', 
@@ -49,9 +52,17 @@ INSTALLED_APPS = [
 
 
 
+
+AUTH_USER_MODEL = 'users.User'
+
+
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',  #i18n
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
