@@ -19,17 +19,241 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 #: users/views.py:24
-msgid "Welcome"
-msgstr "مرحبا"
 
-msgid "Board created"
-msgstr "تم إنشاء اللوحة"
 
-msgid "Profile updated"
-msgstr "تم تحديث الملف الشخصي"
+msgid "Modern Trello"
+msgstr "تريلو الحديث"
 
-msgid "List created"
-msgstr "تم إنشاء القائمة"
+msgid "Welcome to Modern Trello"
+msgstr "مرحبًا بك في تريلو الحديث"
 
-msgid "Task created"
-msgstr "تم إنشاء المهمة"
+msgid "Organize anything, together. The easy, flexible way to manage your projects."
+msgstr "نظم أي شيء معًا. الطريقة السهلة والمرنة لإدارة مشاريعك."
+
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+msgid "Sign Up"
+msgstr "إنشاء حساب"
+
+msgid "Welcome Back"
+msgstr "مرحبًا بعودتك"
+
+msgid "Username"
+msgstr "اسم المستخدم"
+
+msgid "Password"
+msgstr "كلمة المرور"
+
+msgid "Don't have an account? Sign up"
+msgstr "ليس لديك حساب؟ أنشئ حسابًا"
+
+msgid "Create Account"
+msgstr "إنشاء حساب"
+
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Already have an account? Login"
+msgstr "لديك حساب بالفعل؟ سجّل الدخول"
+
+msgid "Your Boards"
+msgstr "مجالسكم"
+
+msgid "Select a board to get started, or create a new one"
+msgstr "اختر مجلسًا للبدء، أو أنشئ واحدًا جديدًا"
+
+msgid "Create New Board"
+msgstr "إنشاء مجلس جديد"
+
+msgid "Board Title"
+msgstr "عنوان المجلس"
+
+msgid "Choose Color"
+msgstr "اختر اللون"
+
+msgid "Create Board"
+msgstr "إنشاء المجلس"
+
+msgid "Add List"
+msgstr "إضافة قائمة"
+
+msgid "Add New List"
+msgstr "إضافة قائمة جديدة"
+
+msgid "List Title"
+msgstr "عنوان القائمة"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Add New Task"
+msgstr "إضافة مهمة جديدة"
+
+msgid "Task Title"
+msgstr "عنوان المهمة"
+
+msgid "Task Description"
+msgstr "وصف المهمة"
+
+msgid "Due Date (Optional)"
+msgstr "تاريخ الاستحقاق (اختياري)"
+
+msgid "Add Task"
+msgstr "إضافة المهمة"
+
+msgid "Task Details"
+msgstr "تفاصيل المهمة"
+
+msgid "Title"
+msgstr "العنوان"
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+msgid "List"
+msgstr "القائمة"
+
+msgid "Created"
+msgstr "تم الإنشاء"
+
+msgid "Delete Task"
+msgstr "حذف المهمة"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Made with Modern Design"
+msgstr "صُنع بتصميم حديث"
+
+msgid "Created recently"
+msgstr "تم الإنشاء مؤخرًا"
+
+msgid "Back to Boards"
+msgstr "العودة إلى المجالس"
+
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+msgid "Please fill in all fields"
+msgstr "يرجى ملء جميع الحقول"
+
+msgid "Invalid credentials"
+msgstr "بيانات اعتماد غير صالحة"
+
+msgid "Login failed"
+msgstr "فشل تسجيل الدخول"
+
+msgid "Please fill in all required fields"
+msgstr "يرجى ملء جميع الحقول المطلوبة"
+
+msgid "Registration failed"
+msgstr "فشل التسجيل"
+
+msgid "Registration successful! Please login."
+msgstr "تم التسجيل بنجاح! يرجى تسجيل الدخول."
+
+msgid "Unauthorized"
+msgstr "غير مصرح"
+
+msgid "Failed to load boards"
+msgstr "فشل في تحميل المجالس"
+
+msgid "Error loading boards"
+msgstr "خطأ في تحميل المجالس"
+
+msgid "Please enter a board title"
+msgstr "يرجى إدخال عنوان المجلس"
+
+msgid "Failed to create board"
+msgstr "فشل في إنشاء المجلس"
+
+msgid "Error creating board"
+msgstr "خطأ في إنشاء المجلس"
+
+msgid "Are you sure you want to delete this board?"
+msgstr "هل أنت متأكد أنك تريد حذف هذا المجلس؟"
+
+msgid "Failed to delete board"
+msgstr "فشل في حذف المجلس"
+
+msgid "Error deleting board"
+msgstr "خطأ في حذف المجلس"
+
+msgid "Failed to load lists"
+msgstr "فشل في تحميل القوائم"
+
+msgid "Error loading lists"
+msgstr "خطأ في تحميل القوائم"
+
+msgid "Please enter a list title"
+msgstr "يرجى إدخال عنوان القائمة"
+
+msgid "Failed to create list"
+msgstr "فشل في إنشاء القائمة"
+
+msgid "Error creating list"
+msgstr "خطأ في إنشاء القائمة"
+
+msgid "Are you sure you want to delete this list and all its tasks?"
+msgstr "هل أنت متأكد أنك تريد حذف هذه القائمة وكل مهامها؟"
+
+msgid "Failed to delete list"
+msgstr "فشل في حذف القائمة"
+
+msgid "Error deleting list"
+msgstr "خطأ في حذف القائمة"
+
+msgid "Failed to load tasks"
+msgstr "فشل في تحميل المهام"
+
+msgid "Error loading tasks"
+msgstr "خطأ في تحميل المهام"
+
+msgid "Please enter a task title"
+msgstr "يرجى إدخال عنوان المهمة"
+
+msgid "Failed to create task"
+msgstr "فشل في إنشاء المهمة"
+
+msgid "Error creating task"
+msgstr "خطأ في إنشاء المهمة"
+
+msgid "No due date"
+msgstr "لا يوجد تاريخ استحقاق"
+
+msgid "No description"
+msgstr "لا يوجد وصف"
+
+msgid "No description provided"
+msgstr "لم يتم تقديم وصف"
+
+msgid "No due date set"
+msgstr "لم يتم تحديد تاريخ استحقاق"
+
+msgid "Unknown List"
+msgstr "قائمة غير معروفة"
+
+msgid "Unknown"
+msgstr "غير معروف"
+
+msgid "Are you sure you want to delete this task?"
+msgstr "هل أنت متأكد أنك تريد حذف هذه المهمة؟"
+
+msgid "Failed to delete task"
+msgstr "فشل في حذف المهمة"
+
+msgid "Error deleting task"
+msgstr "خطأ في حذف المهمة"
+
+msgid "Failed to move task"
+msgstr "فشل في نقل المهمة"

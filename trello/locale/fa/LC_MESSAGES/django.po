@@ -18,17 +18,243 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 #: users/views.py:24
-msgid "Welcome"
+
+
+
+msgid "Modern Trello"
+msgstr "ترلو مدرن"
+
+msgid "Welcome to Modern Trello"
+msgstr "به ترلو مدرن خوش آمدید"
+
+msgid "Organize anything, together. The easy, flexible way to manage your projects."
+msgstr "هر چیزی را با هم سازماندهی کنید. راهی آسان و انعطاف‌پذیر برای مدیریت پروژه‌هایتان."
+
+msgid "Login"
+msgstr "ورود"
+
+msgid "Sign Up"
+msgstr "ثبت‌نام"
+
+msgid "Welcome Back"
 msgstr "خوش آمدید"
 
-msgid "Board created" 
-msgstr "برد ایجاد شد"
+msgid "Username"
+msgstr "نام کاربری"
 
-msgid "Profile updated" 
-msgstr "پروفایل به‌روزرسانی شد"
+msgid "Password"
+msgstr "رمز عبور"
 
-msgid "List created" 
-msgstr "لیست ایجاد شد"
+msgid "Don't have an account? Sign up"
+msgstr "حساب کاربری ندارید؟ ثبت‌نام کنید"
 
-msgid "Task created" 
-msgstr "تسک ایجاد شد"
+msgid "Create Account"
+msgstr "ایجاد حساب"
+
+msgid "Email"
+msgstr "ایمیل"
+
+msgid "Full Name"
+msgstr "نام کامل"
+
+msgid "Language"
+msgstr "زبان"
+
+msgid "Already have an account? Login"
+msgstr "از قبل حساب دارید؟ وارد شوید"
+
+msgid "Your Boards"
+msgstr "بردهای شما"
+
+msgid "Select a board to get started, or create a new one"
+msgstr "یک برد انتخاب کنید تا شروع کنید، یا یک برد جدید بسازید"
+
+msgid "Create New Board"
+msgstr "ایجاد برد جدید"
+
+msgid "Board Title"
+msgstr "عنوان برد"
+
+msgid "Choose Color"
+msgstr "انتخاب رنگ"
+
+msgid "Create Board"
+msgstr "ایجاد برد"
+
+msgid "Add List"
+msgstr "افزودن لیست"
+
+msgid "Add New List"
+msgstr "افزودن لیست جدید"
+
+msgid "List Title"
+msgstr "عنوان لیست"
+
+msgid "Cancel"
+msgstr "لغو"
+
+msgid "Add New Task"
+msgstr "افزودن تسک جدید"
+
+msgid "Task Title"
+msgstr "عنوان تسک"
+
+msgid "Task Description"
+msgstr "توضیحات تسک"
+
+msgid "Due Date (Optional)"
+msgstr "تاریخ سررسید (اختیاری)"
+
+msgid "Add Task"
+msgstr "افزودن تسک"
+
+msgid "Task Details"
+msgstr "جزئیات تسک"
+
+msgid "Title"
+msgstr "عنوان"
+
+msgid "Description"
+msgstr "توضیحات"
+
+msgid "Due Date"
+msgstr "تاریخ سررسید"
+
+msgid "List"
+msgstr "لیست"
+
+msgid "Created"
+msgstr "ایجاد شده"
+
+msgid "Delete Task"
+msgstr "حذف تسک"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Made with Modern Design"
+msgstr "ساخته شده با طراحی مدرن"
+
+msgid "Created recently"
+msgstr "اخیراً ایجاد شده"
+
+msgid "Back to Boards"
+msgstr "بازگشت به بردها"
+
+msgid "Logout"
+msgstr "خروج"
+
+msgid "Please fill in all fields"
+msgstr "لطفاً همه فیلدها را پر کنید"
+
+msgid "Invalid credentials"
+msgstr "اطلاعات ورود نامعتبر"
+
+msgid "Login failed"
+msgstr "ورود ناموفق"
+
+msgid "Please fill in all required fields"
+msgstr "لطفاً همه فیلدهای مورد نیاز را پر کنید"
+
+msgid "Registration failed"
+msgstr "ثبت‌نام ناموفق"
+
+msgid "Registration successful! Please login."
+msgstr "ثبت‌نام با موفقیت انجام شد! لطفاً وارد شوید."
+
+msgid "Unauthorized"
+msgstr "غیرمجاز"
+
+msgid "Failed to load boards"
+msgstr "بارگذاری بردها ناموفق بود"
+
+msgid "Error loading boards"
+msgstr "خطا در بارگذاری بردها"
+
+msgid "Please enter a board title"
+msgstr "لطفاً عنوان برد را وارد کنید"
+
+msgid "Failed to create board"
+msgstr "ایجاد برد ناموفق بود"
+
+msgid "Error creating board"
+msgstr "خطا در ایجاد برد"
+
+msgid "Are you sure you want to delete this board?"
+msgstr "آیا مطمئن هستید که می‌خواهید این برد را حذف کنید؟"
+
+msgid "Failed to delete board"
+msgstr "حذف برد ناموفق بود"
+
+msgid "Error deleting board"
+msgstr "خطا در حذف برد"
+
+msgid "Failed to load lists"
+msgstr "بارگذاری لیست‌ها ناموفق بود"
+
+msgid "Error loading lists"
+msgstr "خطا در بارگذاری لیست‌ها"
+
+msgid "Please enter a list title"
+msgstr "لطفاً عنوان لیست را وارد کنید"
+
+msgid "Failed to create list"
+msgstr "ایجاد لیست ناموفق بود"
+
+msgid "Error creating list"
+msgstr "خطا در ایجاد لیست"
+
+msgid "Are you sure you want to delete this list and all its tasks?"
+msgstr "آیا مطمئن هستید که می‌خواهید این لیست و همه تسک‌های آن را حذف کنید؟"
+
+msgid "Failed to delete list"
+msgstr "حذف لیست ناموفق بود"
+
+msgid "Error deleting list"
+msgstr "خطا در حذف لیست"
+
+msgid "Failed to load tasks"
+msgstr "بارگذاری تسک‌ها ناموفق بود"
+
+msgid "Error loading tasks"
+msgstr "خطا در بارگذاری تسک‌ها"
+
+msgid "Please enter a task title"
+msgstr "لطفاً عنوان تسک را وارد کنید"
+
+msgid "Failed to create task"
+msgstr "ایجاد تسک ناموفق بود"
+
+msgid "Error creating task"
+msgstr "خطا در ایجاد تسک"
+
+msgid "No due date"
+msgstr "بدون تاریخ سررسید"
+
+msgid "No description"
+msgstr "بدون توضیحات"
+
+msgid "No description provided"
+msgstr "هیچ توضیحی ارائه نشده"
+
+msgid "No due date set"
+msgstr "هیچ تاریخ سررسیدی تنظیم نشده"
+
+msgid "Unknown List"
+msgstr "لیست ناشناخته"
+
+msgid "Unknown"
+msgstr "ناشناخته"
+
+msgid "Are you sure you want to delete this task?"
+msgstr "آیا مطمئن هستید که می‌خواهید این تسک را حذف کنید؟"
+
+msgid "Failed to delete task"
+msgstr "حذف تسک ناموفق بود"
+
+msgid "Error deleting task"
+msgstr "خطا در حذف تسک"
+
+msgid "Failed to move task"
+msgstr "جابه‌جایی تسک ناموفق بود"
+

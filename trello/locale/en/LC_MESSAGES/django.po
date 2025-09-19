@@ -18,17 +18,243 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 #: users/views.py:24
-msgid "Welcome"
-msgstr ""
 
-msgid "Board created"
-msgstr "Board created"
 
-msgid "Profile updated"
-msgstr "Profile updated"
 
-msgid "List created"
-msgstr "List created"
+msgid "Modern Trello"
+msgstr "Modern Trello"
 
-msgid "Task created"
-msgstr "Task created"
+msgid "Welcome to Modern Trello"
+msgstr "Welcome to Modern Trello"
+
+msgid "Organize anything, together. The easy, flexible way to manage your projects."
+msgstr "Organize anything, together. The easy, flexible way to manage your projects."
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Sign Up"
+msgstr "Sign Up"
+
+msgid "Welcome Back"
+msgstr "Welcome Back"
+
+msgid "Username"
+msgstr "Username"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Don't have an account? Sign up"
+msgstr "Don't have an account? Sign up"
+
+msgid "Create Account"
+msgstr "Create Account"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Full Name"
+msgstr "Full Name"
+
+msgid "Language"
+msgstr "Language"
+
+msgid "Already have an account? Login"
+msgstr "Already have an account? Login"
+
+msgid "Your Boards"
+msgstr "Your Boards"
+
+msgid "Select a board to get started, or create a new one"
+msgstr "Select a board to get started, or create a new one"
+
+msgid "Create New Board"
+msgstr "Create New Board"
+
+msgid "Board Title"
+msgstr "Board Title"
+
+msgid "Choose Color"
+msgstr "Choose Color"
+
+msgid "Create Board"
+msgstr "Create Board"
+
+msgid "Add List"
+msgstr "Add List"
+
+msgid "Add New List"
+msgstr "Add New List"
+
+msgid "List Title"
+msgstr "List Title"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Add New Task"
+msgstr "Add New Task"
+
+msgid "Task Title"
+msgstr "Task Title"
+
+msgid "Task Description"
+msgstr "Task Description"
+
+msgid "Due Date (Optional)"
+msgstr "Due Date (Optional)"
+
+msgid "Add Task"
+msgstr "Add Task"
+
+msgid "Task Details"
+msgstr "Task Details"
+
+msgid "Title"
+msgstr "Title"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Due Date"
+msgstr "Due Date"
+
+msgid "List"
+msgstr "List"
+
+msgid "Created"
+msgstr "Created"
+
+msgid "Delete Task"
+msgstr "Delete Task"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Made with Modern Design"
+msgstr "Made with Modern Design"
+
+msgid "Created recently"
+msgstr "Created recently"
+
+msgid "Back to Boards"
+msgstr "Back to Boards"
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Please fill in all fields"
+msgstr "Please fill in all fields"
+
+msgid "Invalid credentials"
+msgstr "Invalid credentials"
+
+msgid "Login failed"
+msgstr "Login failed"
+
+msgid "Please fill in all required fields"
+msgstr "Please fill in all required fields"
+
+msgid "Registration failed"
+msgstr "Registration failed"
+
+msgid "Registration successful! Please login."
+msgstr "Registration successful! Please login."
+
+msgid "Unauthorized"
+msgstr "Unauthorized"
+
+msgid "Failed to load boards"
+msgstr "Failed to load boards"
+
+msgid "Error loading boards"
+msgstr "Error loading boards"
+
+msgid "Please enter a board title"
+msgstr "Please enter a board title"
+
+msgid "Failed to create board"
+msgstr "Failed to create board"
+
+msgid "Error creating board"
+msgstr "Error creating board"
+
+msgid "Are you sure you want to delete this board?"
+msgstr "Are you sure you want to delete this board?"
+
+msgid "Failed to delete board"
+msgstr "Failed to delete board"
+
+msgid "Error deleting board"
+msgstr "Error deleting board"
+
+msgid "Failed to load lists"
+msgstr "Failed to load lists"
+
+msgid "Error loading lists"
+msgstr "Error loading lists"
+
+msgid "Please enter a list title"
+msgstr "Please enter a list title"
+
+msgid "Failed to create list"
+msgstr "Failed to create list"
+
+msgid "Error creating list"
+msgstr "Error creating list"
+
+msgid "Are you sure you want to delete this list and all its tasks?"
+msgstr "Are you sure you want to delete this list and all its tasks?"
+
+msgid "Failed to delete list"
+msgstr "Failed to delete list"
+
+msgid "Error deleting list"
+msgstr "Error deleting list"
+
+msgid "Failed to load tasks"
+msgstr "Failed to load tasks"
+
+msgid "Error loading tasks"
+msgstr "Error loading tasks"
+
+msgid "Please enter a task title"
+msgstr "Please enter a task title"
+
+msgid "Failed to create task"
+msgstr "Failed to create task"
+
+msgid "Error creating task"
+msgstr "Error creating task"
+
+msgid "No due date"
+msgstr "No due date"
+
+msgid "No description"
+msgstr "No description"
+
+msgid "No description provided"
+msgstr "No description provided"
+
+msgid "No due date set"
+msgstr "No due date set"
+
+msgid "Unknown List"
+msgstr "Unknown List"
+
+msgid "Unknown"
+msgstr "Unknown"
+
+msgid "Are you sure you want to delete this task?"
+msgstr "Are you sure you want to delete this task?"
+
+msgid "Failed to delete task"
+msgstr "Failed to delete task"
+
+msgid "Error deleting task"
+msgstr "Error deleting task"
+
+msgid "Failed to move task"
+msgstr "Failed to move task"
+

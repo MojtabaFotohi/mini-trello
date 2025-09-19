@@ -1,13 +1,50 @@
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" {% if LANGUAGE_CODE|slice:":2" == "fa" or LANGUAGE_CODE|slice:":2" == "ar" %}dir="rtl"{% endif %}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Trello</title>
+    <title>{% trans "Modern Trello" %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/vazir-font@33.0.0/dist/font-face.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
     <style>
+        {% if LANGUAGE_CODE|slice:":2" == "fa" or LANGUAGE_CODE|slice:":2" == "ar" %}
+        body {
+            font-family: 'Vazir', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+        .header {
+            flex-direction: row-reverse;
+        }
+        .header-buttons {
+            flex-direction: row-reverse;
+        }
+        .auth-buttons {
+            flex-direction: row-reverse;
+        }
+        .board-title {
+            flex-direction: row-reverse;
+        }
+        .list-header {
+            flex-direction: row-reverse;
+        }
+        .task-meta {
+            flex-direction: row-reverse;
+        }
+        .color-picker-container {
+            flex-direction: row-reverse;
+        }
+        .lists-wrapper {
+            flex-direction: row-reverse;
+        }
+        .modal-footer {
+            flex-direction: row-reverse;
+        }
+        {% endif %}
         :root {
             --primary-color: #026aa7;
             --primary-hover: #0052cc;
@@ -77,7 +114,6 @@
             transform: translateY(-2px);
         }
 
-
         .header button.btnlogout {
             background: var(--danger-color);
             border: none;
@@ -93,7 +129,6 @@
             background: var(--danger-hover);
             transform: translateY(-2px);
         }
-
 
         /* Welcome Page */
         .welcome-container {
@@ -219,13 +254,11 @@
             font-weight: 700;
         }
 
-
         #back-to-boards-btn i {
             vertical-align: middle;
             margin-top: 5px;
             padding-right: 6px;
         }
-
 
         .form-floating {
             margin-bottom: 1rem;
@@ -305,6 +338,9 @@
         .board-title {
             font-weight: 600;
             margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .board-meta {
@@ -362,7 +398,6 @@
             align-items: flex-start; 
         }
 
- 
         #lists-container {
             display: flex;          
             flex-direction: row;     
@@ -408,7 +443,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            flex-grow: 1; /* باعث میشه پر کنه فضای خالی ستون رو */
+            flex-grow: 1;
         }
 
         .task-card {
@@ -483,8 +518,6 @@
             border-color: rgba(18, 137, 170, 0.8);
             color: #414141ff;
         }
-
-
 
         /* Modal Styles */
         .modal-content {
@@ -614,7 +647,6 @@
             .color-picker-container {
                 justify-content: center;
             }
-
         }
 
         @media (max-width: 480px) {
@@ -637,13 +669,14 @@
 <body>
     <!-- Header -->
     <header class="header" style="display: none;" id="app-header">
-        <h3><i class="fas fa-columns"></i> Modern Trello</h3>
+        <h3><i class="fas fa-columns"></i> {% trans "Modern Trello" %}</h3>
+        <p>Current Language: {{ LANGUAGE_CODE }}</p>
         <div class="header-buttons">
             <button id="back-to-boards-btn" onclick="backToBoards()">
-                <i class="fas fa-arrow-left"></i> Back to Boards
+                <i class="fas fa-arrow-left"></i> {% trans "Back to Boards" %}
             </button>
             <button onclick="logout()" class="btnlogout">
-                <i class="fas fa-sign-out-alt"></i> Logout
+                <i class="fas fa-sign-out-alt"></i> {% trans "Logout" %}
             </button>
         </div>
     </header>
@@ -654,14 +687,14 @@
             <div class="welcome-logo">
                 <i class="fas fa-columns"></i>
             </div>
-            <h1 class="welcome-title">Welcome to Modern Trello</h1>
-            <p class="welcome-subtitle">Organize anything, together. The easy, flexible way to manage your projects.</p>
+            <h1 class="welcome-title">{% trans "Welcome to Modern Trello" %}</h1>
+            <p class="welcome-subtitle">{% trans "Organize anything, together. The easy, flexible way to manage your projects." %}</p>
             <div class="auth-buttons">
                 <button class="auth-btn" onclick="showLogin()">
-                    <i class="fas fa-sign-in-alt"></i> Login
+                    <i class="fas fa-sign-in-alt"></i> {% trans "Login" %}
                 </button>
                 <button class="auth-btn secondary" onclick="showRegister()">
-                    <i class="fas fa-user-plus"></i> Sign Up
+                    <i class="fas fa-user-plus"></i> {% trans "Sign Up" %}
                 </button>
             </div>
         </div>
@@ -671,57 +704,57 @@
     <div id="auth-container" style="display: none;">
         <!-- Login Form -->
         <div id="login-card" class="auth-card" style="display: none;">
-            <h4><i class="fas fa-sign-in-alt"></i> Welcome Back</h4>
+            <h4><i class="fas fa-sign-in-alt"></i> {% trans "Welcome Back" %}</h4>
             <div class="form-floating">
                 <input type="text" id="login-username" class="form-control" placeholder="Username">
-                <label>Username</label>
+                <label>{% trans "Username" %}</label>
             </div>
             <div class="form-floating">
                 <input type="password" id="login-password" class="form-control" placeholder="Password">
-                <label>Password</label>
+                <label>{% trans "Password" %}</label>
             </div>
             <button onclick="login()" class="btn btn-primary w-100 mb-3">
-                <i class="fas fa-sign-in-alt"></i> Login
+                <i class="fas fa-sign-in-alt"></i> {% trans "Login" %}
             </button>
             <div class="text-center">
-                <a href="#" onclick="showRegister()" class="text-decoration-none">Don't have an account? Sign up</a>
+                <a href="#" onclick="showRegister()" class="text-decoration-none">{% trans "Don't have an account? Sign up" %}</a>
             </div>
         </div>
 
         <!-- Register Form -->
         <div id="register-card" class="auth-card" style="display: none;">
-            <h4><i class="fas fa-user-plus"></i> Create Account</h4>
+            <h4><i class="fas fa-user-plus"></i> {% trans "Create Account" %}</h4>
             <div class="form-floating">
                 <input type="text" id="register-username" class="form-control" placeholder="Username">
-                <label>Username</label>
+                <label>{% trans "Username" %}</label>
             </div>
             <div class="form-floating">
                 <input type="email" id="register-email" class="form-control" placeholder="Email">
-                <label>Email</label>
+                <label>{% trans "Email" %}</label>
             </div>
             <div class="form-floating">
                 <input type="password" id="register-password" class="form-control" placeholder="Password">
-                <label>Password</label>
+                <label>{% trans "Password" %}</label>
             </div>
             <div class="form-floating">
                 <input type="text" id="register-name" class="form-control" placeholder="Full Name">
-                <label>Full Name</label>
+                <label>{% trans "Full Name" %}</label>
             </div>
             <div class="form-floating">
                 <select id="register-language" class="form-select">
-                    <option value="en">English</option>
-                    <option value="fa">Persian</option>
-                    <option value="ar">Arabic</option>
-                    <option value="de">German</option>
-                    <option value="fr">French</option>
+                    <option value="en">{% trans "English" %}</option>
+                    <option value="fa">{% trans "Persian" %}</option>
+                    <option value="ar">{% trans "Arabic" %}</option>
+                    <option value="de">{% trans "German" %}</option>
+                    <option value="fr">{% trans "French" %}</option>
                 </select>
-                <label>Language</label>
+                <label>{% trans "Language" %}</label>
             </div>
             <button onclick="register()" class="btn btn-primary w-100 mb-3">
-                <i class="fas fa-user-plus"></i> Create Account
+                <i class="fas fa-user-plus"></i> {% trans "Create Account" %}
             </button>
             <div class="text-center">
-                <a href="#" onclick="showLogin()" class="text-decoration-none">Already have an account? Login</a>
+                <a href="#" onclick="showLogin()" class="text-decoration-none">{% trans "Already have an account? Login" %}</a>
             </div>
         </div>
     </div>
@@ -729,20 +762,20 @@
     <!-- Board Selection -->
     <div id="board-selection" style="display: none;" class="boards-container">
         <div class="boards-header">
-            <h2 class="boards-title"><i class="fas fa-th-large"></i> Your Boards</h2>
-            <p class="text-muted">Select a board to get started, or create a new one</p>
+            <h2 class="boards-title"><i class="fas fa-th-large"></i> {% trans "Your Boards" %}</h2>
+            <p class="text-muted">{% trans "Select a board to get started, or create a new one" %}</p>
         </div>
         
         <div class="boards-grid" id="boards-grid"></div>
         
         <div class="create-board-card">
-            <h5 class="mb-3"><i class="fas fa-plus"></i> Create New Board</h5>
+            <h5 class="mb-3"><i class="fas fa-plus"></i> {% trans "Create New Board" %}</h5>
             <div class="form-floating mb-3">
                 <input type="text" id="board-title" class="form-control" placeholder="Board Title">
-                <label>Board Title</label>
+                <label>{% trans "Board Title" %}</label>
             </div>
             <div class="mb-3">
-                <label class="form-label">Choose Color</label>
+                <label class="form-label">{% trans "Choose Color" %}</label>
                 <div class="color-picker-container" id="color-picker">
                     <div class="color-option active" data-color="#0079bf" style="background: #0079bf;"></div>
                     <div class="color-option" data-color="#d29034" style="background: #d29034;"></div>
@@ -755,7 +788,7 @@
                 </div>
             </div>
             <button onclick="createBoard()" class="btn btn-success w-100">
-                <i class="fas fa-plus"></i> Create Board
+                <i class="fas fa-plus"></i> {% trans "Create Board" %}
             </button>
         </div>
     </div>
@@ -765,7 +798,7 @@
         <div class="lists-wrapper" id="lists-wrapper">
             <div id="lists-container"></div>
             <div class="add-list-btn" onclick="showAddListModal()">
-                <i class="fas fa-plus"></i> Add List
+                <i class="fas fa-plus"></i> {% trans "Add List" %}
             </div>
         </div>
     </div>
@@ -775,18 +808,18 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add New List</h5>
+                    <h5 class="modal-title">{% trans "Add New List" %}</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="form-floating">
                         <input type="text" id="list-title-input" class="form-control" placeholder="List Title">
-                        <label>List Title</label>
+                        <label>{% trans "List Title" %}</label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick="addList()">Add List</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Cancel" %}</button>
+                    <button type="button" class="btn btn-primary" onclick="addList()">{% trans "Add List" %}</button>
                 </div>
             </div>
         </div>
@@ -797,26 +830,26 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add New Task</h5>
+                    <h5 class="modal-title">{% trans "Add New Task" %}</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="form-floating mb-3">
                         <input type="text" id="task-title-input" class="form-control" placeholder="Task Title">
-                        <label>Task Title</label>
+                        <label>{% trans "Task Title" %}</label>
                     </div>
                     <div class="form-floating mb-3">
                         <textarea id="task-description-input" class="form-control" placeholder="Task Description" style="height: 100px"></textarea>
-                        <label>Task Description</label>
+                        <label>{% trans "Task Description" %}</label>
                     </div>
                     <div class="form-floating">
                         <input type="datetime-local" id="task-due-date-input" class="form-control">
-                        <label>Due Date (Optional)</label>
+                        <label>{% trans "Due Date (Optional)" %}</label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick="addTask()">Add Task</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Cancel" %}</button>
+                    <button type="button" class="btn btn-primary" onclick="addTask()">{% trans "Add Task" %}</button>
                 </div>
             </div>
         </div>
@@ -827,36 +860,36 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="task-details-title">Task Details</h5>
+                    <h5 class="modal-title" id="task-details-title">{% trans "Task Details" %}</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <h6><i class="fas fa-heading"></i> Title</h6>
+                        <h6><i class="fas fa-heading"></i> {% trans "Title" %}</h6>
                         <p id="task-details-title-text" class="task-detail-text"></p>
                     </div>
                     <div class="mb-3">
-                        <h6><i class="fas fa-align-left"></i> Description</h6>
+                        <h6><i class="fas fa-align-left"></i> {% trans "Description" %}</h6>
                         <p id="task-details-description" class="task-detail-text"></p>
                     </div>
                     <div class="mb-3">
-                        <h6><i class="fas fa-calendar"></i> Due Date</h6>
+                        <h6><i class="fas fa-calendar"></i> {% trans "Due Date" %}</h6>
                         <p id="task-details-due-date" class="task-detail-text"></p>
                     </div>
                     <div class="mb-3">
-                        <h6><i class="fas fa-list"></i> List</h6>
+                        <h6><i class="fas fa-list"></i> {% trans "List" %}</h6>
                         <p id="task-details-list" class="task-detail-text"></p>
                     </div>
                     <div>
-                        <h6><i class="fas fa-clock"></i> Created</h6>
+                        <h6><i class="fas fa-clock"></i> {% trans "Created" %}</h6>
                         <p id="task-details-created" class="task-detail-text"></p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" onclick="deleteTask()">
-                        <i class="fas fa-trash"></i> Delete Task
+                        <i class="fas fa-trash"></i> {% trans "Delete Task" %}
                     </button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Close" %}</button>
                 </div>
             </div>
         </div>
@@ -864,7 +897,7 @@
 
     <!-- Footer -->
     <footer class="footer" id="app-footer">
-        <p><i class="fas fa-heart text-danger"></i> Made with Modern Design • © 2025 Modern Trello</p>
+        <p><i class="fas fa-heart text-danger"></i> {% trans "Made with Modern Design" %} • © 2025 {% trans "Modern Trello" %}</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -887,6 +920,10 @@
             }
 
             setupColorPicker();
+            // Add event listener for page refresh
+            window.addEventListener('beforeunload', () => {
+                localStorage.setItem('lastBoardId', currentBoardId || '');
+            });
         }
 
         // Page Navigation
@@ -948,7 +985,7 @@
             const password = document.getElementById('login-password').value;
             
             if (!username || !password) {
-                alert('Please fill in all fields');
+                alert('{% trans "Please fill in all fields" %}');
                 return;
             }
 
@@ -958,7 +995,7 @@
                 body: JSON.stringify({ username, password })
             })
             .then(response => {
-                if (!response.ok) throw new Error('Invalid credentials');
+                if (!response.ok) throw new Error('{% trans "Invalid credentials" %}');
                 return response.json();
             })
             .then(data => {
@@ -966,7 +1003,7 @@
                 localStorage.setItem('accessToken', accessToken);
                 showBoardSelection();
             })
-            .catch(error => alert('Login failed: ' + error.message));
+            .catch(error => alert('{% trans "Login failed" %}: ' + error.message));
         }
 
         function register() {
@@ -977,7 +1014,7 @@
             const language = document.getElementById('register-language').value;
             
             if (!username || !email || !password || !name) {
-                alert('Please fill in all required fields');
+                alert('{% trans "Please fill in all required fields" %}');
                 return;
             }
 
@@ -987,18 +1024,19 @@
                 body: JSON.stringify({ username, email, password, name, preferred_language: language })
             })
             .then(response => {
-                if (!response.ok) throw new Error('Registration failed');
+                if (!response.ok) throw new Error('{% trans "Registration failed" %}');
                 return response.json();
             })
             .then(data => {
-                alert('Registration successful! Please login.');
+                alert('{% trans "Registration successful! Please login." %}');
                 showLogin();
             })
-            .catch(error => alert('Registration failed: ' + error.message));
+            .catch(error => alert('{% trans "Registration failed" %}: ' + error.message));
         }
 
         function logout() {
             localStorage.removeItem('accessToken');
+            localStorage.removeItem('lastBoardId');
             accessToken = '';
             currentBoardId = null;
             showWelcomePage();
@@ -1015,7 +1053,13 @@
                 headers: { 'Authorization': `Bearer ${accessToken}` }
             })
             .then(response => {
-                if (!response.ok) throw new Error('Failed to load boards');
+                if (!response.ok) {
+                    if (response.status === 401) {
+                        logout();
+                        throw new Error('{% trans "Unauthorized" %}');
+                    }
+                    throw new Error('{% trans "Failed to load boards" %}');
+                }
                 return response.json();
             })
             .then(data => {
@@ -1026,20 +1070,29 @@
                     const boardCard = document.createElement('div');
                     boardCard.className = 'board-card';
                     boardCard.style.setProperty('--primary-color', board.color);
-                    boardCard.onclick = () => openBoard(board.id, board.color);
                     boardCard.innerHTML = `
-                        <div class="board-title">${board.title}</div>
+                        <div class="board-title">
+                            <span>${board.title}</span>
+                            <button class="btn btn-danger btn-sm" onclick="deleteBoard(event, ${board.id})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
                         <div class="board-meta">
-                            <i class="fas fa-calendar"></i> Created recently
+                            <i class="fas fa-calendar"></i> {% trans "Created recently" %}
                         </div>
                     `;
+                    boardCard.addEventListener('click', (e) => {
+                        if (!e.target.closest('.btn-danger')) {
+                            openBoard(board.id, board.color);
+                        }
+                    });
                     boardsGrid.appendChild(boardCard);
                 });
             })
             .catch(error => {
                 console.error('Error loading boards:', error);
-                if (error.message.includes('401')) {
-                    logout();
+                if (!error.message.includes('Unauthorized')) {
+                    alert('{% trans "Error loading boards" %}: ' + error.message);
                 }
             });
         }
@@ -1059,7 +1112,7 @@
             const title = document.getElementById('board-title').value.trim();
             
             if (!title) {
-                alert('Please enter a board title');
+                alert('{% trans "Please enter a board title" %}');
                 return;
             }
 
@@ -1072,32 +1125,63 @@
                 body: JSON.stringify({ title, color: selectedColor })
             })
             .then(response => {
-                if (!response.ok) throw new Error('Failed to create board');
+                if (!response.ok) throw new Error('{% trans "Failed to create board" %}');
                 return response.json();
             })
             .then(data => {
                 document.getElementById('board-title').value = '';
                 loadBoards();
             })
-            .catch(error => alert('Error creating board: ' + error.message));
+            .catch(error => alert('{% trans "Error creating board" %}: ' + error.message));
+        }
+
+        function deleteBoard(event, boardId) {
+            event.stopPropagation();
+            if (!confirm('{% trans "Are you sure you want to delete this board?" %}')) {
+                return;
+            }
+
+            fetch(`http://localhost:8000/boards/${boardId}/`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${accessToken}` }
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('{% trans "Failed to delete board" %}');
+                loadBoards();
+                if (currentBoardId === boardId) {
+                    currentBoardId = null;
+                    showBoardSelection();
+                }
+            })
+            .catch(error => alert('{% trans "Error deleting board" %}: ' + error.message));
         }
 
         function openBoard(boardId, boardColor) {
             currentBoardId = boardId;
             currentBoardColor = boardColor;
+            localStorage.setItem('lastBoardId', boardId);
             showTrelloBoard();
             loadLists();
         }
 
         // List Management
         function loadLists() {
-            if (!currentBoardId) return;
+            if (!currentBoardId) {
+                showBoardSelection();
+                return;
+            }
 
             fetch(`http://localhost:8000/lists/boards/${currentBoardId}/lists/`, {
                 headers: { 'Authorization': `Bearer ${accessToken}` }
             })
             .then(response => {
-                if (!response.ok) throw new Error('Failed to load lists');
+                if (!response.ok) {
+                    if (response.status === 401) {
+                        logout();
+                        throw new Error('{% trans "Unauthorized" %}');
+                    }
+                    throw new Error('{% trans "Failed to load lists" %}');
+                }
                 return response.json();
             })
             .then(data => {
@@ -1112,6 +1196,9 @@
             })
             .catch(error => {
                 console.error('Error loading lists:', error);
+                if (!error.message.includes('Unauthorized')) {
+                    alert('{% trans "Error loading lists" %}: ' + error.message);
+                }
             });
         }
 
@@ -1122,10 +1209,13 @@
             listDiv.innerHTML = `
                 <div class="list-header">
                     <h6 class="list-title">${list.title}</h6>
+                    <button class="btn btn-danger btn-sm" onclick="deleteList(event, ${list.id})">
+                        <i class="fas fa-trash"></i>
+                    </button>
                 </div>
                 <ul class="task-list" id="task-list-${list.id}"></ul>
                 <button class="add-task-btn" onclick="showAddTaskModal(${list.id})">
-                    <i class="fas fa-plus"></i> Add Task
+                    <i class="fas fa-plus"></i> {% trans "Add Task" %}
                 </button>
             `;
 
@@ -1156,7 +1246,7 @@
             const title = document.getElementById('list-title-input').value.trim();
             
             if (!title) {
-                alert('Please enter a list title');
+                alert('{% trans "Please enter a list title" %}');
                 return;
             }
 
@@ -1169,14 +1259,31 @@
                 body: JSON.stringify({ title })
             })
             .then(response => {
-                if (!response.ok) throw new Error('Failed to create list');
+                if (!response.ok) throw new Error('{% trans "Failed to create list" %}');
                 return response.json();
             })
             .then(() => {
                 bootstrap.Modal.getInstance(document.getElementById('addListModal')).hide();
                 loadLists();
             })
-            .catch(error => alert('Error creating list: ' + error.message));
+            .catch(error => alert('{% trans "Error creating list" %}: ' + error.message));
+        }
+
+        function deleteList(event, listId) {
+            event.stopPropagation();
+            if (!confirm('{% trans "Are you sure you want to delete this list and all its tasks?" %}')) {
+                return;
+            }
+
+            fetch(`http://localhost:8000/lists/boards/${currentBoardId}/lists/${listId}/`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${accessToken}` }
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('{% trans "Failed to delete list" %}');
+                loadLists();
+            })
+            .catch(error => alert('{% trans "Error deleting list" %}: ' + error.message));
         }
 
         // Task Management
@@ -1185,7 +1292,13 @@
                 headers: { 'Authorization': `Bearer ${accessToken}` }
             })
             .then(response => {
-                if (!response.ok) throw new Error('Failed to load tasks');
+                if (!response.ok) {
+                    if (response.status === 401) {
+                        logout();
+                        throw new Error('{% trans "Unauthorized" %}');
+                    }
+                    throw new Error('{% trans "Failed to load tasks" %}');
+                }
                 return response.json();
             })
             .then(data => {
@@ -1199,6 +1312,9 @@
             })
             .catch(error => {
                 console.error('Error loading tasks:', error);
+                if (!error.message.includes('Unauthorized')) {
+                    alert('{% trans "Error loading tasks" %}: ' + error.message);
+                }
             });
         }
 
@@ -1208,8 +1324,8 @@
             taskDiv.dataset.taskId = task.id;
             taskDiv.onclick = () => showTaskDetails(task);
             
-            const dueDate = task.due_date ? new Date(task.due_date).toLocaleDateString() : 'No due date';
-            const description = task.description || 'No description';
+            const dueDate = task.due_date ? new Date(task.due_date).toLocaleDateString() : '{% trans "No due date" %}';
+            const description = task.description || '{% trans "No description" %}';
             
             taskDiv.innerHTML = `
                 <div class="task-title">${task.title}</div>
@@ -1237,7 +1353,7 @@
             const dueDate = document.getElementById('task-due-date-input').value;
             
             if (!title) {
-                alert('Please enter a task title');
+                alert('{% trans "Please enter a task title" %}');
                 return;
             }
 
@@ -1260,14 +1376,14 @@
                 body: JSON.stringify(taskData)
             })
             .then(response => {
-                if (!response.ok) throw new Error('Failed to create task');
+                if (!response.ok) throw new Error('{% trans "Failed to create task" %}');
                 return response.json();
             })
             .then(() => {
                 bootstrap.Modal.getInstance(document.getElementById('addTaskModal')).hide();
                 loadTasks(currentListId);
             })
-            .catch(error => alert('Error creating task: ' + error.message));
+            .catch(error => alert('{% trans "Error creating task" %}: ' + error.message));
         }
 
         // Task Details Management
@@ -1276,17 +1392,16 @@
             
             document.getElementById('task-details-title').textContent = task.title;
             document.getElementById('task-details-title-text').textContent = task.title;
-            document.getElementById('task-details-description').textContent = task.description || 'No description provided';
+            document.getElementById('task-details-description').textContent = task.description || '{% trans "No description provided" %}';
             
-            const dueDate = task.due_date ? new Date(task.due_date).toLocaleString() : 'No due date set';
+            const dueDate = task.due_date ? new Date(task.due_date).toLocaleString() : '{% trans "No due date set" %}';
             document.getElementById('task-details-due-date').textContent = dueDate;
             
-            // Get list name
             const listElement = document.getElementById(`list-${task.list}`);
-            const listTitle = listElement ? listElement.querySelector('.list-title').textContent : 'Unknown List';
+            const listTitle = listElement ? listElement.querySelector('.list-title').textContent : '{% trans "Unknown List" %}';
             document.getElementById('task-details-list').textContent = listTitle;
             
-            const createdDate = task.created_at ? new Date(task.created_at).toLocaleString() : 'Unknown';
+            const createdDate = task.created_at ? new Date(task.created_at).toLocaleString() : '{% trans "Unknown" %}';
             document.getElementById('task-details-created').textContent = createdDate;
             
             const modal = new bootstrap.Modal(document.getElementById('taskDetailsModal'));
@@ -1296,21 +1411,21 @@
         function deleteTask() {
             if (!currentTaskForDetails) return;
             
-            if (!confirm('Are you sure you want to delete this task?')) {
+            if (!confirm('{% trans "Are you sure you want to delete this task?" %}')) {
                 return;
             }
             
-            fetch(`http://localhost:8000/lists/tasks/${currentTaskForDetails.id}/`, {
+            fetch(`http://localhost:8000/lists/lists/${currentTaskForDetails.list}/tasks/${currentTaskForDetails.id}/`, {
                 method: 'DELETE',
                 headers: { 'Authorization': `Bearer ${accessToken}` }
             })
             .then(response => {
-                if (!response.ok) throw new Error('Failed to delete task');
+                if (!response.ok) throw new Error('{% trans "Failed to delete task" %}');
                 bootstrap.Modal.getInstance(document.getElementById('taskDetailsModal')).hide();
                 loadTasks(currentTaskForDetails.list);
                 currentTaskForDetails = null;
             })
-            .catch(error => alert('Error deleting task: ' + error.message));
+            .catch(error => alert('{% trans "Error deleting task" %}: ' + error.message));
         }
 
         function moveTask(taskId, newListId, newOrder) {
@@ -1323,11 +1438,10 @@
                 body: JSON.stringify({ list_id: parseInt(newListId), order: newOrder })
             })
             .then(response => {
-                if (!response.ok) throw new Error('Failed to move task');
+                if (!response.ok) throw new Error('{% trans "Failed to move task" %}');
                 return response.json();
             })
             .then(() => {
-                // Reload tasks for affected lists
                 const affectedLists = new Set([newListId]);
                 document.querySelectorAll('.list-column').forEach(list => {
                     const listId = list.id.replace('list-', '');
@@ -1338,12 +1452,34 @@
             })
             .catch(error => {
                 console.error('Error moving task:', error);
-                loadLists(); // Reload all lists on error
+                loadLists();
             });
         }
 
         // Initialize app when page loads
-        document.addEventListener('DOMContentLoaded', initApp);
+        document.addEventListener('DOMContentLoaded', () => {
+            initApp();
+            // Check for last viewed board
+            const lastBoardId = localStorage.getItem('lastBoardId');
+            if (lastBoardId && accessToken) {
+                fetch(`http://localhost:8000/boards/${lastBoardId}/`, {
+                    headers: { 'Authorization': `Bearer ${accessToken}` }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('Board not found');
+                })
+                .then(board => {
+                    openBoard(board.id, board.color);
+                })
+                .catch(error => {
+                    console.error('Error loading last board:', error);
+                    showBoardSelection();
+                });
+            }
+        });
 
         // Handle Enter key for forms
         document.addEventListener('keypress', function(e) {

@@ -18,17 +18,242 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 #: users/views.py:24
-msgid "Welcome"
-msgstr "Bienvenue"
 
-msgid "Board created"
-msgstr "Tableau créé"
 
-msgid "Profile updated"
-msgstr "Profil mis à jour"
 
-msgid "List created"
-msgstr "Liste créée"
+msgid "Modern Trello"
+msgstr "Trello Moderne"
 
-msgid "Task created"
-msgstr "Tâche créée"
+msgid "Welcome to Modern Trello"
+msgstr "Bienvenue sur Trello Moderne"
+
+msgid "Organize anything, together. The easy, flexible way to manage your projects."
+msgstr "Organisez tout, ensemble. La façon simple et flexible de gérer vos projets."
+
+msgid "Login"
+msgstr "Connexion"
+
+msgid "Sign Up"
+msgstr "Inscription"
+
+msgid "Welcome Back"
+msgstr "Bon retour"
+
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+msgid "Password"
+msgstr "Mot de passe"
+
+msgid "Don't have an account? Sign up"
+msgstr "Vous n'avez pas de compte ? Inscrivez-vous"
+
+msgid "Create Account"
+msgstr "Créer un compte"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Full Name"
+msgstr "Nom complet"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "Already have an account? Login"
+msgstr "Vous avez déjà un compte ? Connectez-vous"
+
+msgid "Your Boards"
+msgstr "Vos tableaux"
+
+msgid "Select a board to get started, or create a new one"
+msgstr "Sélectionnez un tableau pour commencer, ou créez-en un nouveau"
+
+msgid "Create New Board"
+msgstr "Créer un nouveau tableau"
+
+msgid "Board Title"
+msgstr "Titre du tableau"
+
+msgid "Choose Color"
+msgstr "Choisir une couleur"
+
+msgid "Create Board"
+msgstr "Créer le tableau"
+
+msgid "Add List"
+msgstr "Ajouter une liste"
+
+msgid "Add New List"
+msgstr "Ajouter une nouvelle liste"
+
+msgid "List Title"
+msgstr "Titre de la liste"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Add New Task"
+msgstr "Ajouter une nouvelle tâche"
+
+msgid "Task Title"
+msgstr "Titre de la tâche"
+
+msgid "Task Description"
+msgstr "Description de la tâche"
+
+msgid "Due Date (Optional)"
+msgstr "Date d'échéance (optionnelle)"
+
+msgid "Add Task"
+msgstr "Ajouter la tâche"
+
+msgid "Task Details"
+msgstr "Détails de la tâche"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Due Date"
+msgstr "Date d'échéance"
+
+msgid "List"
+msgstr "Liste"
+
+msgid "Created"
+msgstr "Créé"
+
+msgid "Delete Task"
+msgstr "Supprimer la tâche"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Made with Modern Design"
+msgstr "Conçu avec un design moderne"
+
+msgid "Created recently"
+msgstr "Créé récemment"
+
+msgid "Back to Boards"
+msgstr "Retour aux tableaux"
+
+msgid "Logout"
+msgstr "Déconnexion"
+
+msgid "Please fill in all fields"
+msgstr "Veuillez remplir tous les champs"
+
+msgid "Invalid credentials"
+msgstr "Identifiants invalides"
+
+msgid "Login failed"
+msgstr "Échec de la connexion"
+
+msgid "Please fill in all required fields"
+msgstr "Veuillez remplir tous les champs obligatoires"
+
+msgid "Registration failed"
+msgstr "Échec de l'inscription"
+
+msgid "Registration successful! Please login."
+msgstr "Inscription réussie ! Veuillez vous connecter."
+
+msgid "Unauthorized"
+msgstr "Non autorisé"
+
+msgid "Failed to load boards"
+msgstr "Échec du chargement des tableaux"
+
+msgid "Error loading boards"
+msgstr "Erreur lors du chargement des tableaux"
+
+msgid "Please enter a board title"
+msgstr "Veuillez entrer un titre de tableau"
+
+msgid "Failed to create board"
+msgstr "Échec de la création du tableau"
+
+msgid "Error creating board"
+msgstr "Erreur lors de la création du tableau"
+
+msgid "Are you sure you want to delete this board?"
+msgstr "Êtes-vous sûr de vouloir supprimer ce tableau ?"
+
+msgid "Failed to delete board"
+msgstr "Échec de la suppression du tableau"
+
+msgid "Error deleting board"
+msgstr "Erreur lors de la suppression du tableau"
+
+msgid "Failed to load lists"
+msgstr "Échec du chargement des listes"
+
+msgid "Error loading lists"
+msgstr "Erreur lors du chargement des listes"
+
+msgid "Please enter a list title"
+msgstr "Veuillez entrer un titre de liste"
+
+msgid "Failed to create list"
+msgstr "Échec de la création de la liste"
+
+msgid "Error creating list"
+msgstr "Erreur lors de la création de la liste"
+
+msgid "Are you sure you want to delete this list and all its tasks?"
+msgstr "Êtes-vous sûr de vouloir supprimer cette liste et toutes ses tâches ?"
+
+msgid "Failed to delete list"
+msgstr "Échec de la suppression de la liste"
+
+msgid "Error deleting list"
+msgstr "Erreur lors de la suppression de la liste"
+
+msgid "Failed to load tasks"
+msgstr "Échec du chargement des tâches"
+
+msgid "Error loading tasks"
+msgstr "Erreur lors du chargement des tâches"
+
+msgid "Please enter a task title"
+msgstr "Veuillez entrer un titre de tâche"
+
+msgid "Failed to create task"
+msgstr "Échec de la création de la tâche"
+
+msgid "Error creating task"
+msgstr "Erreur lors de la création de la tâche"
+
+msgid "No due date"
+msgstr "Pas de date d'échéance"
+
+msgid "No description"
+msgstr "Pas de description"
+
+msgid "No description provided"
+msgstr "Aucune description fournie"
+
+msgid "No due date set"
+msgstr "Aucune date d'échéance définie"
+
+msgid "Unknown List"
+msgstr "Liste inconnue"
+
+msgid "Unknown"
+msgstr "Inconnu"
+
+msgid "Are you sure you want to delete this task?"
+msgstr "Êtes-vous sûr de vouloir supprimer cette tâche ?"
+
+msgid "Failed to delete task"
+msgstr "Échec de la suppression de la tâche"
+
+msgid "Error deleting task"
+msgstr "Erreur lors de la suppression de la tâche"
+
+msgid "Failed to move task"
+msgstr "Échec du déplacement de la tâche"
