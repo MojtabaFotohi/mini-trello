@@ -29,3 +29,27 @@ class InvitationListCreateView(generics.ListCreateAPIView):
             raise ValidationError("User cannot be a member of more than 20 boards.")
 
         serializer.save(board=board, invited_user=invited_user)
+
+class InvitationAcceptView(generics.UpdateAPIView):
+    serializer_class = InvitationSerializer
+    permission_classes = [IsAuthenticated]
+    queryset = Invitation.objects.all()
+
+    def perform_update(self, serializer):
+        invitation = self.get_object()
+        if invitation.invited_user != self.request.user:
+            raise ValidationError("You can only accept your own invitations.")
+        if invitation.status != 'pending':
+            raise ValidationError("This invitation is already processed.")
+        
+        board = invitation.board
+        # محدودیت M: چک کردن تعداد اعضا قبل از پذیرش
+        if board.members.count() >= 10:
+            raise ValidationError("Cannot add more than 10 members to a board.")
+        # محدودیت K: چک کردن تعداد عضویت‌ها
+        if invitation.invited_user.board_memberships.count() >= 20:
+            raise ValidationError("User cannot be a member of more than 20 boards.")
+        
+        # اضافه کردن کاربر به اعضای برد
+        board.members.add(invitation.invited_user)
+        serializer.save(status='accepted')
