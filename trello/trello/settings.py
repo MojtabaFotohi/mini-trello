@@ -63,11 +63,12 @@ AUTH_USER_MODEL = 'users.User'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',  #i18n
+    'django.middleware.locale.LocaleMiddleware',  # i18n
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  
+    'users.middleware.UserLanguageMiddleware',  # این middleware باید بعد از SessionMiddleware و LocaleMiddleware باشد
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -86,6 +87,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n', 
+                'users.context_processors.user_language_context', 
             ],
         },
     },
@@ -143,6 +145,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
+USE_L10N = True 
 USE_TZ = True
 
 
@@ -191,4 +194,24 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+
+# اضافه کردن تنظیمات امنیتی CORS
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True  # برای ارسال cookies و session
+
+# Session settings برای حفظ زبان
+SESSION_COOKIE_AGE = 86400  # 24 ساعت
+SESSION_SAVE_EVERY_REQUEST = True
+
+
+SESSION_COOKIE_SECURE = False  # در production باید True باشد
+SESSION_COOKIE_HTTPONLY = True
+
+# JWT Settings 
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'ROTATE_REFRESH_TOKENS': True,
+}

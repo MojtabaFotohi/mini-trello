@@ -32,6 +32,14 @@
         .list-header {
             flex-direction: row-reverse;
         }
+
+
+.modal-header .btn-close {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+
         .task-meta {
             flex-direction: row-reverse;
         }
@@ -281,6 +289,7 @@
             border: 2px solid rgba(0, 0, 0, 0.1);
             border-radius: 12px;
             padding: 0.75rem;
+            padding-right:35px;
         }
 
         /* Board Selection */
@@ -669,8 +678,15 @@
 <body>
     <!-- Header -->
     <header class="header" style="display: none;" id="app-header">
+        
+        <select id="header-language-select" class="form-select" style="width: auto; margin-left: 1rem;" onchange="changeLanguage(this.value)">
+            <option value="en" {% if LANGUAGE_CODE == "en" %}selected{% endif %}>🇺🇸 {% trans "English" %}</option>
+            <option value="fa" {% if LANGUAGE_CODE == "fa" %}selected{% endif %}>🇮🇷 {% trans "Persian" %}</option>
+            <option value="ar" {% if LANGUAGE_CODE == "ar" %}selected{% endif %}>🇸🇦 {% trans "Arabic" %}</option>
+            <option value="de" {% if LANGUAGE_CODE == "de" %}selected{% endif %}>🇩🇪 {% trans "German" %}</option>
+            <option value="fr" {% if LANGUAGE_CODE == "fr" %}selected{% endif %}>🇫🇷 {% trans "French" %}</option>
+        </select>
         <h3><i class="fas fa-columns"></i> {% trans "Modern Trello" %}</h3>
-        <p>Current Language: {{ LANGUAGE_CODE }}</p>
         <div class="header-buttons">
             <button id="back-to-boards-btn" onclick="backToBoards()">
                 <i class="fas fa-arrow-left"></i> {% trans "Back to Boards" %}
@@ -696,6 +712,16 @@
                 <button class="auth-btn secondary" onclick="showRegister()">
                     <i class="fas fa-user-plus"></i> {% trans "Sign Up" %}
                 </button>
+            </div>
+            <div class="form-floating mt-3">
+                <select id="welcome-language-select" class="form-select" onchange="changeLanguage(this.value)">
+                    <option value="en" {% if LANGUAGE_CODE == "en" %}selected{% endif %}>🇺🇸 {% trans "English" %}</option>
+                    <option value="fa" {% if LANGUAGE_CODE == "fa" %}selected{% endif %}>🇮🇷 {% trans "Persian" %}</option>
+                    <option value="ar" {% if LANGUAGE_CODE == "ar" %}selected{% endif %}>🇸🇦 {% trans "Arabic" %}</option>
+                    <option value="de" {% if LANGUAGE_CODE == "de" %}selected{% endif %}>🇩🇪 {% trans "German" %}</option>
+                    <option value="fr" {% if LANGUAGE_CODE == "fr" %}selected{% endif %}>🇫🇷 {% trans "French" %}</option>
+                </select>
+                <label>{% trans "Select Language" %}</label>
             </div>
         </div>
     </div>
@@ -742,11 +768,11 @@
             </div>
             <div class="form-floating">
                 <select id="register-language" class="form-select">
-                    <option value="en">{% trans "English" %}</option>
-                    <option value="fa">{% trans "Persian" %}</option>
-                    <option value="ar">{% trans "Arabic" %}</option>
-                    <option value="de">{% trans "German" %}</option>
-                    <option value="fr">{% trans "French" %}</option>
+                    <option value="en">🇺🇸 {% trans "English" %}</option>
+                    <option value="fa">🇮🇷 {% trans "Persian" %}</option>
+                    <option value="ar">🇸🇦 {% trans "Arabic" %}</option>
+                    <option value="de">🇩🇪 {% trans "German" %}</option>
+                    <option value="fr">🇫🇷 {% trans "French" %}</option>
                 </select>
                 <label>{% trans "Language" %}</label>
             </div>
@@ -762,7 +788,7 @@
     <!-- Board Selection -->
     <div id="board-selection" style="display: none;" class="boards-container">
         <div class="boards-header">
-            <h2 class="boards-title"><i class="fas fa-th-large"></i> {% trans "Your Boards" %}</h2>
+            <h2 class="boards-title" ><i class="fas fa-th-large"></i> {% trans "Your Boards" %}</h2>
             <p class="text-muted">{% trans "Select a board to get started, or create a new one" %}</p>
         </div>
         
@@ -772,7 +798,7 @@
             <h5 class="mb-3"><i class="fas fa-plus"></i> {% trans "Create New Board" %}</h5>
             <div class="form-floating mb-3">
                 <input type="text" id="board-title" class="form-control" placeholder="Board Title">
-                <label>{% trans "Board Title" %}</label>
+                <label >{% trans "Board Title" %}</label>
             </div>
             <div class="mb-3">
                 <label class="form-label">{% trans "Choose Color" %}</label>
@@ -809,7 +835,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">{% trans "Add New List" %}</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="form-floating">
@@ -831,7 +857,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">{% trans "Add New Task" %}</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="form-floating mb-3">
@@ -861,7 +887,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="task-details-title">{% trans "Task Details" %}</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
@@ -901,25 +927,124 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+<script>
         let accessToken = '';
         let currentBoardId = null;
         let currentBoardColor = '#0079bf';
         let selectedColor = '#0079bf';
         let currentListId = null;
         let currentTaskForDetails = null;
+        
+        // متغیرهای i18n
+        let currentUserLanguage = 'en';
+        let translations = {};
+        let userInfo = null;
+
+        // تابع بارگذاری ترجمه‌ها از سرور
+        async function loadTranslations() {
+            try {
+                const headers = {
+                    'Accept-Language': currentUserLanguage
+                };
+                
+                if (accessToken) {
+                    headers['Authorization'] = `Bearer ${accessToken}`;
+                }
+
+                const response = await fetch('http://localhost:8000/users/test-translation/', {
+                    headers: headers
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    translations = data.translations || {};
+                    currentUserLanguage = data.current_language || currentUserLanguage;
+                    
+                    
+                    // تنظیم زبان صفحه
+                    setPageLanguage(currentUserLanguage);
+                    
+                    return true;
+                } else {
+                    console.warn('Could not load translations, using defaults');
+                }
+            } catch (error) {
+                console.error('Error loading translations:', error);
+            }
+            return false;
+        }
+
+        // تابع برای دریافت ترجمه
+        function getTranslation(key, fallback = key) {
+            return translations[key] || fallback || key;
+        }
+
+        // تابع برای تنظیم زبان صفحه
+        function setPageLanguage(language) {
+            const html = document.documentElement;
+            const body = document.body;
+            
+            // تنظیم attributes
+            html.setAttribute('lang', language);
+            
+            // تنظیم direction برای زبان‌های RTL
+            if (language === 'fa' || language === 'ar') {
+                html.setAttribute('dir', 'rtl');
+                body.classList.add('rtl-language');
+            } else {
+                html.setAttribute('dir', 'ltr');
+                body.classList.remove('rtl-language');
+            }
+            
+            // تنظیم font برای زبان فارسی
+            if (language === 'fa') {
+                body.style.fontFamily = "'Vazir', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+            } else {
+                body.style.fontFamily = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+            }
+            
+        }
+
+        // تابع برای بارگذاری زبان ذخیره شده کاربر
+        function loadUserLanguage() {
+            const savedLanguage = localStorage.getItem('userLanguage');
+            const userData = localStorage.getItem('userData');
+            
+            if (userData) {
+                try {
+                    const user = JSON.parse(userData);
+                    userInfo = user;
+                    currentUserLanguage = user.preferred_language || savedLanguage || 'en';
+                } catch (error) {
+                    currentUserLanguage = savedLanguage || 'en';
+                }
+            } else {
+                currentUserLanguage = savedLanguage || 'en';
+            }
+            
+            setPageLanguage(currentUserLanguage);
+            return currentUserLanguage;
+        }
 
         // Initialize app
-        function initApp() {
+        async function initApp() {
             accessToken = localStorage.getItem('accessToken') || '';
             
+            // بارگذاری زبان کاربر
+            loadUserLanguage();
+            
             if (accessToken) {
+                // بارگذاری ترجمه‌ها برای کاربران لاگین شده
+                await loadTranslations();
                 showBoardSelection();
             } else {
+                // بارگذاری ترجمه‌های پایه برای کاربران مهمان
+                await loadTranslations();
                 showWelcomePage();
             }
 
             setupColorPicker();
+            
             // Add event listener for page refresh
             window.addEventListener('beforeunload', () => {
                 localStorage.setItem('lastBoardId', currentBoardId || '');
@@ -980,33 +1105,76 @@
             document.getElementById('register-card').style.display = 'block';
         }
 
-        function login() {
+        // تابع login بروزرسانی شده
+        async function login() {
             const username = document.getElementById('login-username').value;
             const password = document.getElementById('login-password').value;
             
             if (!username || !password) {
-                alert('{% trans "Please fill in all fields" %}');
+                alert(getTranslation('please_fill_all_fields', 'Please fill in all fields'));
                 return;
             }
 
-            fetch('http://localhost:8000/api/token/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password })
-            })
-            .then(response => {
-                if (!response.ok) throw new Error('{% trans "Invalid credentials" %}');
-                return response.json();
-            })
-            .then(data => {
+            try {
+                const response = await fetch('http://localhost:8000/api/token/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                if (!response.ok) {
+                    throw new Error(getTranslation('invalid_credentials', 'Invalid credentials'));
+                }
+
+                const data = await response.json();
                 accessToken = data.access;
                 localStorage.setItem('accessToken', accessToken);
+
+                // ذخیره اطلاعات کاربر و زبان
+                if (data.user) {
+                    userInfo = data.user;
+                    currentUserLanguage = data.user.preferred_language || 'en';
+                    localStorage.setItem('userLanguage', currentUserLanguage);
+                    localStorage.setItem('userData', JSON.stringify(data.user));
+                    
+
+                } else {
+                    // اگر اطلاعات کاربر در response نیست، از profile API استفاده کن
+                    await loadUserProfile();
+                }
+
+                // بارگذاری ترجمه‌ها و تنظیم زبان
+                await loadTranslations();
+                
                 showBoardSelection();
-            })
-            .catch(error => alert('{% trans "Login failed" %}: ' + error.message));
+            } catch (error) {
+                alert(getTranslation('login_failed', 'Login failed') + ': ' + error.message);
+            }
         }
 
-        function register() {
+        // تابع برای بارگذاری اطلاعات پروفایل کاربر
+        async function loadUserProfile() {
+            try {
+                const response = await fetch('http://localhost:8000/users/profile/', {
+                    headers: { 'Authorization': `Bearer ${accessToken}` }
+                });
+
+                if (response.ok) {
+                    const userData = await response.json();
+                    userInfo = userData;
+                    currentUserLanguage = userData.preferred_language || 'en';
+                    localStorage.setItem('userLanguage', currentUserLanguage);
+                    localStorage.setItem('userData', JSON.stringify(userData));
+                    
+
+                }
+            } catch (error) {
+                console.error('Error loading user profile:', error);
+            }
+        }
+
+        // تابع register بروزرسانی شده
+        async function register() {
             const username = document.getElementById('register-username').value;
             const email = document.getElementById('register-email').value;
             const password = document.getElementById('register-password').value;
@@ -1014,31 +1182,57 @@
             const language = document.getElementById('register-language').value;
             
             if (!username || !email || !password || !name) {
-                alert('{% trans "Please fill in all required fields" %}');
+                alert(getTranslation('please_fill_required_fields', 'Please fill in all required fields'));
                 return;
             }
 
-            fetch('http://localhost:8000/users/register/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, email, password, name, preferred_language: language })
-            })
-            .then(response => {
-                if (!response.ok) throw new Error('{% trans "Registration failed" %}');
-                return response.json();
-            })
-            .then(data => {
-                alert('{% trans "Registration successful! Please login." %}');
+            try {
+                const response = await fetch('http://localhost:8000/users/register/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        username, 
+                        email, 
+                        password, 
+                        name, 
+                        preferred_language: language 
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(getTranslation('registration_failed', 'Registration failed'));
+                }
+
+                const data = await response.json();
+
+                // ذخیره زبان انتخابی
+                currentUserLanguage = language;
+                localStorage.setItem('userLanguage', language);
+                
+                // بارگذاری ترجمه‌ها و تنظیم زبان
+                await loadTranslations();
+
+                alert(getTranslation('registration_successful', 'Registration successful! Please login.'));
                 showLogin();
-            })
-            .catch(error => alert('{% trans "Registration failed" %}: ' + error.message));
+            } catch (error) {
+                alert(getTranslation('registration_failed', 'Registration failed') + ': ' + error.message);
+            }
         }
 
         function logout() {
             localStorage.removeItem('accessToken');
             localStorage.removeItem('lastBoardId');
+            localStorage.removeItem('userLanguage');
+            localStorage.removeItem('userData');
             accessToken = '';
             currentBoardId = null;
+            currentUserLanguage = 'en';
+            translations = {};
+            userInfo = null;
+            
+            // بازنشانی زبان به پیش‌فرض
+            setPageLanguage('en');
+            
             showWelcomePage();
         }
 
@@ -1056,9 +1250,9 @@
                 if (!response.ok) {
                     if (response.status === 401) {
                         logout();
-                        throw new Error('{% trans "Unauthorized" %}');
+                        throw new Error(getTranslation('unauthorized', 'Unauthorized'));
                     }
-                    throw new Error('{% trans "Failed to load boards" %}');
+                    throw new Error(getTranslation('failed_load_boards', 'Failed to load boards'));
                 }
                 return response.json();
             })
@@ -1078,7 +1272,7 @@
                             </button>
                         </div>
                         <div class="board-meta">
-                            <i class="fas fa-calendar"></i> {% trans "Created recently" %}
+                            <i class="fas fa-calendar"></i> ${getTranslation('created_recently', 'Created recently')}
                         </div>
                     `;
                     boardCard.addEventListener('click', (e) => {
@@ -1092,7 +1286,7 @@
             .catch(error => {
                 console.error('Error loading boards:', error);
                 if (!error.message.includes('Unauthorized')) {
-                    alert('{% trans "Error loading boards" %}: ' + error.message);
+                    alert(getTranslation('error_loading_boards', 'Error loading boards') + ': ' + error.message);
                 }
             });
         }
@@ -1112,7 +1306,7 @@
             const title = document.getElementById('board-title').value.trim();
             
             if (!title) {
-                alert('{% trans "Please enter a board title" %}');
+                alert(getTranslation('please_enter_board_title', 'Please enter a board title'));
                 return;
             }
 
@@ -1125,19 +1319,19 @@
                 body: JSON.stringify({ title, color: selectedColor })
             })
             .then(response => {
-                if (!response.ok) throw new Error('{% trans "Failed to create board" %}');
+                if (!response.ok) throw new Error(getTranslation('failed_create_board', 'Failed to create board'));
                 return response.json();
             })
             .then(data => {
                 document.getElementById('board-title').value = '';
                 loadBoards();
             })
-            .catch(error => alert('{% trans "Error creating board" %}: ' + error.message));
+            .catch(error => alert(getTranslation('error_creating_board', 'Error creating board') + ': ' + error.message));
         }
 
         function deleteBoard(event, boardId) {
             event.stopPropagation();
-            if (!confirm('{% trans "Are you sure you want to delete this board?" %}')) {
+            if (!confirm(getTranslation('confirm_delete_board', 'Are you sure you want to delete this board?'))) {
                 return;
             }
 
@@ -1146,14 +1340,14 @@
                 headers: { 'Authorization': `Bearer ${accessToken}` }
             })
             .then(response => {
-                if (!response.ok) throw new Error('{% trans "Failed to delete board" %}');
+                if (!response.ok) throw new Error(getTranslation('failed_delete_board', 'Failed to delete board'));
                 loadBoards();
                 if (currentBoardId === boardId) {
                     currentBoardId = null;
                     showBoardSelection();
                 }
             })
-            .catch(error => alert('{% trans "Error deleting board" %}: ' + error.message));
+            .catch(error => alert(getTranslation('error_deleting_board', 'Error deleting board') + ': ' + error.message));
         }
 
         function openBoard(boardId, boardColor) {
@@ -1178,9 +1372,9 @@
                 if (!response.ok) {
                     if (response.status === 401) {
                         logout();
-                        throw new Error('{% trans "Unauthorized" %}');
+                        throw new Error(getTranslation('unauthorized', 'Unauthorized'));
                     }
-                    throw new Error('{% trans "Failed to load lists" %}');
+                    throw new Error(getTranslation('failed_load_lists', 'Failed to load lists'));
                 }
                 return response.json();
             })
@@ -1197,7 +1391,7 @@
             .catch(error => {
                 console.error('Error loading lists:', error);
                 if (!error.message.includes('Unauthorized')) {
-                    alert('{% trans "Error loading lists" %}: ' + error.message);
+                    alert(getTranslation('error_loading_lists', 'Error loading lists') + ': ' + error.message);
                 }
             });
         }
@@ -1215,7 +1409,7 @@
                 </div>
                 <ul class="task-list" id="task-list-${list.id}"></ul>
                 <button class="add-task-btn" onclick="showAddTaskModal(${list.id})">
-                    <i class="fas fa-plus"></i> {% trans "Add Task" %}
+                    <i class="fas fa-plus"></i> ${getTranslation('add_task', 'Add Task')}
                 </button>
             `;
 
@@ -1246,7 +1440,7 @@
             const title = document.getElementById('list-title-input').value.trim();
             
             if (!title) {
-                alert('{% trans "Please enter a list title" %}');
+                alert(getTranslation('please_enter_list_title', 'Please enter a list title'));
                 return;
             }
 
@@ -1259,19 +1453,19 @@
                 body: JSON.stringify({ title })
             })
             .then(response => {
-                if (!response.ok) throw new Error('{% trans "Failed to create list" %}');
+                if (!response.ok) throw new Error(getTranslation('failed_create_list', 'Failed to create list'));
                 return response.json();
             })
             .then(() => {
                 bootstrap.Modal.getInstance(document.getElementById('addListModal')).hide();
                 loadLists();
             })
-            .catch(error => alert('{% trans "Error creating list" %}: ' + error.message));
+            .catch(error => alert(getTranslation('error_creating_list', 'Error creating list') + ': ' + error.message));
         }
 
         function deleteList(event, listId) {
             event.stopPropagation();
-            if (!confirm('{% trans "Are you sure you want to delete this list and all its tasks?" %}')) {
+            if (!confirm(getTranslation('confirm_delete_list', 'Are you sure you want to delete this list and all its tasks?'))) {
                 return;
             }
 
@@ -1280,10 +1474,10 @@
                 headers: { 'Authorization': `Bearer ${accessToken}` }
             })
             .then(response => {
-                if (!response.ok) throw new Error('{% trans "Failed to delete list" %}');
+                if (!response.ok) throw new Error(getTranslation('failed_delete_list', 'Failed to delete list'));
                 loadLists();
             })
-            .catch(error => alert('{% trans "Error deleting list" %}: ' + error.message));
+            .catch(error => alert(getTranslation('error_deleting_list', 'Error deleting list') + ': ' + error.message));
         }
 
         // Task Management
@@ -1295,9 +1489,9 @@
                 if (!response.ok) {
                     if (response.status === 401) {
                         logout();
-                        throw new Error('{% trans "Unauthorized" %}');
+                        throw new Error(getTranslation('unauthorized', 'Unauthorized'));
                     }
-                    throw new Error('{% trans "Failed to load tasks" %}');
+                    throw new Error(getTranslation('failed_load_tasks', 'Failed to load tasks'));
                 }
                 return response.json();
             })
@@ -1313,7 +1507,7 @@
             .catch(error => {
                 console.error('Error loading tasks:', error);
                 if (!error.message.includes('Unauthorized')) {
-                    alert('{% trans "Error loading tasks" %}: ' + error.message);
+                    alert(getTranslation('error_loading_tasks', 'Error loading tasks') + ': ' + error.message);
                 }
             });
         }
@@ -1324,8 +1518,8 @@
             taskDiv.dataset.taskId = task.id;
             taskDiv.onclick = () => showTaskDetails(task);
             
-            const dueDate = task.due_date ? new Date(task.due_date).toLocaleDateString() : '{% trans "No due date" %}';
-            const description = task.description || '{% trans "No description" %}';
+            const dueDate = task.due_date ? new Date(task.due_date).toLocaleDateString() : getTranslation('no_due_date', 'No due date');
+            const description = task.description || getTranslation('no_description', 'No description');
             
             taskDiv.innerHTML = `
                 <div class="task-title">${task.title}</div>
@@ -1353,7 +1547,7 @@
             const dueDate = document.getElementById('task-due-date-input').value;
             
             if (!title) {
-                alert('{% trans "Please enter a task title" %}');
+                alert(getTranslation('please_enter_task_title', 'Please enter a task title'));
                 return;
             }
 
@@ -1376,14 +1570,14 @@
                 body: JSON.stringify(taskData)
             })
             .then(response => {
-                if (!response.ok) throw new Error('{% trans "Failed to create task" %}');
+                if (!response.ok) throw new Error(getTranslation('failed_create_task', 'Failed to create task'));
                 return response.json();
             })
             .then(() => {
                 bootstrap.Modal.getInstance(document.getElementById('addTaskModal')).hide();
                 loadTasks(currentListId);
             })
-            .catch(error => alert('{% trans "Error creating task" %}: ' + error.message));
+            .catch(error => alert(getTranslation('error_creating_task', 'Error creating task') + ': ' + error.message));
         }
 
         // Task Details Management
@@ -1392,16 +1586,16 @@
             
             document.getElementById('task-details-title').textContent = task.title;
             document.getElementById('task-details-title-text').textContent = task.title;
-            document.getElementById('task-details-description').textContent = task.description || '{% trans "No description provided" %}';
+            document.getElementById('task-details-description').textContent = task.description || getTranslation('no_description_provided', 'No description provided');
             
-            const dueDate = task.due_date ? new Date(task.due_date).toLocaleString() : '{% trans "No due date set" %}';
+            const dueDate = task.due_date ? new Date(task.due_date).toLocaleString() : getTranslation('no_due_date_set', 'No due date set');
             document.getElementById('task-details-due-date').textContent = dueDate;
             
             const listElement = document.getElementById(`list-${task.list}`);
-            const listTitle = listElement ? listElement.querySelector('.list-title').textContent : '{% trans "Unknown List" %}';
+            const listTitle = listElement ? listElement.querySelector('.list-title').textContent : getTranslation('unknown_list', 'Unknown List');
             document.getElementById('task-details-list').textContent = listTitle;
             
-            const createdDate = task.created_at ? new Date(task.created_at).toLocaleString() : '{% trans "Unknown" %}';
+            const createdDate = task.created_at ? new Date(task.created_at).toLocaleString() : getTranslation('unknown', 'Unknown');
             document.getElementById('task-details-created').textContent = createdDate;
             
             const modal = new bootstrap.Modal(document.getElementById('taskDetailsModal'));
@@ -1411,7 +1605,7 @@
         function deleteTask() {
             if (!currentTaskForDetails) return;
             
-            if (!confirm('{% trans "Are you sure you want to delete this task?" %}')) {
+            if (!confirm(getTranslation('Are you sure you want to delete this task?', 'Are you sure you want to delete this task?'))) {
                 return;
             }
             
@@ -1420,12 +1614,12 @@
                 headers: { 'Authorization': `Bearer ${accessToken}` }
             })
             .then(response => {
-                if (!response.ok) throw new Error('{% trans "Failed to delete task" %}');
+                if (!response.ok) throw new Error(getTranslation('failed_delete_task', 'Failed to delete task'));
                 bootstrap.Modal.getInstance(document.getElementById('taskDetailsModal')).hide();
                 loadTasks(currentTaskForDetails.list);
                 currentTaskForDetails = null;
             })
-            .catch(error => alert('{% trans "Error deleting task" %}: ' + error.message));
+            .catch(error => alert(getTranslation('error_deleting_task', 'Error deleting task') + ': ' + error.message));
         }
 
         function moveTask(taskId, newListId, newOrder) {
@@ -1438,7 +1632,7 @@
                 body: JSON.stringify({ list_id: parseInt(newListId), order: newOrder })
             })
             .then(response => {
-                if (!response.ok) throw new Error('{% trans "Failed to move task" %}');
+                if (!response.ok) throw new Error(getTranslation('failed_move_task', 'Failed to move task'));
                 return response.json();
             })
             .then(() => {
@@ -1456,28 +1650,34 @@
             });
         }
 
+        // Function to change language and refresh
+        function changeLanguage(lang) {
+            localStorage.setItem('userLanguage', lang);
+            window.location.href = '/' + lang + window.location.pathname.replace(/^\/[a-z]{2}/, '');
+        }
+
         // Initialize app when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            initApp();
+        document.addEventListener('DOMContentLoaded', async () => {
+            await initApp();
+            
             // Check for last viewed board
             const lastBoardId = localStorage.getItem('lastBoardId');
             if (lastBoardId && accessToken) {
-                fetch(`http://localhost:8000/boards/${lastBoardId}/`, {
-                    headers: { 'Authorization': `Bearer ${accessToken}` }
-                })
-                .then(response => {
+                try {
+                    const response = await fetch(`http://localhost:8000/boards/${lastBoardId}/`, {
+                        headers: { 'Authorization': `Bearer ${accessToken}` }
+                    });
+                    
                     if (response.ok) {
-                        return response.json();
+                        const board = await response.json();
+                        openBoard(board.id, board.color);
+                    } else {
+                        throw new Error('Board not found');
                     }
-                    throw new Error('Board not found');
-                })
-                .then(board => {
-                    openBoard(board.id, board.color);
-                })
-                .catch(error => {
+                } catch (error) {
                     console.error('Error loading last board:', error);
                     showBoardSelection();
-                });
+                }
             }
         });
 
