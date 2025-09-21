@@ -26,3 +26,4 @@ sqlparse==0.5.3
 tzdata==2025.2
 vine==5.1.0
 wcwidth==0.2.13
+drf-yasg==1.21.10
