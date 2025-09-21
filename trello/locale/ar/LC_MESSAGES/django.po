@@ -257,3 +257,74 @@ msgstr "خطأ في حذف المهمة"
 
 msgid "Failed to move task"
 msgstr "فشل في نقل المهمة"
+
+
+
+
+
+
+
+
+
+msgid "Invitation to join {board_title}"
+msgstr "دعوة للانضمام إلى اللوحة {board_title}"
+
+msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
+msgstr "مرحبًا {user_name}،\n\nلقد تمت دعوتك للانضمام إلى اللوحة '{board_title}' على Modern Trello.\nيرجى تسجيل الدخول لقبول أو رفض هذه الدعوة.\n\nمع أطيب التحيات،\nفريق Modern Trello"
+
+msgid "Board Members"
+msgstr "أعضاء اللوحة"
+
+msgid "Invite Member"
+msgstr "دعوة عضو"
+
+msgid "Send Invitation"
+msgstr "إرسال دعوة"
+
+msgid "Members"
+msgstr "الأعضاء"
+
+msgid "Invitations"
+msgstr "الدعوات"
+
+msgid "No pending invitations"
+msgstr "لا توجد دعوات معلقة"
+
+msgid "please_enter_email"
+msgstr "يرجى إدخال البريد الإلكتروني"
+
+msgid "invitation_sent"
+msgstr "تم إرسال الدعوة بنجاح"
+
+msgid "failed_invite_member"
+msgstr "فشل في دعوة العضو"
+
+msgid "error_inviting_member"
+msgstr "خطأ في دعوة العضو"
+
+msgid "failed_load_members"
+msgstr "فشل في تحميل الأعضاء"
+
+msgid "failed_load_invitations"
+msgstr "فشل في تحميل الدعوات"
+
+msgid "error_loading_data"
+msgstr "خطأ في تحميل البيانات"
+
+msgid "invitation_accepted"
+msgstr "تم قبول الدعوة بنجاح"
+
+msgid "failed_accept_invitation"
+msgstr "فشل في قبول الدعوة"
+
+msgid "error_accepting_invitation"
+msgstr "خطأ في قبول الدعوة"
+
+msgid "invitation_rejected"
+msgstr "تم رفض الدعوة بنجاح"
+
+msgid "failed_reject_invitation"
+msgstr "فشل في رفض الدعوة"
+
+msgid "error_rejecting_invitation"
+msgstr "خطأ في رفض الدعوة"

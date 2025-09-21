@@ -257,3 +257,76 @@ msgstr "Erreur lors de la suppression de la tâche"
 
 msgid "Failed to move task"
 msgstr "Échec du déplacement de la tâche"
+
+
+
+
+
+
+
+
+
+
+
+msgid "Invitation to join {board_title}"
+msgstr "Invitation à rejoindre le tableau {board_title}"
+
+msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
+msgstr "Bonjour {user_name},\n\nVous avez été invité à rejoindre le tableau '{board_title}' sur Modern Trello.\nVeuillez vous connecter pour accepter ou refuser cette invitation.\n\nCordialement,\nL'équipe Modern Trello"
+
+msgid "Board Members"
+msgstr "Membres du tableau"
+
+msgid "Invite Member"
+msgstr "Inviter un membre"
+
+msgid "Send Invitation"
+msgstr "Envoyer une invitation"
+
+msgid "Members"
+msgstr "Membres"
+
+msgid "Invitations"
+msgstr "Invitations"
+
+msgid "No pending invitations"
+msgstr "Aucune invitation en attente"
+
+msgid "please_enter_email"
+msgstr "Veuillez entrer une adresse e-mail"
+
+msgid "invitation_sent"
+msgstr "Invitation envoyée avec succès"
+
+msgid "failed_invite_member"
+msgstr "Échec de l'invitation du membre"
+
+msgid "error_inviting_member"
+msgstr "Erreur lors de l'invitation du membre"
+
+msgid "failed_load_members"
+msgstr "Échec du chargement des membres"
+
+msgid "failed_load_invitations"
+msgstr "Échec du chargement des invitations"
+
+msgid "error_loading_data"
+msgstr "Erreur lors du chargement des données"
+
+msgid "invitation_accepted"
+msgstr "Invitation acceptée avec succès"
+
+msgid "failed_accept_invitation"
+msgstr "Échec de l'acceptation de l'invitation"
+
+msgid "error_accepting_invitation"
+msgstr "Erreur lors de l'acceptation de l'invitation"
+
+msgid "invitation_rejected"
+msgstr "Invitation rejetée avec succès"
+
+msgid "failed_reject_invitation"
+msgstr "Échec du rejet de l'invitation"
+
+msgid "error_rejecting_invitation"
+msgstr "Erreur lors du rejet de l'invitation"

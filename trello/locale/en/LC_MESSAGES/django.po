@@ -258,3 +258,70 @@ msgstr "Error deleting task"
 msgid "Failed to move task"
 msgstr "Failed to move task"
 
+
+
+
+
+
+msgid "Invitation to join {board_title}"
+msgstr "Invitation to join {board_title}"
+
+msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
+msgstr "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
+
+msgid "Board Members"
+msgstr "Board Members"
+
+msgid "Invite Member"
+msgstr "Invite Member"
+
+msgid "Send Invitation"
+msgstr "Send Invitation"
+
+msgid "Members"
+msgstr "Members"
+
+msgid "Invitations"
+msgstr "Invitations"
+
+msgid "No pending invitations"
+msgstr "No pending invitations"
+
+msgid "please_enter_email"
+msgstr "please_enter_email"
+
+msgid "invitation_sent"
+msgstr "invitation_sent"
+
+msgid "failed_invite_member"
+msgstr "failed_invite_member"
+
+msgid "error_inviting_member"
+msgstr "error_inviting_member"
+
+msgid "failed_load_members"
+msgstr "failed_load_members"
+
+msgid "failed_load_invitations"
+msgstr "failed_load_invitations"
+
+msgid "error_loading_data"
+msgstr "error_loading_data"
+
+msgid "invitation_accepted"
+msgstr "invitation_accepted"
+
+msgid "failed_accept_invitation"
+msgstr "failed_accept_invitation"
+
+msgid "error_accepting_invitation"
+msgstr "error_accepting_invitation"
+
+msgid "invitation_rejected"
+msgstr "invitation_rejected"
+
+msgid "failed_reject_invitation"
+msgstr "failed_reject_invitation"
+
+msgid "error_rejecting_invitation"
+msgstr "error_rejecting_invitation"

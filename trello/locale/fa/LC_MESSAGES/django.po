@@ -258,3 +258,72 @@ msgstr "خطا در حذف تسک"
 msgid "Failed to move task"
 msgstr "جابه‌جایی تسک ناموفق بود"
 
+
+
+
+
+
+
+
+msgid "Invitation to join {board_title}"
+msgstr "دعوت برای پیوستن به برد {board_title}"
+
+msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
+msgstr "سلام {user_name}،\n\nشما به برد '{board_title}' در Modern Trello دعوت شده‌اید.\nلطفاً وارد شوید تا این دعوت را بپذیرید یا رد کنید.\n\nبا احترام،\nتیم Modern Trello"
+
+msgid "Board Members"
+msgstr "اعضای برد"
+
+msgid "Invite Member"
+msgstr "دعوت عضو"
+
+msgid "Send Invitation"
+msgstr "ارسال دعوت‌نامه"
+
+msgid "Members"
+msgstr "اعضا"
+
+msgid "Invitations"
+msgstr "دعوت‌نامه‌ها"
+
+msgid "No pending invitations"
+msgstr "هیچ دعوت‌نامه در انتظاری وجود ندارد"
+
+msgid "please_enter_email"
+msgstr "لطفاً آدرس ایمیل را وارد کنید"
+
+msgid "invitation_sent"
+msgstr "دعوت‌نامه با موفقیت ارسال شد"
+
+msgid "failed_invite_member"
+msgstr "خطا در دعوت عضو"
+
+msgid "error_inviting_member"
+msgstr "خطا در دعوت عضو"
+
+msgid "failed_load_members"
+msgstr "خطا در بارگذاری اعضا"
+
+msgid "failed_load_invitations"
+msgstr "خطا در بارگذاری دعوت‌نامه‌ها"
+
+msgid "error_loading_data"
+msgstr "خطا در بارگذاری داده‌ها"
+
+msgid "invitation_accepted"
+msgstr "دعوت‌نامه با موفقیت پذیرفته شد"
+
+msgid "failed_accept_invitation"
+msgstr "خطا در پذیرش دعوت‌نامه"
+
+msgid "error_accepting_invitation"
+msgstr "خطا در پذیرش دعوت‌نامه"
+
+msgid "invitation_rejected"
+msgstr "دعوت‌نامه با موفقیت رد شد"
+
+msgid "failed_reject_invitation"
+msgstr "خطا در رد دعوت‌نامه"
+
+msgid "error_rejecting_invitation"
+msgstr "خطا در رد دعوت‌نامه"
