@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Invitation
+from boards.serializers import BoardSerializer  # اضافه شده
 from django.contrib.auth import get_user_model
 import logging
 
@@ -9,6 +10,7 @@ User = get_user_model()
 
 class InvitationSerializer(serializers.ModelSerializer):
     invited_user_email = serializers.EmailField(write_only=True, required=False)
+    board = BoardSerializer(read_only=True)  # تغییر به BoardSerializer
     
     class Meta:
         model = Invitation
@@ -17,8 +19,7 @@ class InvitationSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         logger.debug(f"Validating data: {data}")
-        # فقط در حالت ایجاد (create) بررسی invited_user یا invited_user_email را انجام بده
-        if self.context.get('request').method in ['POST']:  # فقط برای ایجاد دعوت‌نامه
+        if self.context.get('request').method in ['POST']:
             if 'invited_user_email' in data and 'invited_user' in data:
                 raise serializers.ValidationError("Provide either invited_user or invited_user_email, not both.")
             if 'invited_user_email' not in data and 'invited_user' not in data:

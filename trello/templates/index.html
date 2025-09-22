@@ -2094,76 +2094,83 @@
         modal.show();
     }
 
-    async function loadInvitations() {
-        try {
-            const response = await fetch('http://localhost:8000/invitations/', {
-                headers: { 'Authorization': `Bearer ${accessToken}` }
-            });
+async function loadInvitations() {
+    try {
+        const response = await fetch('http://localhost:8000/invitations/', {
+            headers: { 'Authorization': `Bearer ${accessToken}` }
+        });
 
-            if (!response.ok) {
-                if (response.status === 401) {
-                    logout();
-                    throw new Error(getTranslation('unauthorized', 'Unauthorized'));
-                }
-                throw new Error(getTranslation('failed_load_invitations', 'Failed to load invitations'));
+        if (!response.ok) {
+            if (response.status === 401) {
+                logout();
+                throw new Error(getTranslation('unauthorized', 'Unauthorized'));
             }
-
-            const data = await response.json();
-            const sentList = document.getElementById('sent-invitations-list');
-            const receivedList = document.getElementById('received-invitations-list');
-            sentList.innerHTML = '';
-            receivedList.innerHTML = '';
-
-            const sentInvitations = data.filter(inv => inv.board.owner === userInfo.id);
-            const receivedInvitations = data.filter(inv => inv.invited_user === userInfo.id);
-
-            sentInvitations.forEach(inv => {
-                const board = inv.board.title || 'Unknown Board';
-                const invItem = document.createElement('div');
-                invItem.className = 'invitation-item';
-                invItem.innerHTML = `
-                    <div>
-                        <strong>${inv.invited_user.email}</strong> {% trans "to" %} <strong>${board}</strong>
-                        <span class="invitation-status-${inv.status.toLowerCase()}">(${getTranslation(inv.status.toLowerCase(), inv.status)})</span>
-                    </div>
-                    <div class="invitation-actions"></div>
-                `;
-                sentList.appendChild(invItem);
-            });
-
-            receivedInvitations.forEach(inv => {
-                const board = inv.board.title || 'Unknown Board';
-                const invItem = document.createElement('div');
-                invItem.className = 'invitation-item';
-                invItem.innerHTML = `
-                    <div>
-                        <strong>${board}</strong>
-                        <span class="invitation-status-${inv.status.toLowerCase()}">(${getTranslation(inv.status.toLowerCase(), inv.status)})</span>
-                    </div>
-                    <div class="invitation-actions">
-                        ${inv.status === 'pending' ? `
-                            <button class="btn btn-success btn-sm" onclick="acceptInvitation(${inv.id})">
-                                <i class="fas fa-check"></i> {% trans "Accept" %}
-                            </button>
-                            <button class="btn btn-danger btn-sm" onclick="rejectInvitation(${inv.id})">
-                                <i class="fas fa-times"></i> {% trans "Reject" %}
-                            </button>
-                        ` : ''}
-                    </div>
-                `;
-                receivedList.appendChild(invItem);
-            });
-
-            if (sentInvitations.length === 0) {
-                sentList.innerHTML = `<p class="text-muted">{% trans "No sent invitations" %}</p>`;
-            }
-            if (receivedInvitations.length === 0) {
-                receivedList.innerHTML = `<p class="text-muted">{% trans "No received invitations" %}</p>`;
-            }
-        } catch (error) {
-            alert(getTranslation('error_loading_invitations', 'Error loading invitations') + ': ' + error.message);
+            throw new Error(getTranslation('failed_load_invitations', 'Failed to load invitations'));
         }
+
+        const data = await response.json();
+        console.log('Invitations data:', data); // Debug: check API response
+
+        const sentList = document.getElementById('sent-invitations-list');
+        const receivedList = document.getElementById('received-invitations-list');
+        sentList.innerHTML = '';
+        receivedList.innerHTML = '';
+
+        const sentInvitations = data.filter(inv => inv.board && inv.board.owner && inv.board.owner.id === userInfo.id);
+        const receivedInvitations = data.filter(inv => inv.invited_user && inv.invited_user.id === userInfo.id);
+        console.log('Sent invitations:', sentInvitations); // Debug: check filtered sent invitations
+        console.log('Received invitations:', receivedInvitations); // Debug: check filtered received invitations
+
+        sentInvitations.forEach(inv => {
+            const boardTitle = inv.board?.title || 'Unknown Board';
+            const email = inv.invited_user?.email || inv.invited_user_email || 'Unknown Email';
+            const invItem = document.createElement('div');
+            invItem.className = 'invitation-item';
+            invItem.innerHTML = `
+                <div>
+                    <strong>${email}</strong> {% trans "to" %} <strong>${boardTitle}</strong>
+                    <span class="invitation-status-${inv.status.toLowerCase()}">(${getTranslation(inv.status.toLowerCase(), inv.status)})</span>
+                </div>
+                <div class="invitation-actions"></div>
+            `;
+            sentList.appendChild(invItem);
+        });
+
+        receivedInvitations.forEach(inv => {
+            const boardTitle = inv.board?.title || 'Unknown Board';
+            const invItem = document.createElement('div');
+            invItem.className = 'invitation-item';
+            invItem.innerHTML = `
+                <div>
+                    <strong>${boardTitle}</strong>
+                    <span class="invitation-status-${inv.status.toLowerCase()}">(${getTranslation(inv.status.toLowerCase(), inv.status)})</span>
+                </div>
+                <div class="invitation-actions">
+                    ${inv.status === 'pending' ? `
+                        <button class="btn btn-success btn-sm" onclick="acceptInvitation(${inv.id})">
+                            <i class="fas fa-check"></i> {% trans "Accept" %}
+                        </button>
+                        <button class="btn btn-danger btn-sm" onclick="rejectInvitation(${inv.id})">
+                            <i class="fas fa-times"></i> {% trans "Reject" %}
+                        </button>
+                    ` : ''}
+                </div>
+            `;
+            receivedList.appendChild(invItem);
+        });
+
+        if (sentInvitations.length === 0) {
+            sentList.innerHTML = `<p class="text-muted">{% trans "No sent invitations" %}</p>`;
+        }
+        if (receivedInvitations.length === 0) {
+            receivedList.innerHTML = `<p class="text-muted">{% trans "No received invitations" %}</p>`;
+        }
+    } catch (error) {
+        console.error('Error loading invitations:', error);
+        alert(getTranslation('error_loading_invitations', 'Error loading invitations') + ': ' + error.message);
     }
+}
+
 
     async function acceptInvitation(invitationId) {
         try {
