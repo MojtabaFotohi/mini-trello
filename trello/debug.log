@@ -1,130 +1,875 @@
 Watching for file changes with StatReloader
-
-def chunks(task, it, n):
-    return 1
-
-
-def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
-    return 1
-
-
-def send_invitation_email(invitation_id, invited_user_language):
-    return 1
-
-
-def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
-    return 1
-
-
-def xmap(task, it):
-    return 1
-
-
-def backend_cleanup():
-    return 1
-
-
-def chain(*args, **kwargs):
-    return 1
-
-
-def xstarmap(task, it):
-    return 1
-
-
-def accumulate(self, *args, **kwargs):
-    return 1
-
-
-def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
-    return 1
-
-Validating data: {'board': <Board: bord test>, 'invited_user_email': 'mojtaba.cy@gmail.com'}
-Searching for user with email: mojtaba.cy@gmail.com
-Found user: moj
-Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
-Found board: bord test
-Invited user: moj
-Internal Server Error: /invitations/
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 991, in create
-    instance = ModelClass._default_manager.create(**validated_data)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 661, in create
-    obj = self.model(**kwargs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/base.py", line 569, in __init__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Invitation() got unexpected keyword arguments: 'invited_user_email'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
-    return view_func(request, *args, **kwargs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
-    return self.dispatch(request, *args, **kwargs)
-           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
-    response = self.handle_exception(exc)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
-    self.raise_uncaught_exception(exc)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
-    raise exc
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
-    response = handler(request, *args, **kwargs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/generics.py", line 246, in post
-    return self.create(request, *args, **kwargs)
-           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 19, in create
-    self.perform_create(serializer)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/trello/invitations/views.py", line 51, in perform_create
-    invitation = serializer.save(board=board)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 210, in save
-    self.instance = self.create(validated_data)
-                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1010, in create
-    raise TypeError(msg)
-TypeError: Got a `TypeError` when calling `Invitation.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Invitation.objects.create()`. You may need to make the field read-only, or override the InvitationSerializer.create() method to handle this correctly.
-Original exception was:
- Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 991, in create
-    instance = ModelClass._default_manager.create(**validated_data)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 661, in create
-    obj = self.model(**kwargs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/base.py", line 569, in __init__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Invitation() got unexpected keyword arguments: 'invited_user_email'
-
+Validating data: {}
+Bad Request: /invitations/31/accept/
+/home/osboxes/projects/trelloProject/trello/invitations/views.py changed, reloading.
+Watching for file changes with StatReloader
 /home/osboxes/projects/trelloProject/trello/invitations/serializers.py changed, reloading.
 Watching for file changes with StatReloader
-/home/osboxes/projects/trelloProject/trello/invitations/models.py changed, reloading.
+Validating data: {'status': 'accepted'}
+Bad Request: /invitations/31/accept/
+/home/osboxes/projects/trelloProject/trello/invitations/serializers.py changed, reloading.
 Watching for file changes with StatReloader
 /home/osboxes/projects/trelloProject/trello/invitations/views.py changed, reloading.
 Watching for file changes with StatReloader
+Validating data: {'status': 'accepted'}
+Bad Request: /invitations/31/accept/
+Validating data: {'status': 'accepted'}
+/home/osboxes/projects/trelloProject/trello/invitations/serializers.py changed, reloading.
 Watching for file changes with StatReloader
-Validating data: {'board': <Board: bord test>, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+/home/osboxes/projects/trelloProject/trello/invitations/views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /invitations/31/accept/
+Bad Request: /invitations/31/accept/
+/home/osboxes/projects/trelloProject/trello/invitations/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/osboxes/projects/trelloProject/trello/invitations/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Validating data: {'status': 'accepted'}
+Bad Request: /invitations/31/accept/
+view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
+    return Board.objects.filter(owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
+    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
+    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
+    return Board.objects.filter(owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
+    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
+    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's TaskMoveView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 55, in get_queryset
+    return Task.objects.filter(list__board__owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
+    return Board.objects.filter(owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
+    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
+    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's TaskMoveView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 55, in get_queryset
+    return Task.objects.filter(list__board__owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
+    return Board.objects.filter(owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
+    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
+    return int(value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
+    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x746656bdd350>.
+view's TestTranslationView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
+    return view_method()
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/generics.py", line 126, in get_serializer_class
+    assert self.serializer_class is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'TestTranslationView' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+Watching for file changes with StatReloader
+Unauthorized: /users/test-translation/
+Unauthorized: /boards/41/
+Unauthorized: /boards/
+Unauthorized: /boards/
+Not Found: /favicon.ico
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
 Searching for user with email: mojtaba.cy@gmail.com
 Found user: moj
-Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Request data: {'board': '41', 'invited_user_email': 'mojtaba.cy@gmail.com'}
 Found board: bord test
 Invited user: moj
-Creating invitation with validated_data: {'board': <Board: bord test>, 'invited_user': <User: moj>}
+Creating invitation with validated_data: {'invited_user': <User: moj>, 'board': <Board: bord test>}
 Created invitation: Invitation to bord test for moj
+
+def xmap(task, it):
+    return 1
+
+
+def backend_cleanup():
+    return 1
+
 
 def chain(*args, **kwargs):
     return 1
@@ -155,1668 +900,236 @@ def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, 
 
 
 def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
-    return 1
-
-
-def xmap(task, it):
-    return 1
-
-
-def backend_cleanup():
     return 1
 
 Start from server, version: 0.9, properties: {'capabilities': {'publisher_confirms': True, 'exchange_exchange_bindings': True, 'basic.nack': True, 'consumer_cancel_notify': True, 'connection.blocked': True, 'consumer_priorities': True, 'authentication_failure_close': True, 'per_consumer_qos': True, 'direct_reply_to': True}, 'cluster_name': 'rabbit@osboxes', 'copyright': 'Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries', 'information': 'Licensed under the MPL 2.0. Website: https://rabbitmq.com', 'platform': 'Erlang/OTP 27.3', 'product': 'RabbitMQ', 'version': '4.0.5'}, mechanisms: [b'AMQPLAIN', b'ANONYMOUS', b'PLAIN'], locales: ['en_US']
 using channel_id: 1
 Channel open
-Watching for file changes with StatReloader
-Unauthorized: /users/test-translation/
-Unauthorized: /boards/
+Validating data: {'status': 'accepted'}
+Validating data: {'invited_user_email': 'mojijk45@gmail.com'}
+Searching for user with email: mojijk45@gmail.com
+Found user: mojtabaaa
+Request data: {'board': '43', 'invited_user_email': 'mojijk45@gmail.com'}
+Found board: ذخقی
+Invited user: mojtabaaa
+Creating invitation with validated_data: {'invited_user': <User: mojtabaaa>, 'board': <Board: ذخقی>}
+Created invitation: Invitation to ذخقی for mojtabaaa
 Not Found: /favicon.ico
-Watching for file changes with StatReloader
-Not Found: /ewf
+Validating data: {'status': 'rejected'}
+Validating data: {'invited_user_email': 'mojijk45@gmail.com'}
+Searching for user with email: mojijk45@gmail.com
+Found user: mojtabaaa
+Request data: {'board': '43', 'invited_user_email': 'mojijk45@gmail.com'}
+Found board: ذخقی
+Invited user: mojtabaaa
+Creating invitation with validated_data: {'invited_user': <User: mojtabaaa>, 'board': <Board: ذخقی>}
+Created invitation: Invitation to ذخقی for mojtabaaa
+Validating data: {'status': 'accepted'}
 Not Found: /favicon.ico
-view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
-    return Board.objects.filter(owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
-    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
-    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
-    return Board.objects.filter(owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
-    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
-    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's TaskMoveView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 55, in get_queryset
-    return Task.objects.filter(list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
-    return Board.objects.filter(owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
-    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
-    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's TaskMoveView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 55, in get_queryset
-    return Task.objects.filter(list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
-    return Board.objects.filter(owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
-    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
-    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b5a350>.
-view's TestTranslationView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/generics.py", line 112, in get_serializer
-    serializer_class = self.get_serializer_class()
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/generics.py", line 126, in get_serializer_class
-    assert self.serializer_class is not None, (
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 'TestTranslationView' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
-view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
-    return Board.objects.filter(owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
-    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
-    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
-    return Board.objects.filter(owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
-    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
-    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's TaskMoveView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 55, in get_queryset
-    return Task.objects.filter(list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
-    return Board.objects.filter(owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
-    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
-    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's TaskMoveView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 55, in get_queryset
-    return Task.objects.filter(list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's BoardDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/boards/views.py", line 27, in get_queryset
-    return Board.objects.filter(owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's ListDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 27, in get_queryset
-    return List.objects.filter(board__id=board_id, board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's TaskDetailView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2128, in get_prep_value
-    return int(value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/contrib/auth/models.py", line 549, in __int__
-    raise TypeError(
-    ...<2 lines>...
-    )
-TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/trello/lists/views.py", line 48, in get_queryset
-    return Task.objects.filter(list__id=list_id, list__board__owner=self.request.user)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1493, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1511, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1518, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1646, in add_q
-    clause, _ = self._add_q(q_object, can_reuse)
-                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1678, in _add_q
-    child_clause, needed_inner = self.build_filter(
-                                 ~~~~~~~~~~~~~~~~~^
-        child,
-        ^^^^^^
-    ...<7 lines>...
-        update_join_types=update_join_types,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1588, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1415, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/lookups.py", line 38, in __init__
-    self.rhs = self.get_prep_lookup()
-               ~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 112, in get_prep_lookup
-    self.rhs = target_field.get_prep_value(self.rhs)
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2130, in get_prep_value
-    raise e.__class__(
-        "Field '%s' expected a number but got %r." % (self.name, value),
-    ) from e
-TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7c89b5b6f230>.
-view's TestTranslationView raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
-Traceback (most recent call last):
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/drf_yasg/inspectors/base.py", line 42, in call_view_method
-    return view_method()
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/generics.py", line 112, in get_serializer
-    serializer_class = self.get_serializer_class()
-  File "/home/osboxes/projects/trelloProject/.venv/lib/python3.13/site-packages/rest_framework/generics.py", line 126, in get_serializer_class
-    assert self.serializer_class is not None, (
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 'TestTranslationView' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': '41', 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Creating invitation with validated_data: {'invited_user': <User: moj>, 'board': <Board: bord test>}
+Created invitation: Invitation to bord test for moj
+Validating data: {'status': 'accepted'}
+Unauthorized: /api/token/
+Validating data: {'invited_user_email': 'mojijk45@gmail.com'}
+Searching for user with email: mojijk45@gmail.com
+Found user: mojtabaaa
+Request data: {'board': '43', 'invited_user_email': 'mojijk45@gmail.com'}
+Found board: ذخقی
+Invited user: mojtabaaa
+Creating invitation with validated_data: {'invited_user': <User: mojtabaaa>, 'board': <Board: ذخقی>}
+Created invitation: Invitation to ذخقی for mojtabaaa
 Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Creating invitation with validated_data: {'invited_user': <User: moj>, 'board': <Board: bord test>}
+Created invitation: Invitation to bord test for moj
+
+def xmap(task, it):
+    return 1
+
+
+def backend_cleanup():
+    return 1
+
+
+def chain(*args, **kwargs):
+    return 1
+
+
+def xstarmap(task, it):
+    return 1
+
+
+def accumulate(self, *args, **kwargs):
+    return 1
+
+
+def send_invitation_email(invitation_id, invited_user_language):
+    return 1
+
+
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+
+def chunks(task, it, n):
+    return 1
+
+
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+Start from server, version: 0.9, properties: {'capabilities': {'publisher_confirms': True, 'exchange_exchange_bindings': True, 'basic.nack': True, 'consumer_cancel_notify': True, 'connection.blocked': True, 'consumer_priorities': True, 'authentication_failure_close': True, 'per_consumer_qos': True, 'direct_reply_to': True}, 'cluster_name': 'rabbit@osboxes', 'copyright': 'Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries', 'information': 'Licensed under the MPL 2.0. Website: https://rabbitmq.com', 'platform': 'Erlang/OTP 27.3', 'product': 'RabbitMQ', 'version': '4.0.5'}, mechanisms: [b'AMQPLAIN', b'ANONYMOUS', b'PLAIN'], locales: ['en_US']
+using channel_id: 1
+Channel open
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Duplicate invitation for user moj to board bord test
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Duplicate invitation for user moj to board bord test
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Duplicate invitation for user moj to board bord test
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Duplicate invitation for user moj to board bord test
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojijk45@gmail.com'}
+Searching for user with email: mojijk45@gmail.com
+Found user: mojtabaaa
+Request data: {'board': 43, 'invited_user_email': 'mojijk45@gmail.com'}
+Found board: ذخقی
+Invited user: mojtabaaa
+Duplicate invitation for user mojtabaaa to board ذخقی
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojijk45@gmail.com'}
+Searching for user with email: mojijk45@gmail.com
+Found user: mojtabaaa
+Request data: {'board': 43, 'invited_user_email': 'mojijk45@gmail.com'}
+Found board: ذخقی
+Invited user: mojtabaaa
+Duplicate invitation for user mojtabaaa to board ذخقی
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojijk45@gmail.com'}
+Searching for user with email: mojijk45@gmail.com
+Found user: mojtabaaa
+Request data: {'board': 43, 'invited_user_email': 'mojijk45@gmail.com'}
+Found board: ذخقی
+Invited user: mojtabaaa
+Duplicate invitation for user mojtabaaa to board ذخقی
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Duplicate invitation for user moj to board bord test
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Duplicate invitation for user moj to board bord test
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Duplicate invitation for user moj to board bord test
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Duplicate invitation for user moj to board bord test
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Duplicate invitation for user moj to board bord test
+Bad Request: /invitations/
+Validating data: {'invited_user_email': 'mojijk45@gmail.com'}
+Searching for user with email: mojijk45@gmail.com
+Found user: mojtabaaa
+Request data: {'board': 43, 'invited_user_email': 'mojijk45@gmail.com'}
+Found board: ذخقی
+Invited user: mojtabaaa
+Duplicate invitation for user mojtabaaa to board ذخقی
+Bad Request: /invitations/
+Validating data: {'status': 'accepted'}
+Bad Request: /invitations/37/accept/
+Validating data: {'status': 'accepted'}
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Creating invitation with validated_data: {'invited_user': <User: moj>, 'board': <Board: bord test>}
+Created invitation: Invitation to bord test for moj
+Validating data: {'invited_user_email': 'mojijk45@gmail.com'}
+Searching for user with email: mojijk45@gmail.com
+Found user: mojtabaaa
+Request data: {'board': 43, 'invited_user_email': 'mojijk45@gmail.com'}
+Found board: ذخقی
+Invited user: mojtabaaa
+Duplicate invitation for user mojtabaaa to board ذخقی
+Bad Request: /invitations/
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Validating data: {'invited_user_email': 'mojtaba.cy@gmail.com'}
+Searching for user with email: mojtaba.cy@gmail.com
+Found user: moj
+Request data: {'board': 41, 'invited_user_email': 'mojtaba.cy@gmail.com'}
+Found board: bord test
+Invited user: moj
+Duplicate invitation for user moj to board bord test
+Bad Request: /invitations/

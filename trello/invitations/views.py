@@ -73,6 +73,13 @@ class InvitationAcceptView(generics.UpdateAPIView):
         board.members.add(invitation.invited_user)
         serializer.save(status='accepted')
 
+    def update(self, request, *args, **kwargs):
+        data = {'status': 'accepted'}
+        serializer = self.get_serializer(self.get_object(), data=data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
+        return Response(serializer.data)
+
 class InvitationRejectView(generics.UpdateAPIView):
     serializer_class = InvitationSerializer
     permission_classes = [IsAuthenticated]
@@ -86,3 +93,10 @@ class InvitationRejectView(generics.UpdateAPIView):
             raise ValidationError("This invitation is already processed.")
         
         serializer.save(status='rejected')
+
+    def update(self, request, *args, **kwargs):
+        data = {'status': 'rejected'}
+        serializer = self.get_serializer(self.get_object(), data=data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
+        return Response(serializer.data)
