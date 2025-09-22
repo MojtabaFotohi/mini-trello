@@ -28,25 +28,25 @@ msgid "Welcome to Modern Trello"
 msgstr "Bienvenue sur Trello Moderne"
 
 msgid "Organize anything, together. The easy, flexible way to manage your projects."
-msgstr "Organisez tout, ensemble. La façon simple et flexible de gérer vos projets."
+msgstr "Organisez tout, ensemble. La manière simple et flexible de gérer vos projets."
 
 msgid "Login"
 msgstr "Connexion"
 
 msgid "Sign Up"
-msgstr "Inscription"
+msgstr "S’inscrire"
 
 msgid "Welcome Back"
 msgstr "Bon retour"
 
 msgid "Username"
-msgstr "Nom d'utilisateur"
+msgstr "Nom d’utilisateur"
 
 msgid "Password"
 msgstr "Mot de passe"
 
 msgid "Don't have an account? Sign up"
-msgstr "Vous n'avez pas de compte ? Inscrivez-vous"
+msgstr "Pas de compte ? Inscrivez-vous"
 
 msgid "Create Account"
 msgstr "Créer un compte"
@@ -67,7 +67,7 @@ msgid "Your Boards"
 msgstr "Vos tableaux"
 
 msgid "Select a board to get started, or create a new one"
-msgstr "Sélectionnez un tableau pour commencer, ou créez-en un nouveau"
+msgstr "Sélectionnez un tableau pour commencer ou créez-en un nouveau"
 
 msgid "Create New Board"
 msgstr "Créer un nouveau tableau"
@@ -103,7 +103,7 @@ msgid "Task Description"
 msgstr "Description de la tâche"
 
 msgid "Due Date (Optional)"
-msgstr "Date d'échéance (optionnelle)"
+msgstr "Date d’échéance (optionnelle)"
 
 msgid "Add Task"
 msgstr "Ajouter la tâche"
@@ -118,7 +118,7 @@ msgid "Description"
 msgstr "Description"
 
 msgid "Due Date"
-msgstr "Date d'échéance"
+msgstr "Date d’échéance"
 
 msgid "List"
 msgstr "Liste"
@@ -133,7 +133,7 @@ msgid "Close"
 msgstr "Fermer"
 
 msgid "Made with Modern Design"
-msgstr "Conçu avec un design moderne"
+msgstr "Réalisé avec un design moderne"
 
 msgid "Created recently"
 msgstr "Créé récemment"
@@ -157,7 +157,7 @@ msgid "Please fill in all required fields"
 msgstr "Veuillez remplir tous les champs obligatoires"
 
 msgid "Registration failed"
-msgstr "Échec de l'inscription"
+msgstr "Échec de l’inscription"
 
 msgid "Registration successful! Please login."
 msgstr "Inscription réussie ! Veuillez vous connecter."
@@ -229,16 +229,16 @@ msgid "Error creating task"
 msgstr "Erreur lors de la création de la tâche"
 
 msgid "No due date"
-msgstr "Pas de date d'échéance"
+msgstr "Aucune date d’échéance"
 
 msgid "No description"
-msgstr "Pas de description"
+msgstr "Aucune description"
 
 msgid "No description provided"
 msgstr "Aucune description fournie"
 
 msgid "No due date set"
-msgstr "Aucune date d'échéance définie"
+msgstr "Aucune date d’échéance définie"
 
 msgid "Unknown List"
 msgstr "Liste inconnue"
@@ -249,30 +249,14 @@ msgstr "Inconnu"
 msgid "Are you sure you want to delete this task?"
 msgstr "Êtes-vous sûr de vouloir supprimer cette tâche ?"
 
-msgid "Failed to delete task"
-msgstr "Échec de la suppression de la tâche"
-
-msgid "Error deleting task"
-msgstr "Erreur lors de la suppression de la tâche"
-
 msgid "Failed to move task"
 msgstr "Échec du déplacement de la tâche"
 
-
-
-
-
-
-
-
-
-
-
 msgid "Invitation to join {board_title}"
-msgstr "Invitation à rejoindre le tableau {board_title}"
+msgstr "Invitation à rejoindre {board_title}"
 
 msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
-msgstr "Bonjour {user_name},\n\nVous avez été invité à rejoindre le tableau '{board_title}' sur Modern Trello.\nVeuillez vous connecter pour accepter ou refuser cette invitation.\n\nCordialement,\nL'équipe Modern Trello"
+msgstr "Bonjour {user_name},\n\nVous avez été invité à rejoindre le tableau « {board_title} » sur Trello Moderne.\nVeuillez vous connecter pour accepter ou refuser cette invitation.\n\nCordialement,\nL’équipe Trello Moderne"
 
 msgid "Board Members"
 msgstr "Membres du tableau"
@@ -281,7 +265,7 @@ msgid "Invite Member"
 msgstr "Inviter un membre"
 
 msgid "Send Invitation"
-msgstr "Envoyer une invitation"
+msgstr "Envoyer l’invitation"
 
 msgid "Members"
 msgstr "Membres"
@@ -293,40 +277,142 @@ msgid "No pending invitations"
 msgstr "Aucune invitation en attente"
 
 msgid "please_enter_email"
-msgstr "Veuillez entrer une adresse e-mail"
+msgstr "veuillez entrer un e-mail"
 
 msgid "invitation_sent"
-msgstr "Invitation envoyée avec succès"
+msgstr "invitation envoyée"
 
 msgid "failed_invite_member"
-msgstr "Échec de l'invitation du membre"
+msgstr "échec de l’invitation du membre"
 
 msgid "error_inviting_member"
-msgstr "Erreur lors de l'invitation du membre"
+msgstr "erreur lors de l’invitation du membre"
 
 msgid "failed_load_members"
-msgstr "Échec du chargement des membres"
+msgstr "échec du chargement des membres"
 
 msgid "failed_load_invitations"
-msgstr "Échec du chargement des invitations"
+msgstr "échec du chargement des invitations"
 
 msgid "error_loading_data"
-msgstr "Erreur lors du chargement des données"
+msgstr "erreur lors du chargement des données"
 
 msgid "invitation_accepted"
-msgstr "Invitation acceptée avec succès"
+msgstr "invitation acceptée"
 
 msgid "failed_accept_invitation"
-msgstr "Échec de l'acceptation de l'invitation"
+msgstr "échec de l’acceptation de l’invitation"
 
 msgid "error_accepting_invitation"
-msgstr "Erreur lors de l'acceptation de l'invitation"
+msgstr "erreur lors de l’acceptation de l’invitation"
 
 msgid "invitation_rejected"
-msgstr "Invitation rejetée avec succès"
+msgstr "invitation rejetée"
 
 msgid "failed_reject_invitation"
-msgstr "Échec du rejet de l'invitation"
+msgstr "échec du rejet de l’invitation"
 
 msgid "error_rejecting_invitation"
-msgstr "Erreur lors du rejet de l'invitation"
+msgstr "erreur lors du rejet de l’invitation"
+
+msgid "English"
+msgstr "Anglais"
+
+msgid "Persian"
+msgstr "Persan"
+
+msgid "Arabic"
+msgstr "Arabe"
+
+msgid "German"
+msgstr "Allemand"
+
+msgid "French"
+msgstr "Français"
+
+msgid "Italian"
+msgstr "Italien"
+
+msgid "Hindi"
+msgstr "Hindi"
+
+msgid "Korean"
+msgstr "Coréen"
+
+msgid "Chinese"
+msgstr "Chinois"
+
+msgid "Japanese"
+msgstr "Japonais"
+
+msgid "Russian"
+msgstr "Russe"
+
+msgid "Turkish"
+msgstr "Turc"
+
+msgid "Spanish"
+msgstr "Espagnol"
+
+msgid "Select Language"
+msgstr "Choisir la langue"
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Invite to Board"
+msgstr "Inviter au tableau"
+
+msgid "User Email"
+msgstr "E-mail de l’utilisateur"
+
+msgid "Send Invite"
+msgstr "Envoyer l’invitation"
+
+msgid "Manage Invitations"
+msgstr "Gérer les invitations"
+
+msgid "Sent Invitations"
+msgstr "Invitations envoyées"
+
+msgid "Received Invitations"
+msgstr "Invitations reçues"
+
+msgid "Select Board"
+msgstr "Sélectionner un tableau"
+
+msgid "Accept"
+msgstr "Accepter"
+
+msgid "Reject"
+msgstr "Refuser"
+
+msgid "Assigned Users"
+msgstr "Utilisateurs assignés"
+
+msgid "Select user to assign"
+msgstr "Sélectionnez un utilisateur à assigner"
+
+msgid "Assign User"
+msgstr "Assigner un utilisateur"
+
+msgid "No users assigned"
+msgstr "Aucun utilisateur assigné"
+
+msgid "Error loading board members"
+msgstr "Erreur lors du chargement des membres du tableau"
+
+msgid "No sent invitations"
+msgstr "Aucune invitation envoyée"
+
+msgid "No received invitations"
+msgstr "Aucune invitation reçue"
+
+msgid "User Profile"
+msgstr "Profil de l’utilisateur"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Preferred Language"
+msgstr "Langue préférée"

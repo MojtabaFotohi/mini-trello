@@ -1,0 +1,423 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-22 18:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: invitations/tasks.py:39
+#, python-brace-format
+
+
+
+
+
+msgid "Modern Trello"
+msgstr "Современный Trello"
+
+msgid "Welcome to Modern Trello"
+msgstr "Добро пожаловать в Современный Trello"
+
+msgid "Organize anything, together. The easy, flexible way to manage your projects."
+msgstr "Организуйте всё вместе. Лёгкий и гибкий способ управления проектами."
+
+msgid "Login"
+msgstr "Вход"
+
+msgid "Sign Up"
+msgstr "Регистрация"
+
+msgid "Welcome Back"
+msgstr "С возвращением"
+
+msgid "Username"
+msgstr "Имя пользователя"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Don't have an account? Sign up"
+msgstr "Нет аккаунта? Зарегистрируйтесь"
+
+msgid "Create Account"
+msgstr "Создать аккаунт"
+
+msgid "Email"
+msgstr "Электронная почта"
+
+msgid "Full Name"
+msgstr "Полное имя"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Already have an account? Login"
+msgstr "Уже есть аккаунт? Войти"
+
+msgid "Your Boards"
+msgstr "Ваши доски"
+
+msgid "Select a board to get started, or create a new one"
+msgstr "Выберите доску, чтобы начать, или создайте новую"
+
+msgid "Create New Board"
+msgstr "Создать новую доску"
+
+msgid "Board Title"
+msgstr "Название доски"
+
+msgid "Choose Color"
+msgstr "Выберите цвет"
+
+msgid "Create Board"
+msgstr "Создать доску"
+
+msgid "Add List"
+msgstr "Добавить список"
+
+msgid "Add New List"
+msgstr "Добавить новый список"
+
+msgid "List Title"
+msgstr "Название списка"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Add New Task"
+msgstr "Добавить новую задачу"
+
+msgid "Task Title"
+msgstr "Название задачи"
+
+msgid "Task Description"
+msgstr "Описание задачи"
+
+msgid "Due Date (Optional)"
+msgstr "Срок (необязательно)"
+
+msgid "Add Task"
+msgstr "Добавить задачу"
+
+msgid "Task Details"
+msgstr "Детали задачи"
+
+msgid "Title"
+msgstr "Заголовок"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Due Date"
+msgstr "Срок"
+
+msgid "List"
+msgstr "Список"
+
+msgid "Created"
+msgstr "Создано"
+
+msgid "Delete Task"
+msgstr "Удалить задачу"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Made with Modern Design"
+msgstr "Создано с современным дизайном"
+
+msgid "Created recently"
+msgstr "Создано недавно"
+
+msgid "Back to Boards"
+msgstr "Назад к доскам"
+
+msgid "Logout"
+msgstr "Выйти"
+
+msgid "Please fill in all fields"
+msgstr "Пожалуйста, заполните все поля"
+
+msgid "Invalid credentials"
+msgstr "Неверные данные"
+
+msgid "Login failed"
+msgstr "Не удалось войти"
+
+msgid "Please fill in all required fields"
+msgstr "Пожалуйста, заполните все обязательные поля"
+
+msgid "Registration failed"
+msgstr "Регистрация не удалась"
+
+msgid "Registration successful! Please login."
+msgstr "Регистрация прошла успешно! Пожалуйста, войдите."
+
+msgid "Unauthorized"
+msgstr "Не авторизован"
+
+msgid "Failed to load boards"
+msgstr "Не удалось загрузить доски"
+
+msgid "Error loading boards"
+msgstr "Ошибка загрузки досок"
+
+msgid "Please enter a board title"
+msgstr "Пожалуйста, введите название доски"
+
+msgid "Failed to create board"
+msgstr "Не удалось создать доску"
+
+msgid "Error creating board"
+msgstr "Ошибка при создании доски"
+
+msgid "Are you sure you want to delete this board?"
+msgstr "Вы уверены, что хотите удалить эту доску?"
+
+msgid "Failed to delete board"
+msgstr "Не удалось удалить доску"
+
+msgid "Error deleting board"
+msgstr "Ошибка при удалении доски"
+
+msgid "Failed to load lists"
+msgstr "Не удалось загрузить списки"
+
+msgid "Error loading lists"
+msgstr "Ошибка загрузки списков"
+
+msgid "Please enter a list title"
+msgstr "Пожалуйста, введите название списка"
+
+msgid "Failed to create list"
+msgstr "Не удалось создать список"
+
+msgid "Error creating list"
+msgstr "Ошибка при создании списка"
+
+msgid "Are you sure you want to delete this list and all its tasks?"
+msgstr "Вы уверены, что хотите удалить этот список и все его задачи?"
+
+msgid "Failed to delete list"
+msgstr "Не удалось удалить список"
+
+msgid "Error deleting list"
+msgstr "Ошибка при удалении списка"
+
+msgid "Failed to load tasks"
+msgstr "Не удалось загрузить задачи"
+
+msgid "Error loading tasks"
+msgstr "Ошибка загрузки задач"
+
+msgid "Please enter a task title"
+msgstr "Пожалуйста, введите название задачи"
+
+msgid "Failed to create task"
+msgstr "Не удалось создать задачу"
+
+msgid "Error creating task"
+msgstr "Ошибка при создании задачи"
+
+msgid "No due date"
+msgstr "Срок не установлен"
+
+msgid "No description"
+msgstr "Описание отсутствует"
+
+msgid "No description provided"
+msgstr "Описание не предоставлено"
+
+msgid "No due date set"
+msgstr "Срок не задан"
+
+msgid "Unknown List"
+msgstr "Неизвестный список"
+
+msgid "Unknown"
+msgstr "Неизвестно"
+
+msgid "Are you sure you want to delete this task?"
+msgstr "Вы уверены, что хотите удалить эту задачу?"
+
+msgid "Failed to move task"
+msgstr "Не удалось переместить задачу"
+
+msgid "Invitation to join {board_title}"
+msgstr "Приглашение присоединиться к {board_title}"
+
+msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
+msgstr "Здравствуйте, {user_name},\n\nВас пригласили присоединиться к доске '{board_title}' в Современном Trello.\nПожалуйста, войдите, чтобы принять или отклонить приглашение.\n\nС уважением,\nКоманда Современного Trello"
+
+msgid "Board Members"
+msgstr "Участники доски"
+
+msgid "Invite Member"
+msgstr "Пригласить участника"
+
+msgid "Send Invitation"
+msgstr "Отправить приглашение"
+
+msgid "Members"
+msgstr "Участники"
+
+msgid "Invitations"
+msgstr "Приглашения"
+
+msgid "No pending invitations"
+msgstr "Нет ожидающих приглашений"
+
+msgid "please_enter_email"
+msgstr "Пожалуйста, введите email"
+
+msgid "invitation_sent"
+msgstr "Приглашение отправлено"
+
+msgid "failed_invite_member"
+msgstr "Не удалось пригласить участника"
+
+msgid "error_inviting_member"
+msgstr "Ошибка при приглашении участника"
+
+msgid "failed_load_members"
+msgstr "Не удалось загрузить участников"
+
+msgid "failed_load_invitations"
+msgstr "Не удалось загрузить приглашения"
+
+msgid "error_loading_data"
+msgstr "Ошибка загрузки данных"
+
+msgid "invitation_accepted"
+msgstr "Приглашение принято"
+
+msgid "failed_accept_invitation"
+msgstr "Не удалось принять приглашение"
+
+msgid "error_accepting_invitation"
+msgstr "Ошибка при принятии приглашения"
+
+msgid "invitation_rejected"
+msgstr "Приглашение отклонено"
+
+msgid "failed_reject_invitation"
+msgstr "Не удалось отклонить приглашение"
+
+msgid "error_rejecting_invitation"
+msgstr "Ошибка при отклонении приглашения"
+
+msgid "English"
+msgstr "Английский"
+
+msgid "Persian"
+msgstr "Персидский"
+
+msgid "Arabic"
+msgstr "Арабский"
+
+msgid "German"
+msgstr "Немецкий"
+
+msgid "French"
+msgstr "Французский"
+
+msgid "Italian"
+msgstr "Итальянский"
+
+msgid "Hindi"
+msgstr "Хинди"
+
+msgid "Korean"
+msgstr "Корейский"
+
+msgid "Chinese"
+msgstr "Китайский"
+
+msgid "Japanese"
+msgstr "Японский"
+
+msgid "Russian"
+msgstr "Русский"
+
+msgid "Turkish"
+msgstr "Турецкий"
+
+msgid "Spanish"
+msgstr "Испанский"
+
+msgid "Select Language"
+msgstr "Выберите язык"
+
+msgid "Profile"
+msgstr "Профиль"
+
+msgid "Invite to Board"
+msgstr "Пригласить на доску"
+
+msgid "User Email"
+msgstr "Email пользователя"
+
+msgid "Send Invite"
+msgstr "Отправить приглашение"
+
+msgid "Manage Invitations"
+msgstr "Управление приглашениями"
+
+msgid "Sent Invitations"
+msgstr "Отправленные приглашения"
+
+msgid "Received Invitations"
+msgstr "Полученные приглашения"
+
+msgid "Select Board"
+msgstr "Выберите доску"
+
+msgid "Accept"
+msgstr "Принять"
+
+msgid "Reject"
+msgstr "Отклонить"
+
+msgid "Assigned Users"
+msgstr "Назначенные пользователи"
+
+msgid "Select user to assign"
+msgstr "Выберите пользователя для назначения"
+
+msgid "Assign User"
+msgstr "Назначить пользователя"
+
+msgid "No users assigned"
+msgstr "Нет назначенных пользователей"
+
+msgid "Error loading board members"
+msgstr "Ошибка загрузки участников доски"
+
+msgid "No sent invitations"
+msgstr "Нет отправленных приглашений"
+
+msgid "No received invitations"
+msgstr "Нет полученных приглашений"
+
+msgid "User Profile"
+msgstr "Профиль пользователя"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Preferred Language"
+msgstr "Предпочтительный язык"

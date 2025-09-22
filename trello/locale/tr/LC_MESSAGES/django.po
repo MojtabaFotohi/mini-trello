@@ -8,16 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-18 14:53+0000\n"
+"POT-Creation-Date: 2025-09-22 18:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: en\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: users/views.py:24
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: invitations/tasks.py:39
+#, python-brace-format
+
 
 
 
@@ -25,394 +27,394 @@ msgid "Modern Trello"
 msgstr "Modern Trello"
 
 msgid "Welcome to Modern Trello"
-msgstr "Welcome to Modern Trello"
+msgstr "Modern Trello'ya Hoş Geldiniz"
 
 msgid "Organize anything, together. The easy, flexible way to manage your projects."
-msgstr "Organize anything, together. The easy, flexible way to manage your projects."
+msgstr "Her şeyi birlikte organize edin. Projelerinizi yönetmenin kolay ve esnek yolu."
 
 msgid "Login"
-msgstr "Login"
+msgstr "Giriş Yap"
 
 msgid "Sign Up"
-msgstr "Sign Up"
+msgstr "Kayıt Ol"
 
 msgid "Welcome Back"
-msgstr "Welcome Back"
+msgstr "Tekrar Hoş Geldiniz"
 
 msgid "Username"
-msgstr "Username"
+msgstr "Kullanıcı Adı"
 
 msgid "Password"
-msgstr "Password"
+msgstr "Şifre"
 
 msgid "Don't have an account? Sign up"
-msgstr "Don't have an account? Sign up"
+msgstr "Hesabınız yok mu? Kayıt Olun"
 
 msgid "Create Account"
-msgstr "Create Account"
+msgstr "Hesap Oluştur"
 
 msgid "Email"
-msgstr "Email"
+msgstr "E-posta"
 
 msgid "Full Name"
-msgstr "Full Name"
+msgstr "Ad Soyad"
 
 msgid "Language"
-msgstr "Language"
+msgstr "Dil"
 
 msgid "Already have an account? Login"
-msgstr "Already have an account? Login"
+msgstr "Zaten hesabınız var mı? Giriş Yapın"
 
 msgid "Your Boards"
-msgstr "Your Boards"
+msgstr "Panolarınız"
 
 msgid "Select a board to get started, or create a new one"
-msgstr "Select a board to get started, or create a new one"
+msgstr "Başlamak için bir pano seçin veya yeni bir pano oluşturun"
 
 msgid "Create New Board"
-msgstr "Create New Board"
+msgstr "Yeni Pano Oluştur"
 
 msgid "Board Title"
-msgstr "Board Title"
+msgstr "Pano Başlığı"
 
 msgid "Choose Color"
-msgstr "Choose Color"
+msgstr "Renk Seçin"
 
 msgid "Create Board"
-msgstr "Create Board"
+msgstr "Pano Oluştur"
 
 msgid "Add List"
-msgstr "Add List"
+msgstr "Liste Ekle"
 
 msgid "Add New List"
-msgstr "Add New List"
+msgstr "Yeni Liste Ekle"
 
 msgid "List Title"
-msgstr "List Title"
+msgstr "Liste Başlığı"
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "İptal"
 
 msgid "Add New Task"
-msgstr "Add New Task"
+msgstr "Yeni Görev Ekle"
 
 msgid "Task Title"
-msgstr "Task Title"
+msgstr "Görev Başlığı"
 
 msgid "Task Description"
-msgstr "Task Description"
+msgstr "Görev Açıklaması"
 
 msgid "Due Date (Optional)"
-msgstr "Due Date (Optional)"
+msgstr "Son Tarih (Opsiyonel)"
 
 msgid "Add Task"
-msgstr "Add Task"
+msgstr "Görev Ekle"
 
 msgid "Task Details"
-msgstr "Task Details"
+msgstr "Görev Detayları"
 
 msgid "Title"
-msgstr "Title"
+msgstr "Başlık"
 
 msgid "Description"
-msgstr "Description"
+msgstr "Açıklama"
 
 msgid "Due Date"
-msgstr "Due Date"
+msgstr "Son Tarih"
 
 msgid "List"
-msgstr "List"
+msgstr "Liste"
 
 msgid "Created"
-msgstr "Created"
+msgstr "Oluşturuldu"
 
 msgid "Delete Task"
-msgstr "Delete Task"
+msgstr "Görevi Sil"
 
 msgid "Close"
-msgstr "Close"
+msgstr "Kapat"
 
 msgid "Made with Modern Design"
-msgstr "Made with Modern Design"
+msgstr "Modern Tasarım ile Yapıldı"
 
 msgid "Created recently"
-msgstr "Created recently"
+msgstr "Yakın zamanda oluşturuldu"
 
 msgid "Back to Boards"
-msgstr "Back to Boards"
+msgstr "Panolara Geri Dön"
 
 msgid "Logout"
-msgstr "Logout"
+msgstr "Çıkış Yap"
 
 msgid "Please fill in all fields"
-msgstr "Please fill in all fields"
+msgstr "Lütfen tüm alanları doldurun"
 
 msgid "Invalid credentials"
-msgstr "Invalid credentials"
+msgstr "Geçersiz bilgiler"
 
 msgid "Login failed"
-msgstr "Login failed"
+msgstr "Giriş başarısız"
 
 msgid "Please fill in all required fields"
-msgstr "Please fill in all required fields"
+msgstr "Lütfen tüm gerekli alanları doldurun"
 
 msgid "Registration failed"
-msgstr "Registration failed"
+msgstr "Kayıt başarısız"
 
 msgid "Registration successful! Please login."
-msgstr "Registration successful! Please login."
+msgstr "Kayıt başarılı! Lütfen giriş yapın."
 
 msgid "Unauthorized"
-msgstr "Unauthorized"
+msgstr "Yetkisiz"
 
 msgid "Failed to load boards"
-msgstr "Failed to load boards"
+msgstr "Panolar yüklenemedi"
 
 msgid "Error loading boards"
-msgstr "Error loading boards"
+msgstr "Panolar yüklenirken hata oluştu"
 
 msgid "Please enter a board title"
-msgstr "Please enter a board title"
+msgstr "Lütfen bir pano başlığı girin"
 
 msgid "Failed to create board"
-msgstr "Failed to create board"
+msgstr "Pano oluşturulamadı"
 
 msgid "Error creating board"
-msgstr "Error creating board"
+msgstr "Pano oluştururken hata oluştu"
 
 msgid "Are you sure you want to delete this board?"
-msgstr "Are you sure you want to delete this board?"
+msgstr "Bu panoyu silmek istediğinizden emin misiniz?"
 
 msgid "Failed to delete board"
-msgstr "Failed to delete board"
+msgstr "Pano silinemedi"
 
 msgid "Error deleting board"
-msgstr "Error deleting board"
+msgstr "Pano silerken hata oluştu"
 
 msgid "Failed to load lists"
-msgstr "Failed to load lists"
+msgstr "Listeler yüklenemedi"
 
 msgid "Error loading lists"
-msgstr "Error loading lists"
+msgstr "Listeler yüklenirken hata oluştu"
 
 msgid "Please enter a list title"
-msgstr "Please enter a list title"
+msgstr "Lütfen bir liste başlığı girin"
 
 msgid "Failed to create list"
-msgstr "Failed to create list"
+msgstr "Liste oluşturulamadı"
 
 msgid "Error creating list"
-msgstr "Error creating list"
+msgstr "Liste oluştururken hata oluştu"
 
 msgid "Are you sure you want to delete this list and all its tasks?"
-msgstr "Are you sure you want to delete this list and all its tasks?"
+msgstr "Bu listeyi ve tüm görevlerini silmek istediğinizden emin misiniz?"
 
 msgid "Failed to delete list"
-msgstr "Failed to delete list"
+msgstr "Liste silinemedi"
 
 msgid "Error deleting list"
-msgstr "Error deleting list"
+msgstr "Liste silerken hata oluştu"
 
 msgid "Failed to load tasks"
-msgstr "Failed to load tasks"
+msgstr "Görevler yüklenemedi"
 
 msgid "Error loading tasks"
-msgstr "Error loading tasks"
+msgstr "Görevler yüklenirken hata oluştu"
 
 msgid "Please enter a task title"
-msgstr "Please enter a task title"
+msgstr "Lütfen bir görev başlığı girin"
 
 msgid "Failed to create task"
-msgstr "Failed to create task"
+msgstr "Görev oluşturulamadı"
 
 msgid "Error creating task"
-msgstr "Error creating task"
+msgstr "Görev oluştururken hata oluştu"
 
 msgid "No due date"
-msgstr "No due date"
+msgstr "Son tarih yok"
 
 msgid "No description"
-msgstr "No description"
+msgstr "Açıklama yok"
 
 msgid "No description provided"
-msgstr "No description provided"
+msgstr "Açıklama sağlanmadı"
 
 msgid "No due date set"
-msgstr "No due date set"
+msgstr "Son tarih ayarlanmadı"
 
 msgid "Unknown List"
-msgstr "Unknown List"
+msgstr "Bilinmeyen Liste"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Bilinmiyor"
 
 msgid "Are you sure you want to delete this task?"
-msgstr "Are you sure you want to delete this task?"
+msgstr "Bu görevi silmek istediğinizden emin misiniz?"
 
 msgid "Failed to move task"
-msgstr "Failed to move task"
+msgstr "Görev taşınamadı"
 
 msgid "Invitation to join {board_title}"
-msgstr "Invitation to join {board_title}"
+msgstr "{board_title} panosuna davet"
 
 msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
-msgstr "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
+msgstr "Merhaba {user_name},\n\nModern Trello'daki '{board_title}' panosuna davet edildiniz.\nLütfen bu daveti kabul veya reddetmek için giriş yapın.\n\nSaygılarımızla,\nModern Trello Ekibi"
 
 msgid "Board Members"
-msgstr "Board Members"
+msgstr "Pano Üyeleri"
 
 msgid "Invite Member"
-msgstr "Invite Member"
+msgstr "Üye Davet Et"
 
 msgid "Send Invitation"
-msgstr "Send Invitation"
+msgstr "Daveti Gönder"
 
 msgid "Members"
-msgstr "Members"
+msgstr "Üyeler"
 
 msgid "Invitations"
-msgstr "Invitations"
+msgstr "Davetler"
 
 msgid "No pending invitations"
-msgstr "No pending invitations"
+msgstr "Bekleyen davet yok"
 
 msgid "please_enter_email"
-msgstr "please_enter_email"
+msgstr "lütfen_email_girin"
 
 msgid "invitation_sent"
-msgstr "invitation_sent"
+msgstr "davet_gönderildi"
 
 msgid "failed_invite_member"
-msgstr "failed_invite_member"
+msgstr "üye_davet_edilemedi"
 
 msgid "error_inviting_member"
-msgstr "error_inviting_member"
+msgstr "üye_daveti_hatası"
 
 msgid "failed_load_members"
-msgstr "failed_load_members"
+msgstr "üyeler_yüklenemedi"
 
 msgid "failed_load_invitations"
-msgstr "failed_load_invitations"
+msgstr "davetler_yüklenemedi"
 
 msgid "error_loading_data"
-msgstr "error_loading_data"
+msgstr "veri_yükleme_hatası"
 
 msgid "invitation_accepted"
-msgstr "invitation_accepted"
+msgstr "davet_kabul_edildi"
 
 msgid "failed_accept_invitation"
-msgstr "failed_accept_invitation"
+msgstr "davet_kabul_edilemedi"
 
 msgid "error_accepting_invitation"
-msgstr "error_accepting_invitation"
+msgstr "davet_kabul_hatası"
 
 msgid "invitation_rejected"
-msgstr "invitation_rejected"
+msgstr "davet_reddedildi"
 
 msgid "failed_reject_invitation"
-msgstr "failed_reject_invitation"
+msgstr "davet_reddedilemedi"
 
 msgid "error_rejecting_invitation"
-msgstr "error_rejecting_invitation"
+msgstr "davet_reddetme_hatası"
 
 msgid "English"
-msgstr "English"
+msgstr "İngilizce"
 
 msgid "Persian"
-msgstr "Persian"
+msgstr "Farsça"
 
 msgid "Arabic"
-msgstr "Arabic"
+msgstr "Arapça"
 
 msgid "German"
-msgstr "German"
+msgstr "Almanca"
 
 msgid "French"
-msgstr "French"
+msgstr "Fransızca"
 
 msgid "Italian"
-msgstr "Italian"
+msgstr "İtalyanca"
 
 msgid "Hindi"
-msgstr "Hindi"
+msgstr "Hintçe"
 
 msgid "Korean"
-msgstr "Korean"
+msgstr "Korece"
 
 msgid "Chinese"
-msgstr "Chinese"
+msgstr "Çince"
 
 msgid "Japanese"
-msgstr "Japanese"
+msgstr "Japonca"
 
 msgid "Russian"
-msgstr "Russian"
+msgstr "Rusça"
 
 msgid "Turkish"
-msgstr "Turkish"
+msgstr "Türkçe"
 
 msgid "Spanish"
-msgstr "Spanish"
+msgstr "İspanyolca"
 
 msgid "Select Language"
-msgstr "Select Language"
+msgstr "Dil Seç"
 
 msgid "Profile"
-msgstr "Profile"
+msgstr "Profil"
 
 msgid "Invite to Board"
-msgstr "Invite to Board"
+msgstr "Panoya Davet Et"
 
 msgid "User Email"
-msgstr "User Email"
+msgstr "Kullanıcı E-postası"
 
 msgid "Send Invite"
-msgstr "Send Invite"
+msgstr "Davet Gönder"
 
 msgid "Manage Invitations"
-msgstr "Manage Invitations"
+msgstr "Davetleri Yönet"
 
 msgid "Sent Invitations"
-msgstr "Sent Invitations"
+msgstr "Gönderilen Davetler"
 
 msgid "Received Invitations"
-msgstr "Received Invitations"
+msgstr "Alınan Davetler"
 
 msgid "Select Board"
-msgstr "Select Board"
+msgstr "Pano Seç"
 
 msgid "Accept"
-msgstr "Accept"
+msgstr "Kabul Et"
 
 msgid "Reject"
-msgstr "Reject"
+msgstr "Reddet"
 
 msgid "Assigned Users"
-msgstr "Assigned Users"
+msgstr "Atanan Kullanıcılar"
 
 msgid "Select user to assign"
-msgstr "Select user to assign"
+msgstr "Atanacak kullanıcıyı seçin"
 
 msgid "Assign User"
-msgstr "Assign User"
+msgstr "Kullanıcı Ata"
 
 msgid "No users assigned"
-msgstr "No users assigned"
+msgstr "Atanan kullanıcı yok"
 
 msgid "Error loading board members"
-msgstr "Error loading board members"
+msgstr "Pano üyeleri yüklenirken hata oluştu"
 
 msgid "No sent invitations"
-msgstr "No sent invitations"
+msgstr "Gönderilen davet yok"
 
 msgid "No received invitations"
-msgstr "No received invitations"
+msgstr "Alınan davet yok"
 
 msgid "User Profile"
-msgstr "User Profile"
+msgstr "Kullanıcı Profili"
 
 msgid "Name"
-msgstr "Name"
+msgstr "İsim"
 
 msgid "Preferred Language"
-msgstr "Preferred Language"
+msgstr "Tercih Edilen Dil"

@@ -1,0 +1,422 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-22 18:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: invitations/tasks.py:39
+#, python-brace-format
+
+
+
+
+
+msgid "Modern Trello"
+msgstr "Trello Moderno"
+
+msgid "Welcome to Modern Trello"
+msgstr "Bienvenido a Trello Moderno"
+
+msgid "Organize anything, together. The easy, flexible way to manage your projects."
+msgstr "Organiza cualquier cosa, juntos. La manera fácil y flexible de gestionar tus proyectos."
+
+msgid "Login"
+msgstr "Iniciar sesión"
+
+msgid "Sign Up"
+msgstr "Registrarse"
+
+msgid "Welcome Back"
+msgstr "Bienvenido de nuevo"
+
+msgid "Username"
+msgstr "Nombre de usuario"
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Don't have an account? Sign up"
+msgstr "¿No tienes una cuenta? Regístrate"
+
+msgid "Create Account"
+msgstr "Crear cuenta"
+
+msgid "Email"
+msgstr "Correo electrónico"
+
+msgid "Full Name"
+msgstr "Nombre completo"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Already have an account? Login"
+msgstr "¿Ya tienes una cuenta? Iniciar sesión"
+
+msgid "Your Boards"
+msgstr "Tus tableros"
+
+msgid "Select a board to get started, or create a new one"
+msgstr "Selecciona un tablero para comenzar o crea uno nuevo"
+
+msgid "Create New Board"
+msgstr "Crear nuevo tablero"
+
+msgid "Board Title"
+msgstr "Título del tablero"
+
+msgid "Choose Color"
+msgstr "Elegir color"
+
+msgid "Create Board"
+msgstr "Crear tablero"
+
+msgid "Add List"
+msgstr "Agregar lista"
+
+msgid "Add New List"
+msgstr "Agregar nueva lista"
+
+msgid "List Title"
+msgstr "Título de la lista"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Add New Task"
+msgstr "Agregar nueva tarea"
+
+msgid "Task Title"
+msgstr "Título de la tarea"
+
+msgid "Task Description"
+msgstr "Descripción de la tarea"
+
+msgid "Due Date (Optional)"
+msgstr "Fecha límite (Opcional)"
+
+msgid "Add Task"
+msgstr "Agregar tarea"
+
+msgid "Task Details"
+msgstr "Detalles de la tarea"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Due Date"
+msgstr "Fecha límite"
+
+msgid "List"
+msgstr "Lista"
+
+msgid "Created"
+msgstr "Creado"
+
+msgid "Delete Task"
+msgstr "Eliminar tarea"
+
+msgid "Close"
+msgstr "Cerrar"
+
+msgid "Made with Modern Design"
+msgstr "Hecho con diseño moderno"
+
+msgid "Created recently"
+msgstr "Creado recientemente"
+
+msgid "Back to Boards"
+msgstr "Volver a tableros"
+
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+msgid "Please fill in all fields"
+msgstr "Por favor, completa todos los campos"
+
+msgid "Invalid credentials"
+msgstr "Credenciales inválidas"
+
+msgid "Login failed"
+msgstr "Error al iniciar sesión"
+
+msgid "Please fill in all required fields"
+msgstr "Por favor, completa todos los campos obligatorios"
+
+msgid "Registration failed"
+msgstr "Registro fallido"
+
+msgid "Registration successful! Please login."
+msgstr "¡Registro exitoso! Por favor, inicia sesión."
+
+msgid "Unauthorized"
+msgstr "No autorizado"
+
+msgid "Failed to load boards"
+msgstr "Error al cargar tableros"
+
+msgid "Error loading boards"
+msgstr "Error cargando tableros"
+
+msgid "Please enter a board title"
+msgstr "Por favor, ingresa un título de tablero"
+
+msgid "Failed to create board"
+msgstr "No se pudo crear el tablero"
+
+msgid "Error creating board"
+msgstr "Error al crear tablero"
+
+msgid "Are you sure you want to delete this board?"
+msgstr "¿Estás seguro de que deseas eliminar este tablero?"
+
+msgid "Failed to delete board"
+msgstr "No se pudo eliminar el tablero"
+
+msgid "Error deleting board"
+msgstr "Error al eliminar tablero"
+
+msgid "Failed to load lists"
+msgstr "Error al cargar listas"
+
+msgid "Error loading lists"
+msgstr "Error cargando listas"
+
+msgid "Please enter a list title"
+msgstr "Por favor, ingresa un título de lista"
+
+msgid "Failed to create list"
+msgstr "No se pudo crear la lista"
+
+msgid "Error creating list"
+msgstr "Error al crear lista"
+
+msgid "Are you sure you want to delete this list and all its tasks?"
+msgstr "¿Estás seguro de que deseas eliminar esta lista y todas sus tareas?"
+
+msgid "Failed to delete list"
+msgstr "No se pudo eliminar la lista"
+
+msgid "Error deleting list"
+msgstr "Error al eliminar lista"
+
+msgid "Failed to load tasks"
+msgstr "Error al cargar tareas"
+
+msgid "Error loading tasks"
+msgstr "Error cargando tareas"
+
+msgid "Please enter a task title"
+msgstr "Por favor, ingresa un título de tarea"
+
+msgid "Failed to create task"
+msgstr "No se pudo crear la tarea"
+
+msgid "Error creating task"
+msgstr "Error al crear tarea"
+
+msgid "No due date"
+msgstr "Sin fecha límite"
+
+msgid "No description"
+msgstr "Sin descripción"
+
+msgid "No description provided"
+msgstr "No se proporcionó descripción"
+
+msgid "No due date set"
+msgstr "No se estableció fecha límite"
+
+msgid "Unknown List"
+msgstr "Lista desconocida"
+
+msgid "Unknown"
+msgstr "Desconocido"
+
+msgid "Are you sure you want to delete this task?"
+msgstr "¿Estás seguro de que deseas eliminar esta tarea?"
+
+msgid "Failed to move task"
+msgstr "No se pudo mover la tarea"
+
+msgid "Invitation to join {board_title}"
+msgstr "Invitación para unirse a {board_title}"
+
+msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
+msgstr "Hola {user_name},\n\nHas sido invitado a unirte al tablero '{board_title}' en Trello Moderno.\nPor favor, inicia sesión para aceptar o rechazar esta invitación.\n\nSaludos,\nEquipo de Trello Moderno"
+
+msgid "Board Members"
+msgstr "Miembros del tablero"
+
+msgid "Invite Member"
+msgstr "Invitar miembro"
+
+msgid "Send Invitation"
+msgstr "Enviar invitación"
+
+msgid "Members"
+msgstr "Miembros"
+
+msgid "Invitations"
+msgstr "Invitaciones"
+
+msgid "No pending invitations"
+msgstr "No hay invitaciones pendientes"
+
+msgid "please_enter_email"
+msgstr "por_favor_ingresa_email"
+
+msgid "invitation_sent"
+msgstr "invitación_enviada"
+
+msgid "failed_invite_member"
+msgstr "falló_invitar_miembro"
+
+msgid "error_inviting_member"
+msgstr "error_invitar_miembro"
+
+msgid "failed_load_members"
+msgstr "falló_cargar_miembros"
+
+msgid "failed_load_invitations"
+msgstr "falló_cargar_invitaciones"
+
+msgid "error_loading_data"
+msgstr "error_cargando_datos"
+
+msgid "invitation_accepted"
+msgstr "invitación_aceptada"
+
+msgid "failed_accept_invitation"
+msgstr "falló_aceptar_invitación"
+
+msgid "error_accepting_invitation"
+msgstr "error_aceptando_invitación"
+
+msgid "invitation_rejected"
+msgstr "invitación_rechazada"
+
+msgid "failed_reject_invitation"
+msgstr "falló_rechazar_invitación"
+
+msgid "error_rejecting_invitation"
+msgstr "error_rechazando_invitación"
+
+msgid "English"
+msgstr "Inglés"
+
+msgid "Persian"
+msgstr "Persa"
+
+msgid "Arabic"
+msgstr "Árabe"
+
+msgid "German"
+msgstr "Alemán"
+
+msgid "French"
+msgstr "Francés"
+
+msgid "Italian"
+msgstr "Italiano"
+
+msgid "Hindi"
+msgstr "Hindi"
+
+msgid "Korean"
+msgstr "Coreano"
+
+msgid "Chinese"
+msgstr "Chino"
+
+msgid "Japanese"
+msgstr "Japonés"
+
+msgid "Russian"
+msgstr "Ruso"
+
+msgid "Turkish"
+msgstr "Turco"
+
+msgid "Spanish"
+msgstr "Español"
+
+msgid "Select Language"
+msgstr "Seleccionar idioma"
+
+msgid "Profile"
+msgstr "Perfil"
+
+msgid "Invite to Board"
+msgstr "Invitar al tablero"
+
+msgid "User Email"
+msgstr "Email del usuario"
+
+msgid "Send Invite"
+msgstr "Enviar invitación"
+
+msgid "Manage Invitations"
+msgstr "Gestionar invitaciones"
+
+msgid "Sent Invitations"
+msgstr "Invitaciones enviadas"
+
+msgid "Received Invitations"
+msgstr "Invitaciones recibidas"
+
+msgid "Select Board"
+msgstr "Seleccionar tablero"
+
+msgid "Accept"
+msgstr "Aceptar"
+
+msgid "Reject"
+msgstr "Rechazar"
+
+msgid "Assigned Users"
+msgstr "Usuarios asignados"
+
+msgid "Select user to assign"
+msgstr "Selecciona un usuario para asignar"
+
+msgid "Assign User"
+msgstr "Asignar usuario"
+
+msgid "No users assigned"
+msgstr "No hay usuarios asignados"
+
+msgid "Error loading board members"
+msgstr "Error cargando miembros del tablero"
+
+msgid "No sent invitations"
+msgstr "No hay invitaciones enviadas"
+
+msgid "No received invitations"
+msgstr "No hay invitaciones recibidas"
+
+msgid "User Profile"
+msgstr "Perfil del usuario"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Preferred Language"
+msgstr "Idioma preferido"

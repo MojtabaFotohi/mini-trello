@@ -1,0 +1,420 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-22 18:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: invitations/tasks.py:39
+#, python-brace-format
+
+
+
+
+msgid "Modern Trello"
+msgstr "Trello Moderno"
+
+msgid "Welcome to Modern Trello"
+msgstr "Benvenuto in Trello Moderno"
+
+msgid "Organize anything, together. The easy, flexible way to manage your projects."
+msgstr "Organizza qualsiasi cosa, insieme. Il modo semplice e flessibile per gestire i tuoi progetti."
+
+msgid "Login"
+msgstr "Accedi"
+
+msgid "Sign Up"
+msgstr "Registrati"
+
+msgid "Welcome Back"
+msgstr "Bentornato"
+
+msgid "Username"
+msgstr "Nome utente"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Don't have an account? Sign up"
+msgstr "Non hai un account? Registrati"
+
+msgid "Create Account"
+msgstr "Crea account"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Full Name"
+msgstr "Nome completo"
+
+msgid "Language"
+msgstr "Lingua"
+
+msgid "Already have an account? Login"
+msgstr "Hai già un account? Accedi"
+
+msgid "Your Boards"
+msgstr "Le tue bacheche"
+
+msgid "Select a board to get started, or create a new one"
+msgstr "Seleziona una bacheca per iniziare o creane una nuova"
+
+msgid "Create New Board"
+msgstr "Crea nuova bacheca"
+
+msgid "Board Title"
+msgstr "Titolo della bacheca"
+
+msgid "Choose Color"
+msgstr "Scegli colore"
+
+msgid "Create Board"
+msgstr "Crea bacheca"
+
+msgid "Add List"
+msgstr "Aggiungi lista"
+
+msgid "Add New List"
+msgstr "Aggiungi nuova lista"
+
+msgid "List Title"
+msgstr "Titolo della lista"
+
+msgid "Cancel"
+msgstr "Annulla"
+
+msgid "Add New Task"
+msgstr "Aggiungi nuovo compito"
+
+msgid "Task Title"
+msgstr "Titolo del compito"
+
+msgid "Task Description"
+msgstr "Descrizione del compito"
+
+msgid "Due Date (Optional)"
+msgstr "Data di scadenza (opzionale)"
+
+msgid "Add Task"
+msgstr "Aggiungi compito"
+
+msgid "Task Details"
+msgstr "Dettagli del compito"
+
+msgid "Title"
+msgstr "Titolo"
+
+msgid "Description"
+msgstr "Descrizione"
+
+msgid "Due Date"
+msgstr "Data di scadenza"
+
+msgid "List"
+msgstr "Lista"
+
+msgid "Created"
+msgstr "Creato"
+
+msgid "Delete Task"
+msgstr "Elimina compito"
+
+msgid "Close"
+msgstr "Chiudi"
+
+msgid "Made with Modern Design"
+msgstr "Creato con design moderno"
+
+msgid "Created recently"
+msgstr "Creato di recente"
+
+msgid "Back to Boards"
+msgstr "Torna alle bacheche"
+
+msgid "Logout"
+msgstr "Esci"
+
+msgid "Please fill in all fields"
+msgstr "Per favore compila tutti i campi"
+
+msgid "Invalid credentials"
+msgstr "Credenziali non valide"
+
+msgid "Login failed"
+msgstr "Accesso fallito"
+
+msgid "Please fill in all required fields"
+msgstr "Per favore compila tutti i campi obbligatori"
+
+msgid "Registration failed"
+msgstr "Registrazione fallita"
+
+msgid "Registration successful! Please login."
+msgstr "Registrazione avvenuta con successo! Effettua l’accesso."
+
+msgid "Unauthorized"
+msgstr "Non autorizzato"
+
+msgid "Failed to load boards"
+msgstr "Impossibile caricare le bacheche"
+
+msgid "Error loading boards"
+msgstr "Errore nel caricamento delle bacheche"
+
+msgid "Please enter a board title"
+msgstr "Per favore inserisci un titolo per la bacheca"
+
+msgid "Failed to create board"
+msgstr "Impossibile creare la bacheca"
+
+msgid "Error creating board"
+msgstr "Errore nella creazione della bacheca"
+
+msgid "Are you sure you want to delete this board?"
+msgstr "Sei sicuro di voler eliminare questa bacheca?"
+
+msgid "Failed to delete board"
+msgstr "Impossibile eliminare la bacheca"
+
+msgid "Error deleting board"
+msgstr "Errore nell’eliminazione della bacheca"
+
+msgid "Failed to load lists"
+msgstr "Impossibile caricare le liste"
+
+msgid "Error loading lists"
+msgstr "Errore nel caricamento delle liste"
+
+msgid "Please enter a list title"
+msgstr "Per favore inserisci un titolo per la lista"
+
+msgid "Failed to create list"
+msgstr "Impossibile creare la lista"
+
+msgid "Error creating list"
+msgstr "Errore nella creazione della lista"
+
+msgid "Are you sure you want to delete this list and all its tasks?"
+msgstr "Sei sicuro di voler eliminare questa lista e tutti i suoi compiti?"
+
+msgid "Failed to delete list"
+msgstr "Impossibile eliminare la lista"
+
+msgid "Error deleting list"
+msgstr "Errore nell’eliminazione della lista"
+
+msgid "Failed to load tasks"
+msgstr "Impossibile caricare i compiti"
+
+msgid "Error loading tasks"
+msgstr "Errore nel caricamento dei compiti"
+
+msgid "Please enter a task title"
+msgstr "Per favore inserisci un titolo per il compito"
+
+msgid "Failed to create task"
+msgstr "Impossibile creare il compito"
+
+msgid "Error creating task"
+msgstr "Errore nella creazione del compito"
+
+msgid "No due date"
+msgstr "Nessuna scadenza"
+
+msgid "No description"
+msgstr "Nessuna descrizione"
+
+msgid "No description provided"
+msgstr "Nessuna descrizione fornita"
+
+msgid "No due date set"
+msgstr "Nessuna data di scadenza impostata"
+
+msgid "Unknown List"
+msgstr "Lista sconosciuta"
+
+msgid "Unknown"
+msgstr "Sconosciuto"
+
+msgid "Are you sure you want to delete this task?"
+msgstr "Sei sicuro di voler eliminare questo compito?"
+
+msgid "Failed to move task"
+msgstr "Impossibile spostare il compito"
+
+msgid "Invitation to join {board_title}"
+msgstr "Invito a unirti a {board_title}"
+
+msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
+msgstr "Ciao {user_name},\n\nSei stato invitato a unirti alla bacheca '{board_title}' su Trello Moderno.\nAccedi per accettare o rifiutare questo invito.\n\nCordiali saluti,\nIl team di Trello Moderno"
+
+msgid "Board Members"
+msgstr "Membri della bacheca"
+
+msgid "Invite Member"
+msgstr "Invita membro"
+
+msgid "Send Invitation"
+msgstr "Invia invito"
+
+msgid "Members"
+msgstr "Membri"
+
+msgid "Invitations"
+msgstr "Inviti"
+
+msgid "No pending invitations"
+msgstr "Nessun invito in sospeso"
+
+msgid "please_enter_email"
+msgstr "per favore inserisci l'email"
+
+msgid "invitation_sent"
+msgstr "invito inviato"
+
+msgid "failed_invite_member"
+msgstr "impossibile invitare il membro"
+
+msgid "error_inviting_member"
+msgstr "errore nell'invitare il membro"
+
+msgid "failed_load_members"
+msgstr "impossibile caricare i membri"
+
+msgid "failed_load_invitations"
+msgstr "impossibile caricare gli inviti"
+
+msgid "error_loading_data"
+msgstr "errore nel caricamento dei dati"
+
+msgid "invitation_accepted"
+msgstr "invito accettato"
+
+msgid "failed_accept_invitation"
+msgstr "impossibile accettare l'invito"
+
+msgid "error_accepting_invitation"
+msgstr "errore nell'accettazione dell'invito"
+
+msgid "invitation_rejected"
+msgstr "invito rifiutato"
+
+msgid "failed_reject_invitation"
+msgstr "impossibile rifiutare l'invito"
+
+msgid "error_rejecting_invitation"
+msgstr "errore nel rifiuto dell'invito"
+
+msgid "English"
+msgstr "Inglese"
+
+msgid "Persian"
+msgstr "Persiano"
+
+msgid "Arabic"
+msgstr "Arabo"
+
+msgid "German"
+msgstr "Tedesco"
+
+msgid "French"
+msgstr "Francese"
+
+msgid "Italian"
+msgstr "Italiano"
+
+msgid "Hindi"
+msgstr "Hindi"
+
+msgid "Korean"
+msgstr "Coreano"
+
+msgid "Chinese"
+msgstr "Cinese"
+
+msgid "Japanese"
+msgstr "Giapponese"
+
+msgid "Russian"
+msgstr "Russo"
+
+msgid "Turkish"
+msgstr "Turco"
+
+msgid "Spanish"
+msgstr "Spagnolo"
+
+msgid "Select Language"
+msgstr "Seleziona lingua"
+
+msgid "Profile"
+msgstr "Profilo"
+
+msgid "Invite to Board"
+msgstr "Invita alla bacheca"
+
+msgid "User Email"
+msgstr "Email utente"
+
+msgid "Send Invite"
+msgstr "Invia invito"
+
+msgid "Manage Invitations"
+msgstr "Gestisci inviti"
+
+msgid "Sent Invitations"
+msgstr "Inviti inviati"
+
+msgid "Received Invitations"
+msgstr "Inviti ricevuti"
+
+msgid "Select Board"
+msgstr "Seleziona bacheca"
+
+msgid "Accept"
+msgstr "Accetta"
+
+msgid "Reject"
+msgstr "Rifiuta"
+
+msgid "Assigned Users"
+msgstr "Utenti assegnati"
+
+msgid "Select user to assign"
+msgstr "Seleziona un utente da assegnare"
+
+msgid "Assign User"
+msgstr "Assegna utente"
+
+msgid "No users assigned"
+msgstr "Nessun utente assegnato"
+
+msgid "Error loading board members"
+msgstr "Errore nel caricamento dei membri della bacheca"
+
+msgid "No sent invitations"
+msgstr "Nessun invito inviato"
+
+msgid "No received invitations"
+msgstr "Nessun invito ricevuto"
+
+msgid "User Profile"
+msgstr "Profilo utente"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Preferred Language"
+msgstr "Lingua preferita"

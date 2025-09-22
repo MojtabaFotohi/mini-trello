@@ -25,10 +25,10 @@ msgid "Modern Trello"
 msgstr "تريلو الحديث"
 
 msgid "Welcome to Modern Trello"
-msgstr "مرحبًا بك في تريلو الحديث"
+msgstr "مرحباً بك في تريلو الحديث"
 
 msgid "Organize anything, together. The easy, flexible way to manage your projects."
-msgstr "نظم أي شيء معًا. الطريقة السهلة والمرنة لإدارة مشاريعك."
+msgstr "نظم أي شيء معاً. الطريقة السهلة والمرنة لإدارة مشاريعك."
 
 msgid "Login"
 msgstr "تسجيل الدخول"
@@ -37,7 +37,7 @@ msgid "Sign Up"
 msgstr "إنشاء حساب"
 
 msgid "Welcome Back"
-msgstr "مرحبًا بعودتك"
+msgstr "مرحباً بعودتك"
 
 msgid "Username"
 msgstr "اسم المستخدم"
@@ -46,7 +46,7 @@ msgid "Password"
 msgstr "كلمة المرور"
 
 msgid "Don't have an account? Sign up"
-msgstr "ليس لديك حساب؟ أنشئ حسابًا"
+msgstr "ليس لديك حساب؟ سجّل الآن"
 
 msgid "Create Account"
 msgstr "إنشاء حساب"
@@ -64,22 +64,22 @@ msgid "Already have an account? Login"
 msgstr "لديك حساب بالفعل؟ سجّل الدخول"
 
 msgid "Your Boards"
-msgstr "مجالسكم"
+msgstr "لوحاتك"
 
 msgid "Select a board to get started, or create a new one"
-msgstr "اختر مجلسًا للبدء، أو أنشئ واحدًا جديدًا"
+msgstr "اختر لوحة للبدء أو أنشئ واحدة جديدة"
 
 msgid "Create New Board"
-msgstr "إنشاء مجلس جديد"
+msgstr "إنشاء لوحة جديدة"
 
 msgid "Board Title"
-msgstr "عنوان المجلس"
+msgstr "عنوان اللوحة"
 
 msgid "Choose Color"
 msgstr "اختر اللون"
 
 msgid "Create Board"
-msgstr "إنشاء المجلس"
+msgstr "إنشاء لوحة"
 
 msgid "Add List"
 msgstr "إضافة قائمة"
@@ -106,7 +106,7 @@ msgid "Due Date (Optional)"
 msgstr "تاريخ الاستحقاق (اختياري)"
 
 msgid "Add Task"
-msgstr "إضافة المهمة"
+msgstr "إضافة مهمة"
 
 msgid "Task Details"
 msgstr "تفاصيل المهمة"
@@ -133,13 +133,13 @@ msgid "Close"
 msgstr "إغلاق"
 
 msgid "Made with Modern Design"
-msgstr "صُنع بتصميم حديث"
+msgstr "مصنوع بتصميم حديث"
 
 msgid "Created recently"
-msgstr "تم الإنشاء مؤخرًا"
+msgstr "تم الإنشاء مؤخراً"
 
 msgid "Back to Boards"
-msgstr "العودة إلى المجالس"
+msgstr "العودة إلى اللوحات"
 
 msgid "Logout"
 msgstr "تسجيل الخروج"
@@ -148,7 +148,7 @@ msgid "Please fill in all fields"
 msgstr "يرجى ملء جميع الحقول"
 
 msgid "Invalid credentials"
-msgstr "بيانات اعتماد غير صالحة"
+msgstr "بيانات الاعتماد غير صحيحة"
 
 msgid "Login failed"
 msgstr "فشل تسجيل الدخول"
@@ -166,28 +166,28 @@ msgid "Unauthorized"
 msgstr "غير مصرح"
 
 msgid "Failed to load boards"
-msgstr "فشل في تحميل المجالس"
+msgstr "فشل في تحميل اللوحات"
 
 msgid "Error loading boards"
-msgstr "خطأ في تحميل المجالس"
+msgstr "خطأ في تحميل اللوحات"
 
 msgid "Please enter a board title"
-msgstr "يرجى إدخال عنوان المجلس"
+msgstr "يرجى إدخال عنوان اللوحة"
 
 msgid "Failed to create board"
-msgstr "فشل في إنشاء المجلس"
+msgstr "فشل في إنشاء اللوحة"
 
 msgid "Error creating board"
-msgstr "خطأ في إنشاء المجلس"
+msgstr "خطأ في إنشاء اللوحة"
 
 msgid "Are you sure you want to delete this board?"
-msgstr "هل أنت متأكد أنك تريد حذف هذا المجلس؟"
+msgstr "هل أنت متأكد أنك تريد حذف هذه اللوحة؟"
 
 msgid "Failed to delete board"
-msgstr "فشل في حذف المجلس"
+msgstr "فشل في حذف اللوحة"
 
 msgid "Error deleting board"
-msgstr "خطأ في حذف المجلس"
+msgstr "خطأ في حذف اللوحة"
 
 msgid "Failed to load lists"
 msgstr "فشل في تحميل القوائم"
@@ -205,7 +205,7 @@ msgid "Error creating list"
 msgstr "خطأ في إنشاء القائمة"
 
 msgid "Are you sure you want to delete this list and all its tasks?"
-msgstr "هل أنت متأكد أنك تريد حذف هذه القائمة وكل مهامها؟"
+msgstr "هل أنت متأكد أنك تريد حذف هذه القائمة وجميع مهامها؟"
 
 msgid "Failed to delete list"
 msgstr "فشل في حذف القائمة"
@@ -235,7 +235,7 @@ msgid "No description"
 msgstr "لا يوجد وصف"
 
 msgid "No description provided"
-msgstr "لم يتم تقديم وصف"
+msgstr "لم يتم توفير وصف"
 
 msgid "No due date set"
 msgstr "لم يتم تحديد تاريخ استحقاق"
@@ -249,28 +249,14 @@ msgstr "غير معروف"
 msgid "Are you sure you want to delete this task?"
 msgstr "هل أنت متأكد أنك تريد حذف هذه المهمة؟"
 
-msgid "Failed to delete task"
-msgstr "فشل في حذف المهمة"
-
-msgid "Error deleting task"
-msgstr "خطأ في حذف المهمة"
-
 msgid "Failed to move task"
 msgstr "فشل في نقل المهمة"
 
-
-
-
-
-
-
-
-
 msgid "Invitation to join {board_title}"
-msgstr "دعوة للانضمام إلى اللوحة {board_title}"
+msgstr "دعوة للانضمام إلى {board_title}"
 
 msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
-msgstr "مرحبًا {user_name}،\n\nلقد تمت دعوتك للانضمام إلى اللوحة '{board_title}' على Modern Trello.\nيرجى تسجيل الدخول لقبول أو رفض هذه الدعوة.\n\nمع أطيب التحيات،\nفريق Modern Trello"
+msgstr "مرحباً {user_name}،\n\nلقد تمت دعوتك للانضمام إلى اللوحة '{board_title}' في تريلو الحديث.\nيرجى تسجيل الدخول لقبول أو رفض هذه الدعوة.\n\nمع أطيب التحيات،\nفريق تريلو الحديث"
 
 msgid "Board Members"
 msgstr "أعضاء اللوحة"
@@ -294,7 +280,7 @@ msgid "please_enter_email"
 msgstr "يرجى إدخال البريد الإلكتروني"
 
 msgid "invitation_sent"
-msgstr "تم إرسال الدعوة بنجاح"
+msgstr "تم إرسال الدعوة"
 
 msgid "failed_invite_member"
 msgstr "فشل في دعوة العضو"
@@ -312,7 +298,7 @@ msgid "error_loading_data"
 msgstr "خطأ في تحميل البيانات"
 
 msgid "invitation_accepted"
-msgstr "تم قبول الدعوة بنجاح"
+msgstr "تم قبول الدعوة"
 
 msgid "failed_accept_invitation"
 msgstr "فشل في قبول الدعوة"
@@ -321,10 +307,112 @@ msgid "error_accepting_invitation"
 msgstr "خطأ في قبول الدعوة"
 
 msgid "invitation_rejected"
-msgstr "تم رفض الدعوة بنجاح"
+msgstr "تم رفض الدعوة"
 
 msgid "failed_reject_invitation"
 msgstr "فشل في رفض الدعوة"
 
 msgid "error_rejecting_invitation"
 msgstr "خطأ في رفض الدعوة"
+
+msgid "English"
+msgstr "الإنجليزية"
+
+msgid "Persian"
+msgstr "الفارسية"
+
+msgid "Arabic"
+msgstr "العربية"
+
+msgid "German"
+msgstr "الألمانية"
+
+msgid "French"
+msgstr "الفرنسية"
+
+msgid "Italian"
+msgstr "الإيطالية"
+
+msgid "Hindi"
+msgstr "الهندية"
+
+msgid "Korean"
+msgstr "الكورية"
+
+msgid "Chinese"
+msgstr "الصينية"
+
+msgid "Japanese"
+msgstr "اليابانية"
+
+msgid "Russian"
+msgstr "الروسية"
+
+msgid "Turkish"
+msgstr "التركية"
+
+msgid "Spanish"
+msgstr "الإسبانية"
+
+msgid "Select Language"
+msgstr "اختر اللغة"
+
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+msgid "Invite to Board"
+msgstr "دعوة إلى اللوحة"
+
+msgid "User Email"
+msgstr "بريد المستخدم"
+
+msgid "Send Invite"
+msgstr "إرسال دعوة"
+
+msgid "Manage Invitations"
+msgstr "إدارة الدعوات"
+
+msgid "Sent Invitations"
+msgstr "الدعوات المرسلة"
+
+msgid "Received Invitations"
+msgstr "الدعوات المستلمة"
+
+msgid "Select Board"
+msgstr "اختر لوحة"
+
+msgid "Accept"
+msgstr "قبول"
+
+msgid "Reject"
+msgstr "رفض"
+
+msgid "Assigned Users"
+msgstr "المستخدمون المعيّنون"
+
+msgid "Select user to assign"
+msgstr "اختر مستخدماً للتعيين"
+
+msgid "Assign User"
+msgstr "تعيين مستخدم"
+
+msgid "No users assigned"
+msgstr "لم يتم تعيين أي مستخدم"
+
+msgid "Error loading board members"
+msgstr "خطأ في تحميل أعضاء اللوحة"
+
+msgid "No sent invitations"
+msgstr "لا توجد دعوات مرسلة"
+
+msgid "No received invitations"
+msgstr "لا توجد دعوات مستلمة"
+
+msgid "User Profile"
+msgstr "ملف المستخدم"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Preferred Language"
+msgstr "اللغة المفضلة"

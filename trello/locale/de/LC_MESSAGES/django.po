@@ -19,14 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 #: users/views.py:24
 
+
+
 msgid "Modern Trello"
 msgstr "Modernes Trello"
 
 msgid "Welcome to Modern Trello"
-msgstr "Willkommen bei Modern Trello"
+msgstr "Willkommen bei Modernem Trello"
 
 msgid "Organize anything, together. The easy, flexible way to manage your projects."
-msgstr "Organisieren Sie alles gemeinsam. Der einfache, flexible Weg, Ihre Projekte zu verwalten."
+msgstr "Organisiere alles gemeinsam. Der einfache und flexible Weg, deine Projekte zu verwalten."
 
 msgid "Login"
 msgstr "Anmelden"
@@ -44,7 +46,7 @@ msgid "Password"
 msgstr "Passwort"
 
 msgid "Don't have an account? Sign up"
-msgstr "Sie haben kein Konto? Registrieren Sie sich"
+msgstr "Noch kein Konto? Jetzt registrieren"
 
 msgid "Create Account"
 msgstr "Konto erstellen"
@@ -59,13 +61,13 @@ msgid "Language"
 msgstr "Sprache"
 
 msgid "Already have an account? Login"
-msgstr "Sie haben bereits ein Konto? Anmelden"
+msgstr "Bereits ein Konto? Anmelden"
 
 msgid "Your Boards"
-msgstr "Ihre Boards"
+msgstr "Deine Boards"
 
 msgid "Select a board to get started, or create a new one"
-msgstr "Wählen Sie ein Board aus, um zu starten, oder erstellen Sie ein neues"
+msgstr "Wähle ein Board aus, um zu starten, oder erstelle ein neues"
 
 msgid "Create New Board"
 msgstr "Neues Board erstellen"
@@ -74,7 +76,7 @@ msgid "Board Title"
 msgstr "Board-Titel"
 
 msgid "Choose Color"
-msgstr "Farbe wählen"
+msgstr "Farbe auswählen"
 
 msgid "Create Board"
 msgstr "Board erstellen"
@@ -131,7 +133,7 @@ msgid "Close"
 msgstr "Schließen"
 
 msgid "Made with Modern Design"
-msgstr "Mit modernem Design erstellt"
+msgstr "Erstellt mit modernem Design"
 
 msgid "Created recently"
 msgstr "Kürzlich erstellt"
@@ -143,16 +145,16 @@ msgid "Logout"
 msgstr "Abmelden"
 
 msgid "Please fill in all fields"
-msgstr "Bitte füllen Sie alle Felder aus"
+msgstr "Bitte alle Felder ausfüllen"
 
 msgid "Invalid credentials"
-msgstr "Ungültige Zugangsdaten"
+msgstr "Ungültige Anmeldedaten"
 
 msgid "Login failed"
 msgstr "Anmeldung fehlgeschlagen"
 
 msgid "Please fill in all required fields"
-msgstr "Bitte füllen Sie alle erforderlichen Felder aus"
+msgstr "Bitte alle Pflichtfelder ausfüllen"
 
 msgid "Registration failed"
 msgstr "Registrierung fehlgeschlagen"
@@ -164,13 +166,13 @@ msgid "Unauthorized"
 msgstr "Nicht autorisiert"
 
 msgid "Failed to load boards"
-msgstr "Laden der Boards fehlgeschlagen"
+msgstr "Boards konnten nicht geladen werden"
 
 msgid "Error loading boards"
 msgstr "Fehler beim Laden der Boards"
 
 msgid "Please enter a board title"
-msgstr "Bitte geben Sie einen Board-Titel ein"
+msgstr "Bitte einen Board-Titel eingeben"
 
 msgid "Failed to create board"
 msgstr "Board konnte nicht erstellt werden"
@@ -179,7 +181,7 @@ msgid "Error creating board"
 msgstr "Fehler beim Erstellen des Boards"
 
 msgid "Are you sure you want to delete this board?"
-msgstr "Sind Sie sicher, dass Sie dieses Board löschen möchten?"
+msgstr "Möchten Sie dieses Board wirklich löschen?"
 
 msgid "Failed to delete board"
 msgstr "Board konnte nicht gelöscht werden"
@@ -188,13 +190,13 @@ msgid "Error deleting board"
 msgstr "Fehler beim Löschen des Boards"
 
 msgid "Failed to load lists"
-msgstr "Laden der Listen fehlgeschlagen"
+msgstr "Listen konnten nicht geladen werden"
 
 msgid "Error loading lists"
 msgstr "Fehler beim Laden der Listen"
 
 msgid "Please enter a list title"
-msgstr "Bitte geben Sie einen Listentitel ein"
+msgstr "Bitte einen Listentitel eingeben"
 
 msgid "Failed to create list"
 msgstr "Liste konnte nicht erstellt werden"
@@ -203,7 +205,7 @@ msgid "Error creating list"
 msgstr "Fehler beim Erstellen der Liste"
 
 msgid "Are you sure you want to delete this list and all its tasks?"
-msgstr "Sind Sie sicher, dass Sie diese Liste und alle Aufgaben löschen möchten?"
+msgstr "Möchten Sie diese Liste und alle ihre Aufgaben wirklich löschen?"
 
 msgid "Failed to delete list"
 msgstr "Liste konnte nicht gelöscht werden"
@@ -212,13 +214,13 @@ msgid "Error deleting list"
 msgstr "Fehler beim Löschen der Liste"
 
 msgid "Failed to load tasks"
-msgstr "Laden der Aufgaben fehlgeschlagen"
+msgstr "Aufgaben konnten nicht geladen werden"
 
 msgid "Error loading tasks"
 msgstr "Fehler beim Laden der Aufgaben"
 
 msgid "Please enter a task title"
-msgstr "Bitte geben Sie einen Aufgabentitel ein"
+msgstr "Bitte einen Aufgabentitel eingeben"
 
 msgid "Failed to create task"
 msgstr "Aufgabe konnte nicht erstellt werden"
@@ -245,33 +247,16 @@ msgid "Unknown"
 msgstr "Unbekannt"
 
 msgid "Are you sure you want to delete this task?"
-msgstr "Sind Sie sicher, dass Sie diese Aufgabe löschen möchten?"
-
-msgid "Failed to delete task"
-msgstr "Aufgabe konnte nicht gelöscht werden"
-
-msgid "Error deleting task"
-msgstr "Fehler beim Löschen der Aufgabe"
+msgstr "Möchten Sie diese Aufgabe wirklich löschen?"
 
 msgid "Failed to move task"
 msgstr "Aufgabe konnte nicht verschoben werden"
-
-
-
-
-
-
-
-
-
-
-
 
 msgid "Invitation to join {board_title}"
 msgstr "Einladung zum Beitritt zum Board {board_title}"
 
 msgid "Hello {user_name},\n\nYou have been invited to join the board '{board_title}' on Modern Trello.\nPlease log in to accept or reject this invitation.\n\nBest regards,\nModern Trello Team"
-msgstr "Hallo {user_name},\n\nSie wurden eingeladen, dem Board '{board_title}' auf Modern Trello beizutreten.\nBitte melden Sie sich an, um diese Einladung anzunehmen oder abzulehnen.\n\nMit freundlichen Grüßen,\nIhr Modern Trello Team"
+msgstr "Hallo {user_name},\n\nSie wurden eingeladen, dem Board „{board_title}“ auf Modernem Trello beizutreten.\nBitte melden Sie sich an, um diese Einladung anzunehmen oder abzulehnen.\n\nMit freundlichen Grüßen,\nDas Modern Trello Team"
 
 msgid "Board Members"
 msgstr "Board-Mitglieder"
@@ -292,40 +277,142 @@ msgid "No pending invitations"
 msgstr "Keine ausstehenden Einladungen"
 
 msgid "please_enter_email"
-msgstr "Bitte geben Sie eine E-Mail-Adresse ein"
+msgstr "Bitte E-Mail eingeben"
 
 msgid "invitation_sent"
-msgstr "Einladung erfolgreich gesendet"
+msgstr "Einladung gesendet"
 
 msgid "failed_invite_member"
-msgstr "Fehler beim Einladen des Mitglieds"
+msgstr "Einladung des Mitglieds fehlgeschlagen"
 
 msgid "error_inviting_member"
 msgstr "Fehler beim Einladen des Mitglieds"
 
 msgid "failed_load_members"
-msgstr "Fehler beim Laden der Mitglieder"
+msgstr "Mitglieder konnten nicht geladen werden"
 
 msgid "failed_load_invitations"
-msgstr "Fehler beim Laden der Einladungen"
+msgstr "Einladungen konnten nicht geladen werden"
 
 msgid "error_loading_data"
 msgstr "Fehler beim Laden der Daten"
 
 msgid "invitation_accepted"
-msgstr "Einladung erfolgreich angenommen"
+msgstr "Einladung angenommen"
 
 msgid "failed_accept_invitation"
-msgstr "Fehler beim Annehmen der Einladung"
+msgstr "Annahme der Einladung fehlgeschlagen"
 
 msgid "error_accepting_invitation"
 msgstr "Fehler beim Annehmen der Einladung"
 
 msgid "invitation_rejected"
-msgstr "Einladung erfolgreich abgelehnt"
+msgstr "Einladung abgelehnt"
 
 msgid "failed_reject_invitation"
-msgstr "Fehler beim Ablehnen der Einladung"
+msgstr "Ablehnung der Einladung fehlgeschlagen"
 
 msgid "error_rejecting_invitation"
 msgstr "Fehler beim Ablehnen der Einladung"
+
+msgid "English"
+msgstr "Englisch"
+
+msgid "Persian"
+msgstr "Persisch"
+
+msgid "Arabic"
+msgstr "Arabisch"
+
+msgid "German"
+msgstr "Deutsch"
+
+msgid "French"
+msgstr "Französisch"
+
+msgid "Italian"
+msgstr "Italienisch"
+
+msgid "Hindi"
+msgstr "Hindi"
+
+msgid "Korean"
+msgstr "Koreanisch"
+
+msgid "Chinese"
+msgstr "Chinesisch"
+
+msgid "Japanese"
+msgstr "Japanisch"
+
+msgid "Russian"
+msgstr "Russisch"
+
+msgid "Turkish"
+msgstr "Türkisch"
+
+msgid "Spanish"
+msgstr "Spanisch"
+
+msgid "Select Language"
+msgstr "Sprache auswählen"
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Invite to Board"
+msgstr "Zum Board einladen"
+
+msgid "User Email"
+msgstr "Benutzer-E-Mail"
+
+msgid "Send Invite"
+msgstr "Einladung senden"
+
+msgid "Manage Invitations"
+msgstr "Einladungen verwalten"
+
+msgid "Sent Invitations"
+msgstr "Gesendete Einladungen"
+
+msgid "Received Invitations"
+msgstr "Erhaltene Einladungen"
+
+msgid "Select Board"
+msgstr "Board auswählen"
+
+msgid "Accept"
+msgstr "Annehmen"
+
+msgid "Reject"
+msgstr "Ablehnen"
+
+msgid "Assigned Users"
+msgstr "Zugewiesene Benutzer"
+
+msgid "Select user to assign"
+msgstr "Benutzer zur Zuweisung auswählen"
+
+msgid "Assign User"
+msgstr "Benutzer zuweisen"
+
+msgid "No users assigned"
+msgstr "Keine Benutzer zugewiesen"
+
+msgid "Error loading board members"
+msgstr "Fehler beim Laden der Board-Mitglieder"
+
+msgid "No sent invitations"
+msgstr "Keine gesendeten Einladungen"
+
+msgid "No received invitations"
+msgstr "Keine erhaltenen Einladungen"
+
+msgid "User Profile"
+msgstr "Benutzerprofil"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Preferred Language"
+msgstr "Bevorzugte Sprache"

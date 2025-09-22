@@ -34,8 +34,8 @@ body {
     flex-direction: row-reverse;
 }
 .modal-header .btn-close {
-    margin-left: 0;
-    margin-right: auto;
+    margin-left: auto;
+    margin-right: 0;
 }
 .task-meta {
     flex-direction: row-reverse;
@@ -67,6 +67,9 @@ body {
 .assigned-users {
     flex-direction: row-reverse;
 }
+
+
+
 {% else %}
 .member-circle .tooltip {
     left: 50%;
@@ -125,6 +128,11 @@ body {
 .header-buttons {
     display: flex;
     gap: 0.5rem;
+}
+
+.modal-header .btn-close {
+    margin-left: 0;
+    margin-right: auto;
 }
 
 .header button {
@@ -891,7 +899,7 @@ body {
     </style>
 </head>
 <body>
-    <!-- Header -->
+ <!-- Header -->
     <header class="header" style="display: none;" id="app-header">
         
         <select id="header-language-select" class="form-select" style="width: auto; margin-left: 1rem;" onchange="changeLanguage(this.value)">
@@ -900,8 +908,15 @@ body {
             <option value="ar" {% if LANGUAGE_CODE == "ar" %}selected{% endif %}>🇸🇦 {% trans "Arabic" %}</option>
             <option value="de" {% if LANGUAGE_CODE == "de" %}selected{% endif %}>🇩🇪 {% trans "German" %}</option>
             <option value="fr" {% if LANGUAGE_CODE == "fr" %}selected{% endif %}>🇫🇷 {% trans "French" %}</option>
+            <option value="it" {% if LANGUAGE_CODE == "it" %}selected{% endif %}>🇮🇹 {% trans "Italian" %}</option>
+            <option value="hi" {% if LANGUAGE_CODE == "hi" %}selected{% endif %}>🇮🇳 {% trans "Hindi" %}</option>
+            <option value="ko" {% if LANGUAGE_CODE == "ko" %}selected{% endif %}>🇰🇷 {% trans "Korean" %}</option>
+            <option value="ja" {% if LANGUAGE_CODE == "ja" %}selected{% endif %}>🇯🇵 {% trans "Japanese" %}</option>
+            <option value="ru" {% if LANGUAGE_CODE == "ru" %}selected{% endif %}>🇷🇺 {% trans "Russian" %}</option>
+            <option value="tr" {% if LANGUAGE_CODE == "tr" %}selected{% endif %}>🇹🇷 {% trans "Turkish" %}</option>
+            <option value="es" {% if LANGUAGE_CODE == "es" %}selected{% endif %}>🇪🇸 {% trans "Spanish" %}</option>
         </select>
-        <button onclick="showUserProfileModal()" class="btn btn-primary btn-sm">
+        <button onclick="showUserProfileModal()" class="btn btn-primary btn-sm"  >
             <i class="fas fa-user"></i> {% trans "Profile" %}
         </button>
         <h3><i class="fas fa-columns"></i> {% trans "Modern Trello" %}</h3>
@@ -944,6 +959,13 @@ body {
                     <option value="ar" {% if LANGUAGE_CODE == "ar" %}selected{% endif %}>🇸🇦 {% trans "Arabic" %}</option>
                     <option value="de" {% if LANGUAGE_CODE == "de" %}selected{% endif %}>🇩🇪 {% trans "German" %}</option>
                     <option value="fr" {% if LANGUAGE_CODE == "fr" %}selected{% endif %}>🇫🇷 {% trans "French" %}</option>
+                    <option value="it" {% if LANGUAGE_CODE == "it" %}selected{% endif %}>🇮🇹 {% trans "Italian" %}</option>
+                    <option value="hi" {% if LANGUAGE_CODE == "hi" %}selected{% endif %}>🇮🇳 {% trans "Hindi" %}</option>
+                    <option value="ko" {% if LANGUAGE_CODE == "ko" %}selected{% endif %}>🇰🇷 {% trans "Korean" %}</option>
+                    <option value="ja" {% if LANGUAGE_CODE == "ja" %}selected{% endif %}>🇯🇵 {% trans "Japanese" %}</option>
+                    <option value="ru" {% if LANGUAGE_CODE == "ru" %}selected{% endif %}>🇷🇺 {% trans "Russian" %}</option>
+                    <option value="tr" {% if LANGUAGE_CODE == "tr" %}selected{% endif %}>🇹🇷 {% trans "Turkish" %}</option>
+                    <option value="es" {% if LANGUAGE_CODE == "es" %}selected{% endif %}>🇪🇸 {% trans "Spanish" %}</option>
                 </select>
                 <label>{% trans "Select Language" %}</label>
             </div>
@@ -997,6 +1019,13 @@ body {
                     <option value="ar">🇸🇦 {% trans "Arabic" %}</option>
                     <option value="de">🇩🇪 {% trans "German" %}</option>
                     <option value="fr">🇫🇷 {% trans "French" %}</option>
+                    <option value="it">🇮🇹 {% trans "Italian" %}</option>
+                    <option value="hi">🇮🇳 {% trans "Hindi" %}</option>
+                    <option value="ko">🇰🇷 {% trans "Korean" %}</option>
+                    <option value="ja">🇯🇵 {% trans "Japanese" %}</option>
+                    <option value="ru">🇷🇺 {% trans "Russian" %}</option>
+                    <option value="tr">🇹🇷 {% trans "Turkish" %}</option>
+                    <option value="es">🇪🇸 {% trans "Spanish" %}</option>
                 </select>
                 <label>{% trans "Language" %}</label>
             </div>
@@ -1106,87 +1135,83 @@ body {
     </div>
 
     <!-- Task Details Modal -->
- <div class="modal fade" id="taskDetailsModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="task-details-title"><i class="fas fa-task"></i> {% trans "Task Details" %}</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <div class="mb-3">
-                    <h6><i class="fas fa-heading"></i> {% trans "Title" %}</h6>
-                    <p id="task-details-title-text" class="task-detail-text"></p>
+    <div class="modal fade" id="taskDetailsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="task-details-title"><i class="fas fa-task"></i> {% trans "Task Details" %}</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="mb-3">
-                    <h6><i class="fas fa-align-left"></i> {% trans "Description" %}</h6>
-                    <p id="task-details-description" class="task-detail-text"></p>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <h6><i class="fas fa-heading"></i> {% trans "Title" %}</h6>
+                        <p id="task-details-title-text" class="task-detail-text"></p>
+                    </div>
+                    <div class="mb-3">
+                        <h6><i class="fas fa-align-left"></i> {% trans "Description" %}</h6>
+                        <p id="task-details-description" class="task-detail-text"></p>
+                    </div>
+                    <div class="mb-3">
+                        <h6><i class="fas fa-calendar"></i> {% trans "Due Date" %}</h6>
+                        <p id="task-details-due-date" class="task-detail-text"></p>
+                    </div>
+                    <div class="mb-3">
+                        <h6><i class="fas fa-list"></i> {% trans "List" %}</h6>
+                        <p id="task-details-list" class="task-detail-text"></p>
+                    </div>
+                    <div class="mb-3">
+                        <h6><i class="fas fa-clock"></i> {% trans "Created" %}</h6>
+                        <p id="task-details-created" class="task-detail-text"></p>
+                    </div>
+                    <div class="mb-3 assign-users-container">
+                        <h6><i class="fas fa-users"></i> {% trans "Assigned Users" %}</h6>
+                        <div id="assigned-users" class="assigned-users"></div>
+                        <select id="assign-users-select" class="assign-users-select mt-2">
+                            <option value="">{% trans "Select user to assign" %}</option>
+                        </select>
+                        <button class="btn btn-primary btn-sm mt-2" onclick="assignUser(currentTaskForDetails.id)">
+                            <i class="fas fa-user-plus"></i> {% trans "Assign User" %}
+                        </button>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <h6><i class="fas fa-calendar"></i> {% trans "Due Date" %}</h6>
-                    <p id="task-details-due-date" class="task-detail-text"></p>
-                </div>
-                <div class="mb-3">
-                    <h6><i class="fas fa-list"></i> {% trans "List" %}</h6>
-                    <p id="task-details-list" class="task-detail-text"></p>
-                </div>
-                <div class="mb-3">
-                    <h6><i class="fas fa-clock"></i> {% trans "Created" %}</h6>
-                    <p id="task-details-created" class="task-detail-text"></p>
-                </div>
-                <div class="mb-3 assign-users-container">
-                    <h6><i class="fas fa-users"></i> {% trans "Assigned Users" %}</h6>
-                    <div id="assigned-users" class="assigned-users"></div>
-                    <select id="assign-users-select" class="assign-users-select mt-2">
-                        <option value="">{% trans "Select user to assign" %}</option>
-                    </select>
-                    <button class="btn btn-primary btn-sm mt-2" onclick="assignUser(currentTaskForDetails.id)">
-                        <i class="fas fa-user-plus"></i> {% trans "Assign User" %}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="deleteTask()">
+                        <i class="fas fa-trash"></i> {% trans "Delete Task" %}
                     </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Close" %}</button>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" onclick="deleteTask()">
-                    <i class="fas fa-trash"></i> {% trans "Delete Task" %}
-                </button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Close" %}</button>
             </div>
         </div>
     </div>
-</div>
-
-
-
-
 
     <!-- Invite Member Modal -->
-     <div class="modal fade" id="inviteMemberModal" tabindex="-1">
-         <div class="modal-dialog">
-             <div class="modal-content">
-                 <div class="modal-header">
-                     <h5 class="modal-title"><i class="fas fa-user-plus"></i> {% trans "Invite to Board" %}</h5>
-                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                 </div>
-                 <div class="modal-body">
-                     <div class="form-floating mb-3">
-                         <select id="invite-board-select" class="form-select">
-                             <option value="">{% trans "Select Board" %}</option>
-                         </select>
-                         <label>{% trans "Select Board" %}</label>
-                     </div>
-                     <div class="form-floating mb-3">
-                         <input type="email" id="invite-email-input" class="form-control" placeholder="{% trans 'Email' %}">
-                         <label>{% trans "User Email" %}</label>
-                     </div>
-                     <div id="invite-error" class="text-danger" style="display: none;"></div>
-                 </div>
-                 <div class="modal-footer">
-                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Cancel" %}</button>
-                     <button type="button" class="btn btn-primary" onclick="sendInvitation()"><i class="fas fa-paper-plane"></i> {% trans "Send Invite" %}</button>
-                 </div>
-             </div>
-         </div>
-     </div>
+    <div class="modal fade" id="inviteMemberModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-user-plus"></i> {% trans "Invite to Board" %}</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <select id="invite-board-select" class="form-select">
+                            <option value="">{% trans "Select Board" %}</option>
+                        </select>
+                        <label>{% trans "Select Board" %}</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" id="invite-email-input" class="form-control" placeholder="{% trans 'Email' %}">
+                        <label>{% trans "User Email" %}</label>
+                    </div>
+                    <div id="invite-error" class="text-danger" style="display: none;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Cancel" %}</button>
+                    <button type="button" class="btn btn-primary" onclick="sendInvitation()"><i class="fas fa-paper-plane"></i> {% trans "Send Invite" %}</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Invitations Management Modal -->
     <div class="modal fade" id="invitationsModal" tabindex="-1">
@@ -1221,13 +1246,6 @@ body {
         </div>
     </div>
 
-
-
-
-
-
-
-
     <!-- User Profile Modal -->
     <div class="modal fade" id="userProfileModal" tabindex="-1">
         <div class="modal-dialog">
@@ -1260,11 +1278,6 @@ body {
             </div>
         </div>
     </div>
-
-
-
-
-
 
 
 

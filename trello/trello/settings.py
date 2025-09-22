@@ -69,7 +69,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',  
-    'users.middleware.UserLanguageMiddleware',  # این middleware باید بعد از SessionMiddleware و LocaleMiddleware باشد
+    'users.middleware.UserLanguageMiddleware',  
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -157,6 +157,14 @@ LANGUAGES = [
     ('ar', 'Arabic'),
     ('de', 'German'),
     ('fr', 'French'),
+    ('it', 'Italian'),
+    ('hi', 'Hindi'),
+    ('ko', 'Korean'),
+    ('zh-hans', 'Simplified Chinese'),
+    ('ja', 'Japanese'),
+    ('ru', 'Russian'),
+    ('tr', 'Turkish'),
+    ('es', 'Spanish'),
 ]
 
 LOCALE_PATHS = [
@@ -204,16 +212,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-# اضافه کردن تنظیمات امنیتی CORS
+# CORS
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_CREDENTIALS = True  # برای ارسال cookies و session
+CORS_ALLOW_CREDENTIALS = True  #   cookies و session
 
-# Session settings برای حفظ زبان
-SESSION_COOKIE_AGE = 86400  # 24 ساعت
+# Session settings 
+SESSION_COOKIE_AGE = 86400  # 24h
 SESSION_SAVE_EVERY_REQUEST = True
 
 
-SESSION_COOKIE_SECURE = False  # در production باید True باشد
+SESSION_COOKIE_SECURE = False  
 SESSION_COOKIE_HTTPONLY = True
 
 # JWT Settings 
