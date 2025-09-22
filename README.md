@@ -13,7 +13,7 @@
 
 ---
 
-## ✨ Features
+## ✨ Features 
 
 - **User Management**:
   - Register, login, and edit profiles with **JWT** authentication.
@@ -47,6 +47,7 @@
   - Readable **ReDoc** at `/redoc/`.
 
 ---
+
 
 ## 🛠 Prerequisites
 
