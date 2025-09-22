@@ -760,7 +760,7 @@ body {
 }
 
 .assigned-user-chip {
-    background: var(--primary-color);
+    background: #43af04ff;
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 16px;
@@ -1899,98 +1899,126 @@ body {
         modal.show();
     }
 
-    async function loadAssignedUsers(task) {
-        const assignedUsersContainer = document.getElementById('assigned-users');
-        assignedUsersContainer.innerHTML = '';
-        
-        if (task.assigned_users && task.assigned_users.length > 0) {
-            task.assigned_users.forEach(user => {
-                const chip = document.createElement('div');
-                chip.className = 'assigned-user-chip';
-                chip.innerHTML = `
-                    ${user.name || user.username}
-                    <i class="fas fa-times remove-user" onclick="unassignUser(${task.id}, ${user.id})"></i>
-                `;
-                assignedUsersContainer.appendChild(chip);
-            });
-        } else {
-            assignedUsersContainer.innerHTML = `<p class="text-muted">{% trans "No users assigned" %}</p>`;
-        }
+async function loadAssignedUsers(task) {
+    const assignedUsersContainer = document.getElementById('assigned-users');
+    assignedUsersContainer.innerHTML = '';
 
-        // Load board members for assign dropdown
-        const assignSelect = document.getElementById('assign-users-select');
-        assignSelect.innerHTML = '<option value="">{% trans "Select user to assign" %}</option>';
-
-        try {
-            const response = await fetch(`http://localhost:8000/boards/${currentBoardId}/`, {
-                headers: { 'Authorization': `Bearer ${accessToken}` }
-            });
-            if (!response.ok) throw new Error('Failed to load board members');
-            const board = await response.json();
-            
-            board.members.forEach(user => {
-                if (!task.assigned_users || !task.assigned_users.some(u => u.id === user.id)) {
-                    const option = document.createElement('option');
-                    option.value = user.id;
-                    option.textContent = user.name || user.username;
-                    assignSelect.appendChild(option);
-                }
-            });
-        } catch (error) {
-            console.error('Error loading board members:', error);
-        }
+    // لود اعضای بورد برای map کردن id به نام
+    let boardMembers = [];
+    try {
+        const response = await fetch(`http://localhost:8000/boards/${currentBoardId}/`, {
+            headers: { 'Authorization': `Bearer ${accessToken}` }
+        });
+        if (!response.ok) throw new Error('Failed to load board members');
+        const board = await response.json();
+        boardMembers = board.members; // ذخیره اعضای بورد
+    } catch (error) {
+        console.error('Error loading board members:', error);
+        assignedUsersContainer.innerHTML = `<p class="text-muted">{% trans "Error loading board members" %}</p>`;
+        return;
     }
 
-    async function assignUser(taskId) {
-        const userId = document.getElementById('assign-users-select').value;
-        if (!userId) return;
+    // نمایش کاربران اختصاص‌یافته
+    if (task.assigned_users && task.assigned_users.length > 0) {
+        task.assigned_users.forEach(user => {
+            // پیدا کردن کاربر از boardMembers با استفاده از id
+            const userId = user.id || user; // پشتیبانی از هر دو فرمت
+            const matchedUser = boardMembers.find(member => member.id === userId);
+            const displayName = matchedUser ? (matchedUser.name || matchedUser.username || 'Unknown User') : 'Unknown User';
 
-        try {
-            const response = await fetch(`http://localhost:8000/lists/lists/${currentTaskForDetails.list}/tasks/${taskId}/`, {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${accessToken}`
-                },
-                body: JSON.stringify({ 
-                    assigned_users: [...(currentTaskForDetails.assigned_users || []).map(u => u.id), parseInt(userId)] 
-                })
-            });
-
-            if (!response.ok) throw new Error(getTranslation('failed_assign_user', 'Failed to assign user'));
-
-            const updatedTask = await response.json();
-            currentTaskForDetails = updatedTask;
-            loadAssignedUsers(updatedTask);
-            loadTasks(currentTaskForDetails.list);
-        } catch (error) {
-            alert(getTranslation('error_assigning_user', 'Error assigning user') + ': ' + error.message);
-        }
+            const chip = document.createElement('div');
+            chip.className = 'assigned-user-chip';
+            chip.innerHTML = `
+                ${displayName}
+                <i class="fas fa-times remove-user" onclick="unassignUser(${task.id}, ${userId})"></i>
+            `;
+            assignedUsersContainer.appendChild(chip);
+        });
+    } else {
+        assignedUsersContainer.innerHTML = `<p class="text-muted">{% trans "No users assigned" %}</p>`;
     }
 
-    async function unassignUser(taskId, userId) {
-        try {
-            const response = await fetch(`http://localhost:8000/lists/lists/${currentTaskForDetails.list}/tasks/${taskId}/`, {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${accessToken}`
-                },
-                body: JSON.stringify({ 
-                    assigned_users: (currentTaskForDetails.assigned_users || []).filter(u => u.id !== userId).map(u => u.id) 
-                })
-            });
+    // لود اعضای بورد برای dropdown
+    const assignSelect = document.getElementById('assign-users-select');
+    assignSelect.innerHTML = '<option value="">{% trans "Select user to assign" %}</option>';
 
-            if (!response.ok) throw new Error(getTranslation('failed_unassign_user', 'Failed to unassign user'));
-
-            const updatedTask = await response.json();
-            currentTaskForDetails = updatedTask;
-            loadAssignedUsers(updatedTask);
-            loadTasks(currentTaskForDetails.list);
-        } catch (error) {
-            alert(getTranslation('error_unassigning_user', 'Error unassigning user') + ': ' + error.message);
+    boardMembers.forEach(user => {
+        if (!task.assigned_users || !task.assigned_users.some(u => (u.id || u) === user.id)) {
+            const option = document.createElement('option');
+            option.value = user.id;
+            option.textContent = user.name || user.username || 'Unknown User';
+            assignSelect.appendChild(option);
         }
+    });
+}
+
+async function assignUser(taskId) {
+    const userId = document.getElementById('assign-users-select').value;
+    if (!userId) return;
+
+    try {
+        // گرفتن assigned_users فعلی و تبدیل به آرایه IDها
+        const currentAssignedUsers = (currentTaskForDetails.assigned_users || []).map(u => u.id || u);
+        const response = await fetch(`http://localhost:8000/lists/lists/${currentTaskForDetails.list}/tasks/${taskId}/`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${accessToken}`
+            },
+            body: JSON.stringify({ 
+                assigned_users: [...currentAssignedUsers, parseInt(userId)] 
+            })
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            console.error('Assign error:', errorData); // دیباگ خطا
+            throw new Error(getTranslation('failed_assign_user', 'Failed to assign user'));
+        }
+
+        const updatedTask = await response.json();
+        console.log('Updated task:', updatedTask); // دیباگ پاسخ
+        currentTaskForDetails = updatedTask;
+        loadAssignedUsers(updatedTask);
+        loadTasks(currentTaskForDetails.list);
+    } catch (error) {
+        alert(getTranslation('error_assigning_user', 'Error assigning user') + ': ' + error.message);
     }
+}
+
+async function unassignUser(taskId, userId) {
+    try {
+        // گرفتن assigned_users فعلی و تبدیل به آرایه IDها
+        const currentAssignedUsers = (currentTaskForDetails.assigned_users || []).map(u => u.id || u);
+        console.log('Current assigned users:', currentAssignedUsers); // دیباگ
+        const updatedAssignedUsers = currentAssignedUsers.filter(id => id !== userId);
+
+        const response = await fetch(`http://localhost:8000/lists/lists/${currentTaskForDetails.list}/tasks/${taskId}/`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${accessToken}`
+            },
+            body: JSON.stringify({ 
+                assigned_users: updatedAssignedUsers 
+            })
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            console.error('Unassign error:', errorData); // دیباگ خطا
+            throw new Error(getTranslation('failed_unassign_user', 'Failed to unassign user'));
+        }
+
+        const updatedTask = await response.json();
+        console.log('Updated task:', updatedTask); // دیباگ پاسخ
+        currentTaskForDetails = updatedTask;
+        loadAssignedUsers(updatedTask);
+        loadTasks(currentTaskForDetails.list);
+    } catch (error) {
+        alert(getTranslation('error_unassigning_user', 'Error unassigning user') + ': ' + error.message);
+    }
+}
 
     function deleteTask() {
         if (!currentTaskForDetails) return;
@@ -2154,7 +2182,7 @@ async function loadInvitations() {
 
         sentInvitations.forEach(inv => {
             const boardTitle = inv.board?.title || 'Unknown Board';
-            const email = inv.invited_user?.email || inv.invited_user_email || 'Unknown Email';
+            const email = inv.invited_user?.email || inv.invited_user_email || 'invited you';
             const invItem = document.createElement('div');
             invItem.className = 'invitation-item';
             invItem.innerHTML = `
