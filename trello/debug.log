@@ -4447,3 +4447,6 @@ Bad Request: /lists/lists/33/tasks/23/
 Bad Request: /lists/lists/32/tasks/22/
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Watching for file changes with StatReloader
+Unauthorized: /users/test-translation/
+Unauthorized: /boards/
