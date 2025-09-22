@@ -34,6 +34,9 @@ class InvitationListCreateView(generics.ListCreateAPIView):
             raise ValidationError(f"Board with id {board_id} does not exist or you are not the owner.")
 
         invited_user = serializer.validated_data['invited_user']
+        if board.members.filter(id=invited_user.id).exists():
+            logger.error(f"User {invited_user} is already a member of board {board}")
+            raise ValidationError("User is already a member of this board.")
         logger.debug(f"Invited user: {invited_user}")
         
         if Invitation.objects.filter(board=board, invited_user=invited_user, status='pending').exists():

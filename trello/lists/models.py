@@ -16,8 +16,13 @@ class Task(models.Model):
     list = models.ForeignKey(List, on_delete=models.CASCADE, related_name='tasks')
     due_date = models.DateTimeField(null=True, blank=True)
     order = models.PositiveIntegerField(default=0)
+    assigned_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='assigned_tasks', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title
+    
+    
+    
+    

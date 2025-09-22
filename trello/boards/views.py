@@ -3,6 +3,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.exceptions import ValidationError
 from .models import Board
 from .serializers import BoardSerializer
+from django.db.models import Q
+
 
 class BoardListCreateView(generics.ListCreateAPIView):
     queryset = Board.objects.all()
@@ -16,7 +18,7 @@ class BoardListCreateView(generics.ListCreateAPIView):
         serializer.save(owner=self.request.user)
 
     def get_queryset(self):
-        return Board.objects.filter(owner=self.request.user)
+        return Board.objects.filter(Q(owner=self.request.user) | Q(members=self.request.user))
 
 class BoardDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Board.objects.all()
@@ -24,4 +26,17 @@ class BoardDetailView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return Board.objects.filter(owner=self.request.user)
+        return Board.objects.filter(Q(owner=self.request.user) | Q(members=self.request.user))
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
