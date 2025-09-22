@@ -839,6 +839,27 @@ body {
     }
 }
 
+
+
+    /* User Profile Modal Styles */
+    #userProfileModal .modal-body {
+        padding: 1.5rem;
+    }
+
+    #userProfileModal .task-detail-text {
+        background: var(--secondary-color);
+        padding: 0.75rem;
+        border-radius: 8px;
+        margin: 0;
+        border-left: 4px solid var(--primary-color);
+    }
+
+    #userProfileModal .task-detail-text:empty::before {
+        content: '{% trans "No information available" %}';
+        color: var(--text-light);
+        font-style: italic;
+    }
+
 @media (max-width: 480px) {
     .welcome-card {
         padding: 1.5rem;
@@ -879,6 +900,9 @@ body {
             <option value="de" {% if LANGUAGE_CODE == "de" %}selected{% endif %}>🇩🇪 {% trans "German" %}</option>
             <option value="fr" {% if LANGUAGE_CODE == "fr" %}selected{% endif %}>🇫🇷 {% trans "French" %}</option>
         </select>
+        <button onclick="showUserProfileModal()" class="btn btn-primary btn-sm">
+            <i class="fas fa-user"></i> {% trans "Profile" %}
+        </button>
         <h3><i class="fas fa-columns"></i> {% trans "Modern Trello" %}</h3>
         <div class="header-buttons">
             <button onclick="showInviteMemberModal()" class="btn btn-primary btn-sm">
@@ -1199,6 +1223,42 @@ body {
 
 
 
+
+
+
+
+    <!-- User Profile Modal -->
+    <div class="modal fade" id="userProfileModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-user"></i> {% trans "User Profile" %}</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <h6><i class="fas fa-user-circle"></i> {% trans "Username" %}</h6>
+                        <p id="profile-username" class="task-detail-text"></p>
+                    </div>
+                    <div class="mb-3">
+                        <h6><i class="fas fa-envelope"></i> {% trans "Email" %}</h6>
+                        <p id="profile-email" class="task-detail-text"></p>
+                    </div>
+                    <div class="mb-3">
+                        <h6><i class="fas fa-signature"></i> {% trans "Name" %}</h6>
+                        <p id="profile-name" class="task-detail-text"></p>
+                    </div>
+                    <div class="mb-3">
+                        <h6><i class="fas fa-language"></i> {% trans "Preferred Language" %}</h6>
+                        <p id="profile-language" class="task-detail-text"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Close" %}</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -2281,6 +2341,39 @@ async function loadInvitations() {
         localStorage.setItem('userLanguage', lang);
         window.location.href = '/' + lang + window.location.pathname.replace(/^\/[a-z]{2}/, '');
     }
+
+
+
+
+    async function showUserProfileModal() {
+    const modal = new bootstrap.Modal(document.getElementById('userProfileModal'));
+    
+    try {
+        const response = await fetch('http://localhost:8000/users/profile/', {
+            headers: { 'Authorization': `Bearer ${accessToken}` }
+        });
+
+        if (!response.ok) {
+            throw new Error(getTranslation('failed_load_profile', 'Failed to load profile'));
+        }
+
+        const userData = await response.json();
+        
+        document.getElementById('profile-username').textContent = userData.username || getTranslation('no_username', 'No username');
+        document.getElementById('profile-email').textContent = userData.email || getTranslation('no_email', 'No email');
+        document.getElementById('profile-name').textContent = userData.name || getTranslation('no_name', 'No name');
+        document.getElementById('profile-language').textContent = userData.preferred_language || getTranslation('no_language', 'No language');
+        
+        modal.show();
+    } catch (error) {
+        console.error('Error loading user profile:', error);
+        alert(getTranslation('error_loading_profile', 'Error loading profile') + ': ' + error.message);
+    }
+}
+
+
+
+
 
     // Initialize app when page loads
     document.addEventListener('DOMContentLoaded', async () => {
