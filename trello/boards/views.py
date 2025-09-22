@@ -13,8 +13,12 @@ class BoardListCreateView(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         max_boards = 5  # limit N
-        if Board.objects.filter(owner=self.request.user).count() >= max_boards:
-            raise ValidationError(f"Cannot create more than {max_boards} boards.")
+        # شمردن مجموع بوردهایی که کاربر صاحب یا عضو آن‌هاست
+        total_boards = Board.objects.filter(
+            Q(owner=self.request.user) | Q(members=self.request.user)
+        ).distinct().count()
+        if total_boards >= max_boards:
+            raise ValidationError(f"Cannot create or join more than {max_boards} boards.")
         serializer.save(owner=self.request.user)
 
     def get_queryset(self):
@@ -27,16 +31,3 @@ class BoardDetailView(generics.RetrieveUpdateDestroyAPIView):
 
     def get_queryset(self):
         return Board.objects.filter(Q(owner=self.request.user) | Q(members=self.request.user))
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

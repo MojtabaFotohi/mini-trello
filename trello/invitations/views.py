@@ -8,6 +8,7 @@ from .serializers import InvitationSerializer
 from boards.models import Board
 from django.contrib.auth import get_user_model
 from .tasks import send_invitation_email
+from django.db.models import Q
 import logging
 
 logger = logging.getLogger(__name__)
@@ -47,9 +48,14 @@ class InvitationListCreateView(generics.ListCreateAPIView):
             logger.error(f"Board {board} has reached maximum members (10)")
             raise ValidationError("Cannot add more than 10 members to a board.")
         
-        if invited_user.board_memberships.count() >= 20:
-            logger.error(f"User {invited_user} has reached maximum board memberships (20)")
-            raise ValidationError("User cannot be a member of more than 20 boards.")
+        # چک کردن لیمیت ۵ بورد برای invited_user
+        max_boards = 5
+        total_boards = Board.objects.filter(
+            Q(owner=invited_user) | Q(members=invited_user)
+        ).distinct().count()
+        if total_boards >= max_boards:
+            logger.error(f"User {invited_user} has reached maximum board limit ({max_boards})")
+            raise ValidationError(f"User cannot be a member of more than {max_boards} boards.")
 
         invitation = serializer.save(board=board)
         logger.debug(f"Created invitation: {invitation}")
@@ -70,8 +76,14 @@ class InvitationAcceptView(generics.UpdateAPIView):
         board = invitation.board
         if board.members.count() >= 10:
             raise ValidationError("Cannot add more than 10 members to a board.")
-        if invitation.invited_user.board_memberships.count() >= 20:
-            raise ValidationError("User cannot be a member of more than 20 boards.")
+        
+        # چک کردن لیمیت ۵ بورد برای کاربر در زمان پذیرش دعوت‌نامه
+        max_boards = 5
+        total_boards = Board.objects.filter(
+            Q(owner=self.request.user) | Q(members=self.request.user)
+        ).distinct().count()
+        if total_boards >= max_boards:
+            raise ValidationError(f"User cannot be a member of more than {max_boards} boards.")
         
         board.members.add(invitation.invited_user)
         serializer.save(status='accepted')
