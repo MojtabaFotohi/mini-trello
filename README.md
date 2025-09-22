@@ -1,6 +1,5 @@
 # Mini Trello: Collaborative Task Management 🌟
 
-![Mini Trello Banner](https://via.placeholder.com/1280x300?text=Mini+Trello) <!-- جایگزین با تصویر واقعی اگر داری -->
 
 [![Python](https://img.shields.io/badge/Python-3.13-blue)](https://www.python.org/downloads/release/python-3130/)
 [![Django](https://img.shields.io/badge/Django-5.2.6-green)](https://www.djangoproject.com/)
@@ -144,7 +143,6 @@ Mini Trello supports **12 languages** with translations managed via Django’s i
 | Italian                 | `it`      | 🇮🇹  |
 | Hindi                   | `hi`      | 🇮🇳  |
 | Korean                  | `ko`      | 🇰🇷  |
-| Simplified Chinese      | `zh_Hans` | 🇨🇳  |
 | Japanese                | `ja`      | 🇯🇵  |
 | Russian                 | `ru`      | 🇷🇺  |
 | Turkish                 | `tr`      | 🇹🇷  |
