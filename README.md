@@ -41,7 +41,7 @@
 - **Asynchronous Processing**:
   - Email sending via **Celery**, **RabbitMQ**, and **Redis**.
 - **Custom Management Command**:
-  - `python manage.py scu` creates a superuser with credentials `admin`/`admin`.
+  - `python manage.py csu` creates a superuser with credentials `admin`/`admin`.
 - **API Documentation**:
   - Interactive **Swagger UI** at `/swagger/`.
   - Readable **ReDoc** at `/redoc/`.
@@ -89,7 +89,7 @@
 
 5. **Create Superuser**:
    ```bash
-   python manage.py scu  # Creates superuser (admin/admin)
+   python manage.py csu  # Creates superuser (admin/admin)
    ```
 
 
@@ -190,7 +190,7 @@ Key Endpoints:
 
 The project includes a custom command to simplify superuser creation:
 ```bash
-python manage.py scu
+python manage.py csu
 ```
 - Creates a superuser with username: `admin`, password: `admin`, email: `admin@gmail.com`.
 
