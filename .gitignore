@@ -1,36 +1,36 @@
 # Python
-     __pycache__/
-     *.py[cod]
-     *$py.class
-     *.pyc
-     *.pyo
-     *.pyd
-     .Python
-     *.egg-info/
-     dist/
-     build/
-     *.egg
-     *.eggs/
-     .env
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+*.eggs/
+.env
 
-     # Django
-     *.log
-     *.pot
-     *.pyc
-     db.sqlite3
-     media/
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
 
-     # Virtual environment
-     trello_env/
-     venv/
-     env/
+# Virtual environment
+trello_env/
+venv/
+env/
 
-     # IDEs and editors
-     .idea/
-     *.sublime-project
-     *.sublime-workspace
-     .vscode/
+# IDEs and editors
+.idea/
+*.sublime-project
+*.sublime-workspace
+.vscode/
 
-     # Celery
-     celerybeat-schedule
-     celerybeat.pid
+# Celery
+celerybeat-schedule
+celerybeat.pid
